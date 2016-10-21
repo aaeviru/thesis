@@ -23,7 +23,7 @@
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
 \renewcommand{\algorithmicensure}{\textbf{Output:}}
 
-\title{privacy-protecting patent search}
+\title{プライバシーを保護する特許検索}
 \author{中川研究室 修士2年 胡 瀚林\\指導教員： 中川 裕志 教授}
 \date{2016年7月1日}
 \begin{document}
@@ -34,15 +34,37 @@
 
 \section{INTRODUCTION}
 \subsection{Patent Search}
+特許文章の特徴\\
+特許検索の目的と方法\\
+ーー新規性調査(Novelty Search)
 \subsection{Patent Versus Non-patent Literature}
+特許文章と普通の文章の区別
 \section{PRIVATE INFORMATION RETRIEVAL}
-\subsection{Obfuscation-Based Private Search}
+PIRの背景紹介
 \subsection{Private Information Retrieval}
-\section{LATENT SEMANTIC MODELS}
-\subsection{Latent Semantic Indexing}
-\subsection{Probabilistic Latent Semantic Indexing}
-\subsection{Latent Dirichlet Allocation}
-\section{privacy-protecting patent search}
-\section{EXPERIMENT}
+\subsection{Obfuscation-Based Private Search}
+既存手法とその手法が特許検索に適用できない理由
 
+\section{LATENT SEMANTIC MODELS}
+\subsection{tf-idf}
+\subsection{Latent Semantic Indexing}
+長所:計算簡単\\
+短所:トピックベクトルが直交である
+\subsection{Probabilistic Latent Semantic Indexing}
+長所:確率的モデル\\
+短所:トレーニングセットに含まれていない文章(質問)の分析が困難である
+\subsection{Latent Dirichlet Allocation}
+長所:確率的モデルトレーニングセットに含まれていない文章(質問)の分析が簡単\\
+短所:学習するときは単語数xトピック数の行列を用いて反復するので学習するには時間がかかる(30トピック、1000反復は3日かかる)
+\section{privacy-protecting patent search}
+提案手法\\
+評価(攻撃)方法
+\section{EXPERIMENT}
+実験\\
+1質問者:tfidf攻撃者LSA\\
+2質問者:LSA攻撃者LSA\\
+3質問者:LDA攻撃者LSA\\
+4質問者:LSA攻撃者LDA
+\section{CONCLUSIONS}
+\section{FUTURE WORKS}
 \end{document}

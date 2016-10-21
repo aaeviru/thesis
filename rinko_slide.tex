@@ -60,6 +60,8 @@
     \frame{\tableofcontents[currentsection, hideallsubsections]} %目次スライド
 }
 
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+
 \title{\bfseries プライバシーを保護する特許検索}
 
 \date{2016年月日}
@@ -74,19 +76,21 @@
 
 \section{背景紹介}
 \begin{frame}{特許}
-	\begin{block}[特許とは？]
-		特許法第1条には、「この法律は、発明の保護及び利用を図ることにより、発明を奨励し、もつて産業の発達に寄与することを目的とする」とある。\\
-		特許制度は、発明者には一定期間、一定の条件のもとに特許権という独占的な権利を与えて発明の保護を図る一方、その発明を公開して利用を図ることにより新しい技術を人類共通の財産としていくことを定めて、これにより技術の進歩を促進し、産業の発達に寄与しようというものである。
+	\begin{block}{特許とは？}
+		\begin{itemize}
+        \item 特許法第1条には、「この法律は、発明の保護及び利用を図ることにより、発明を奨励し、もつて産業の発達に寄与することを目的とする」とある。
+		\item 特許制度は、発明者には一定期間、一定の条件のもとに特許権という独占的な権利を与えて発明の保護を図る一方、その発明を公開して利用を図ることにより新しい技術を人類共通の財産としていくことを定めて、これにより技術の進歩を促進し、産業の発達に寄与しようというものである。
+		\end{itemize}
 	\end{block}
 \end{frame}
 
 \begin{frame}{特許}
-    \begin{exampleblock}[特許請求の範囲]
+    \begin{exampleblock}{特許請求の範囲}
 		【請求項１】植物の種子をパルプ繊維の水懸濁液に混合して抄紙する播種シートの製造方法。\\
 		【請求項２】水懸濁液にさらに水溶性接着剤を添加する請求項１記載の播種シートの製造方法。\\
 		【請求項３】あらかじめ種子を低粘度多価アルコールで被覆する請求項１記載の播種シートの製造方法。
     \end{exampleblock}
-	\begin{block}[]
+	\begin{block}{特許請求の範囲の作成方法}
 		８技術用語は、学術用語を用いる。\\
 		９用語は、その有する普通の意味で使用し、かつ、明細書及び特許請求の範囲全体を通じて統一して使用する	
 	\end{block}
@@ -94,14 +98,15 @@
 
 
 \begin{frame}{特許検索}
-	\begin{block}[]
+	\begin{block}{}
+		\fontsize{8pt}{7.2}\selectfont
 		\begin{tabular}{ccc}
         \noalign{\hrule height 1pt}
         検索タイプー & 検索対象(specification) & 検索目的 \\
         \hline
-        技術水準調査(State of the Art Search) & イデア & 自分の発明に関連する背景知識を得る \\
-        新規性調査(Novelty Search) & 特許文章 & 特許登録の可能性を判断する \\
-        侵害調査(Infringement Search) &  商品と商品に関連する技術 & 権利侵害とならないかを判断する \\
+        \tabincell{c}{技術水準調査\\(State of the Art Search)} & イデア & 自分の発明に関連する背景知識を得る \\
+        \tabincell{c}{新規性調査\\(Novelty Search)} & 特許文章 & 特許登録の可能性を判断する \\
+        \tabincell{c}{侵害調査\\(Infringement Search)} &  \tabincell{c}{商品と\\商品に関連する技術} & 権利侵害とならないかを判断する \\
         \noalign{\hrule height 1pt}
         \end{tabular}
 	\end{block}
