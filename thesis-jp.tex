@@ -29,10 +29,18 @@
 \begin{document}
 \maketitle
 \begin{abstract}
+企業が特許を取る前に，類似な特許が既に存在するかを確かめるために特許データベースを検索する必要がある．
+しかし，検索の質問から企業秘密が漏洩する可能性がある．
+ウェブテキスト検索の質問からユーザーの興味を守る手法が多数存在している。
+その中真の質問と同時にダミー質問を提出する手法が一番効率的、現実的である。
+一般的なウェブテキスト検索と違い，特許データベース検索は長い検索質問を用い，検索の精度と再現率を重視しているため、既存手法を直接特許検索に適用することはできない。
+本発表では既存手法を破られる攻手法を提案し、その攻撃手法に対応できるダミー質問生成システムを提案する
 \end{abstract}
 
 
 \section{INTRODUCTION}
+
+
 \subsection{Patent Search}
 特許文章の特徴\\
 特許検索の目的と方法\\
@@ -67,4 +75,59 @@ PIRの背景紹介
 4質問者:LSA攻撃者LDA
 \section{CONCLUSIONS}
 \section{FUTURE WORKS}
+
+\begin{table}[!hbp]
+\center
+\begin{tabular}{|c|c|}
+\hline
+符号 & 意味 \\
+\hline
+$N$ & 辞書中の単語の数 \\
+$T = {1,2,3, \dots ,N} $ & 単語集合 \\
+$M$ & コーパス中の文書の数 \\
+$D = {1,2,3, \dots ,M}$ & 文章集合 \\ 
+$K$ & トピック数 \\
+$\ell_i = {t_1,t_2,\dots,K} $ & 単語$i$のトピックベクトル \\
+$\ell$ & 質問のトピックベクトル \\
+\hline
+\end{tabular}
+\caption{表記法}
+\end{table}
+
+\begin{algorithm}
+\caption{メイントピック攻撃}
+\begin{algorithmic}[1]
+    \Require 質問:$q=\{t_i\},$単語のトピックベクトル集合$L=\{\ell_i\}$
+    \State $R=\phi, \, \ell=0$
+    \State $\ell=\sum_{t_i \in Q}\ell_{t_i}$
+    \State $maintopic=argmax_j \ell[j]$
+    \ForAll {$bk_k \in q $}
+    \State $R=R \cup max_{t_i}l_{t_i}[maintopic]$
+    \EndFor　\\
+    \Return $R$
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+\caption{類似攻撃}
+\begin{algorithmic}[1]
+    \Require 質問集合:$Q=\{q^r_i\, | i \in \{1,2,3,4\},r \in \{1,2, \dots ,R\}\},$単語のトピックベクトル集合$L=\{\ell_i\}$
+    \State $p_i= q^1_i \, \, i \in \{1,2,3,4\} , result = \phi $
+    \For {$r = 2,3 \dots ,R $}
+		\For {$i = 1,2,3,4$}
+		\State $j = argmax_j \frac{p_i \cdot q^r_j}{|p_i||q^r_j|}$
+		\State $d_i = \frac{p_i \cdot q^r_j}{|p_i||q^r_j|}$
+		\State $temp_i = \frac{1}{r}(p_i(r-1) + q_j)$
+		\EndFor
+		\For {$i = 1,2,3,4$}
+		\State $p_i = temp_i $
+		\EndFor
+    \State $result =result \cup argmax_{i}d_i$
+    \EndFor　\\
+    \Return $result$
+\end{algorithmic}
+\end{algorithm}
+
+
+
 \end{document}
