@@ -22,6 +22,7 @@
 
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
 \renewcommand{\algorithmicensure}{\textbf{Output:}}
+\newcommand{\argmax}{\mathop{\rm argmax}\limits}
 
 \title{プライバシーを保護する特許検索}
 \author{中川研究室 修士2年 胡 瀚林\\指導教員： 中川 裕志 教授}
@@ -31,10 +32,10 @@
 \begin{abstract}
 企業が特許を取る前に，類似な特許が既に存在するかを確かめるために特許データベースを検索する必要がある．
 しかし，検索の質問から企業秘密が漏洩する可能性がある．
-ウェブテキスト検索の質問からユーザーの興味を守る手法が多数存在している。
-その中真の質問と同時にダミー質問を提出する手法が一番効率的、現実的である。
-一般的なウェブテキスト検索と違い，特許データベース検索は長い検索質問を用い，検索の精度と再現率を重視しているため、既存手法を直接特許検索に適用することはできない。
-本発表では既存手法を破られる攻手法を提案し、その攻撃手法に対応できるダミー質問生成システムを提案する
+ウェブテキスト検索の質問からユーザーの興味を守る手法が多数存在している．
+その中真の質問と同時にダミー質問を提出する手法が一番効率的、現実的である．
+一般的なウェブテキスト検索と違い，特許データベース検索は長い検索質問を用い，検索の精度と再現率を重視しているため、既存手法を直接特許検索に適用することはできない．
+本発表では既存手法を破られる攻手法を提案し、その攻撃手法に対応できるダミー質問生成システムを提案する．
 \end{abstract}
 
 
@@ -54,16 +55,59 @@ PIRの背景紹介
 既存手法とその手法が特許検索に適用できない理由
 
 \section{LATENT SEMANTIC MODELS}
+ユーザーが質問に使った具体的な単語だけではなくユーザーが興味ある分野も隠すため、質問の意味を分析する必要がある．
+本稿では，分野あるいは単語の意味のカテゴリをトピックという．
+質問が一連のトピックと関係があると仮定し，質問$q$とトピック$t$の関係を関数$rscore(q,t)$で評価する．
+
+\begin{defi}[ユニバーサル質問集合:$Q$]
+$W$を全ての単語の集合とする．
+ユニバーサル質問集合$Q$とは$W$の冪集合である，つまり
+\begin{equation}
+Q = P(W) = \{X|X \subset W\}
+\end{equation}
+\end{defi}
+
+\begin{defi}[質問-トピックスコア関数:$rscore$]
+$T$を全ての可能なトピックの集合とする．
+質問$q$とトピック푡の関係を表す関数とは
+\begin{equation}
+rscore:Q \times T \to \mathbb{R}
+\end{equation}
+\end{defi}
+
+
 \subsection{tf-idf}
 \subsection{Latent Semantic Indexing}
 長所:計算簡単\\
 短所:トピックベクトルが直交である
+単語$w$のLSIトピックベクトル$LSI_w = (s_1,s_2, \dots , s_{K_{LSI}})$ \\
+LSIトピック$t$の
+単語集合$ W' \subset  W = \{w_1,w_2, \dots ,w_m\}$のLSIトピックベクトル
+\begin{equation}
+LSI_q = \sum_{w_i \in q}LSI_{w_i}
+\end{equation}
+
 \subsection{Probabilistic Latent Semantic Indexing}
 長所:確率的モデル\\
 短所:トレーニングセットに含まれていない文章(質問)の分析が困難である
+
 \subsection{Latent Dirichlet Allocation}
 長所:確率的モデルトレーニングセットに含まれていない文章(質問)の分析が簡単\\
 短所:学習するときは単語数xトピック数の行列を用いて反復するので学習するには時間がかかる(30トピック、1000反復は3日かかる)
+各クラスに属する単語のtfidf値の上位10000個を用いてLDAを行い全ての単語とトピックに対して$Pr[w|t]$と$Pr[t]$を計算する.\\
+単語$w$のLDAトピックベクトル$LDA_w = (Pr[w|t=1],Pr[w|t=2], \dots ,Pr[w|t=K_{LDA}])$ \\
+単語集合$ W' \subset W = \{w_1,w_2, \dots ,w_m\}$のLDAトピックベクトル
+\begin{eqnarray}
+Pr[t|W'] & = & \frac{\prod_{w \in W'}Pr[w|t])Pr[t]}{\prod_{w \in W'}Pr[w]} \\
+LDA_W' & = & (Pr[W'|t=1],Pr[W'|t=2], \dots , Pr[q|t=K_{LDA}])
+\end{eqnarray}
+
+\subsection{トピック間の距離}
+
+\begin{defi}[トピック間のcos距離]
+
+\end{defi}
+
 \section{privacy-protecting patent search}
 提案手法\\
 評価(攻撃)方法
@@ -83,10 +127,11 @@ PIRの背景紹介
 符号 & 意味 \\
 \hline
 $N$ & 辞書中の単語の数 \\
-$T = {1,2,3, \dots ,N} $ & 単語集合 \\
+$W = {1,2,3, \dots ,N} $ & 単語集合 \\
 $M$ & コーパス中の文書の数 \\
 $D = {1,2,3, \dots ,M}$ & 文章集合 \\ 
 $K$ & トピック数 \\
+$T = {1,2,3, \dots ,K}$ & トピック集合 \\
 $\ell_i = {t_1,t_2,\dots,K} $ & 単語$i$のトピックベクトル \\
 $\ell$ & 質問のトピックベクトル \\
 \hline
@@ -95,14 +140,73 @@ $\ell$ & 質問のトピックベクトル \\
 \end{table}
 
 \begin{algorithm}
+\caption{潜在意味解析}
+\begin{algorithmic}[1]
+    \Require 単語文集行列$A$
+    \State 特異値分解$A = U \Sigma V$
+	\State 特異値の上位$T$個だけ用い、行列の階数を低減する:$A' = U_T \Sigma_T V_T$
+    \State $U$
+    \Return $R$
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+\caption{} 
+\begin{algorithmic}[1]
+    \Require ユーザー質問集合:$U=\{u^r | r \in {1,2, \dots , R}\},$単語のトピックベクトル集合$L=\{\ell_i\}$
+    \Return $R$
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+\caption{} 
+\begin{algorithmic}[1]
+    \Require ユーザー質問集合:$U=\{u^r | r \in {1,2, \dots , R}\},$単語のトピックベクトル集合$L=\{\ell_i\}$
+    \Return $R$
+\end{algorithmic}
+\end{algorithm}
+
+
+\begin{algorithm}
+\caption{デミー質問生成}
+\begin{algorithmic}[1]
+    \Require ユーザー質問集合:$U=\{u^r | r \in {1,2, \dots , R}\},$単語のトピックベクトル集合$L=\{\ell_i\}$
+    \Return $R$
+\end{algorithmic}
+\end{algorithm}
+
+
+\begin{algorithm}
+\caption{HDGA(On Masking Topical Intent in Keyword Search)}
+\begin{algorithmic}[1]
+    \Require 質問:$q_1$
+    \State $Q = \{q_1\}\delta_{q_1} = \argmax_{t \in T} Pr[t|q_1]$
+	\ForAll {$t \in T \setminus \{\delta_{q_1}\}$}
+    \State $e_t = h(\delta_{q_1}||t||s)$
+	\EndFor
+    \State $T_D = \{t^1_{q1},t^2_{q1}, \dots , t^2_{q1} | \forall t_1 \ \in T_D , \forall t_2 \ \in T \setminus T_D, e_{t_1} > e_{t_2} \}$
+    \ForAll {$t \in T_D $}
+	\While { $ \argmax_{t \in T} Pr[t|q'] \neq t$}
+	\State randomly select $|q_1|$ keywords for $t$ based on $Pr[w|t]$, to form a dummy query $q'$
+	\EndWhile
+    \State $Q = Q \cup \{q'\}$
+    \EndFor　
+	\State Shuffle queries in Q
+    \Return $Q$
+\end{algorithmic}
+\end{algorithm}
+
+
+
+\begin{algorithm}
 \caption{メイントピック攻撃}
 \begin{algorithmic}[1]
     \Require 質問:$q=\{t_i\},$単語のトピックベクトル集合$L=\{\ell_i\}$
     \State $R=\phi, \, \ell=0$
     \State $\ell=\sum_{t_i \in Q}\ell_{t_i}$
-    \State $maintopic=argmax_j \ell[j]$
+    \State $maintopic = \argmax_j \ell[j]$
     \ForAll {$bk_k \in q $}
-    \State $R=R \cup max_{t_i}l_{t_i}[maintopic]$
+    \State $R=R \cup \{\max_{t_i}l_{t_i}[maintopic]\}$
     \EndFor　\\
     \Return $R$
 \end{algorithmic}
@@ -115,14 +219,14 @@ $\ell$ & 質問のトピックベクトル \\
     \State $p_i= q^1_i \, \, i \in \{1,2,3,4\} , result = \phi $
     \For {$r = 2,3 \dots ,R $}
 		\For {$i = 1,2,3,4$}
-		\State $j = argmax_j \frac{p_i \cdot q^r_j}{|p_i||q^r_j|}$
+		\State $j = \argmax_j \frac{p_i \cdot q^r_j}{|p_i||q^r_j|}$
 		\State $d_i = \frac{p_i \cdot q^r_j}{|p_i||q^r_j|}$
 		\State $temp_i = \frac{1}{r}(p_i(r-1) + q_j)$
 		\EndFor
 		\For {$i = 1,2,3,4$}
 		\State $p_i = temp_i $
 		\EndFor
-    \State $result =result \cup argmax_{i}d_i$
+    \State $result =result \cup \{\argmax_{i}d_i\}$
     \EndFor　\\
     \Return $result$
 \end{algorithmic}
