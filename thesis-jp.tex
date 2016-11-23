@@ -23,7 +23,7 @@
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
 \renewcommand{\algorithmicensure}{\textbf{Output:}}
 \newcommand{\argmax}{\mathop{\rm argmax}\limits}
-
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
 \title{プライバシーを保護する特許検索}
 \author{中川研究室 修士2年 胡 瀚林\\指導教員： 中川 裕志 教授}
 \date{2016年7月1日}
@@ -43,9 +43,36 @@
 
 
 \subsection{Patent Search}
-特許文章の特徴\\
-特許検索の目的と方法\\
-ーー新規性調査(Novelty Search)
+特許法第1条には，「この法律は、発明の保護及び利用を図ることにより、発明を奨励し、もつて産業の発達に寄与することを目的とする」とある．\cite{}
+特許制度は，発明者には一定期間，一定の条件のもとに特許権という独占的な権利を与えて発明の保護を図る一方，その発明を公開して利用を図ることにより新しい技術を人類共通の財産としていくことを定めて，これにより技術の進歩を促進し，産業の発達に寄与しようというものである．\cite{}
+特許を取るには以下の条件を満たさなければならない，\\
+新規性:公知の発明と同様の発明は特許を受けることができない．\\
+進歩性:先行技術に基づいて容易に発明をすることができる発明は特許を受けることができない．\\
+単一性:発明の単一性の要件を満たさない二以上の発明は一つの願書で出願することができない．\\
+
+%特許文章の特徴\\
+特許を受けようとする発明を特定するために特許請求の範囲を記載する必要がある．
+
+図\ref{fig:}で表した例のように，特許の請求項は特定の書き方がある．
+誤解を招かないように技術用語は、学術用語を用いる．
+また，一般的な文章は単語をなるべく重複しないようにする一方，特許文章は単語を全体を通じて統一して使用する．
+
+%特許検索の目的と方法\\
+\center
+\begin{tabular}{ccc}
+\noalign{\hrule height 1pt}
+検索タイプー & 検索対象(specification) & 検索目的 \\
+\hline
+\tabincell{c}{技術水準調査\\(State of the Art Search)} & イデア & 自分の発明に関連する背景知識を得る \\
+\tabincell{c}{新規性調査\\(Novelty Search)} & 特許文章 & 特許登録の可能性を判断する \\
+\tabincell{c}{侵害調査\\(Infringement Search)} &  \tabincell{c}{商品と\\商品に関連する技術} & 権利侵害とならないかを判断する \\
+\noalign{\hrule height 1pt}
+\end{tabular}
+
+
+
+%ーー新規性調査(Novelty Search)\\
+本稿では新規性調査を対象にユーザーのプライバシーを守る手法を研究する．
 \subsection{Patent Versus Non-patent Literature}
 特許文章と普通の文章の区別
 \section{PRIVATE INFORMATION RETRIEVAL}
