@@ -1,8 +1,21 @@
 \begin{thebibliography}{PDX10}
 
-\bibitem[PDX10]{pang_embellishing_2010}
+\bibitem[MC09]{providing2009}
+M.~Murugesan and C.~Clifton.
+\newblock Providing {Privacy} through {Plausibly} {Deniable} {Search}.
+\newblock In {\em Proceedings of the 2009 {SIAM} {International} {Conference}
+  on {Data} {Mining}}, Proceedings, pages 768--779. Society for Industrial and
+  Applied Mathematics, April 2009.
+
+\bibitem[PDX10]{embellishing2010}
 HweeHwa Pang, Xuhua Ding, and Xiaokui Xiao.
 \newblock Embellishing {Text} {Search} {Queries} to {Protect} {User} {Privacy}.
 \newblock {\em Proc. VLDB Endow.}, 3(1-2):598--607, September 2010.
+
+\bibitem[WR14]{masking2014}
+Peng Wang and Chinya~V. Ravishankar.
+\newblock On masking topical intent in keyword search.
+\newblock In {\em 2014 {IEEE} 30th {International} {Conference} on {Data}
+  {Engineering}}, pages 256--267. IEEE, 2014.
 
 \end{thebibliography}

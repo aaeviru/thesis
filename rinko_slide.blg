@@ -2,45 +2,45 @@ This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: rinko_slide.aux
 The style file: alpha.bst
-Database file #1: zotero.bib
-You've used 1 entry,
+Database file #1: thesis.bib
+You've used 3 entries,
             2543 wiz_defined-function locations,
-            565 strings with 4616 characters,
-and the built_in function-call counts, 482 in all, are:
-= -- 47
-> -- 25
-< -- 0
-+ -- 9
-- -- 9
-* -- 43
-:= -- 88
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 7
-chr.to.int$ -- 1
-cite$ -- 1
-duplicate$ -- 14
-empty$ -- 31
-format.name$ -- 10
-if$ -- 91
+            580 strings with 5034 characters,
+and the built_in function-call counts, 1583 in all, are:
+= -- 170
+> -- 63
+< -- 2
++ -- 21
+- -- 21
+* -- 110
+:= -- 246
+add.period$ -- 11
+call.type$ -- 3
+change.case$ -- 19
+chr.to.int$ -- 3
+cite$ -- 3
+duplicate$ -- 67
+empty$ -- 119
+format.name$ -- 24
+if$ -- 344
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 1
-newline$ -- 8
-num.names$ -- 3
-pop$ -- 4
+missing$ -- 3
+newline$ -- 18
+num.names$ -- 9
+pop$ -- 17
 preamble$ -- 1
-purify$ -- 8
+purify$ -- 22
 quote$ -- 0
-skip$ -- 13
+skip$ -- 62
 stack$ -- 0
-substring$ -- 32
-swap$ -- 1
-text.length$ -- 0
+substring$ -- 110
+swap$ -- 22
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 8
+type$ -- 24
 warning$ -- 0
-while$ -- 5
-width$ -- 2
-write$ -- 15
+while$ -- 17
+width$ -- 5
+write$ -- 44

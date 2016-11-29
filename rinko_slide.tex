@@ -216,7 +216,13 @@
 \end{frame}
 
 \section{既存研究}
-\begin{frame}{Providing Privacy through Plausibly Deniable Search \cite{pang_embellishing_2010}}
+\begin{frame}{Providing Privacy through Plausibly Deniable Search \cite{providing2009}}
+	\begin{block}{}
+		真の質問である可能性がある質問数:$K$	
+	\end{block}
+\end{frame}
+
+\begin{frame}{Embellishing Text Search Queries to Protect User Privacy \cite{embellishing2010}}
 	\begin{columns}[t]
 		\begin{column}{0.8\textwidth} % 横幅の30％
 			\includegraphics[width=\columnwidth]{rk6.png}
@@ -227,18 +233,12 @@
 	\end{block}
 \end{frame}
 
-\begin{frame}{Embellishing Text Search Queries to Protect User Privacy \cite{pang_embellishing_2010}}
-	\begin{columns}[t]
-		\begin{column}{0.8\textwidth} % 横幅の30％
-			\includegraphics[width=\columnwidth]{rk6.png}
-		\end{column}
-	\end{columns}
+\begin{frame}{Embellishing Text Search Queries to Protect User Privacy \cite{embellishing2010}}
 	\begin{block}{}
-		真の質問である可能性がある質問数:$K$	
 	\end{block}
 \end{frame}
 
-\begin{frame}{Obfuscating the Topical Intention in Enterprise Text Search \cite{pang_embellishing_2010}}
+\begin{frame}{On masking topical intent in keyword search \cite{masking2014}}
 	\begin{columns}[t]
 		\begin{column}{0.8\textwidth} % 横幅の30％
 			\includegraphics[width=\columnwidth]{rk6.png}
@@ -254,11 +254,11 @@
         \fontsize{8pt}{7.2}\selectfont
         \begin{tabular}{ccc}
         \noalign{\hrule height 1pt}
-         & 潜在意味分析手法 & 質問列の対応 \\
+         & 潜在意味分析手法 & 質問列への対応 & 長い質問への対応  \\
         \hline
-         & LSI   &  X\\
-         & WordNet  & O  \\
-         & LDA  &  O \\
+        \cite{providing2009} & LSI   & X & X\\ 
+        \cite{embellishing2010} & WordNet  & O & O \\
+        \cite{masking2014} & LDA & O & O \\
         \noalign{\hrule height 1pt}
         \end{tabular}
     \end{block}
@@ -637,7 +637,7 @@
 \begin{frame}[t,allowframebreaks]{Bibliography}
 \fontsize{8pt}{7.2}\selectfont
 \bibliographystyle{alpha}
-\bibliography{zotero}
+\bibliography{thesis}
 \end{frame}
 
 \end{document}
