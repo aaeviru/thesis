@@ -3,16 +3,6 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: rinko_slide.aux
 The style file: alpha.bst
 Database file #1: zotero.bib
-I was expecting a `,' or a `}'---line 232 of file zotero.bib
- :     
- :     year = {2006}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 406 of file zotero.bib
- :  
- :  year = {2009}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 You've used 1 entry,
             2543 wiz_defined-function locations,
             565 strings with 4616 characters,
@@ -54,4 +44,3 @@ warning$ -- 0
 while$ -- 5
 width$ -- 2
 write$ -- 15
-(There were 2 error messages)

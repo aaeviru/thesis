@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2016.5.12)  17 OCT 2016 20:02
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2016.5.12)  29 NOV 2016 19:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1269,135 +1269,137 @@ LaTeX Font Info:    Font shape `OT1/txss/m/sl' will be
 (Font)              scaled to size 6.64998pt on input line 161.
  [10
 
+] [11
+
 ]
 File: rk4.png Graphic file (type bmp)
- <rk4.png> [11
+ <rk4.png> [12
 
 ]
 File: rk14.png Graphic file (type bmp)
- <rk14.png> [12
-
-] [13
+ <rk14.png> [13
 
 ]
-(./rinko_slide.toc) [14
+[14
+
+] (./rinko_slide.toc) [15
 
 ]
 File: rk6.png Graphic file (type bmp)
- <rk6.png> [15
+ <rk6.png> [16
 
 ]
 File: rk7.png Graphic file (type bmp)
- <rk7.png> [16
+ <rk7.png> [17
 
 ]
 File: rk8.png Graphic file (type bmp)
- <rk8.png> [17
+ <rk8.png> [18
 
 ]
 LaTeX Font Info:    Font shape `OT1/txss/m/it' in size <12> not available
-(Font)              Font shape `OT1/txss/m/sl' tried instead on input line 251.
+(Font)              Font shape `OT1/txss/m/sl' tried instead on input line 263.
 
 LaTeX Font Info:    Font shape `OT1/txss/m/sl' will be
-(Font)              scaled to size 11.39996pt on input line 251.
- [18
+(Font)              scaled to size 11.39996pt on input line 263.
 
-]
 [19
+
+] [20
 
 ]
 File: rk9.png Graphic file (type bmp)
- <rk9.png> [20
+ <rk9.png> [21
 
-] [21
+] [22
 
 ]
 File: rk10.png Graphic file (type bmp)
  <rk10.png>
-Overfull \hbox (13.50713pt too wide) detected at line 324
+Overfull \hbox (13.50713pt too wide) detected at line 336
   \OT1/txss/m/sl/12 u[] \OT1/cmss/m/n/12 = []
  []
 
-[22
+[23
 
 ]
 File: rk16.png Graphic file (type bmp)
  <rk16.png>
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 8.54997pt on input line 359.
+(Font)              scaled to size 8.54997pt on input line 371.
 LaTeX Font Info:    Font shape `OT1/txss/m/it' in size <9> not available
-(Font)              Font shape `OT1/txss/m/sl' tried instead on input line 359.
+(Font)              Font shape `OT1/txss/m/sl' tried instead on input line 371.
 
 LaTeX Font Info:    Font shape `OT1/txss/m/sl' will be
-(Font)              scaled to size 8.54997pt on input line 359.
- [23
+(Font)              scaled to size 8.54997pt on input line 371.
+ [24
 
 ]
 File: photo14.png Graphic file (type bmp)
- <photo14.png> [24
+ <photo14.png> [25
 
-] [25
+] [26
 
 ]
 File: rk11.png Graphic file (type bmp)
- <rk11.png> [26
+ <rk11.png> [27
 
 ]
 File: photo14.png Graphic file (type bmp)
  <photo14.png>
-[27
+[28
 
 ]
 File: rk15.png Graphic file (type bmp)
- <rk15.png> [28
+ <rk15.png> [29
 
 ]
 File: rk13.png Graphic file (type bmp)
- <rk13.png> [29
+ <rk13.png> [30
 
-] (./rinko_slide.toc) [30
+] (./rinko_slide.toc) [31
 
-] [31
+] [32
 
 ]
 File: photo11.png Graphic file (type bmp)
 
-<photo11.png> [32
+<photo11.png> [33
 
 ]
-Overfull \hbox (16.51364pt too wide) in paragraph at lines 470--470
+Overfull \hbox (16.51364pt too wide) in paragraph at lines 482--482
 [][]  
  []
 
-[33
+[34
 
-] [34
+] [35
 
 ]
 File: rk16.png Graphic file (type bmp)
  <rk16.png>
-Overfull \hbox (2.18202pt too wide) in paragraph at lines 523--523
-[][]  
- []
-
-[35
-
-]
-File: rk16.png Graphic file (type bmp)
- <rk16.png>
-Overfull \hbox (2.18202pt too wide) in paragraph at lines 555--555
+Overfull \hbox (2.18202pt too wide) in paragraph at lines 535--535
 [][]  
  []
 
 [36
 
-] [37
+]
+File: rk16.png Graphic file (type bmp)
+ <rk16.png>
+Overfull \hbox (2.18202pt too wide) in paragraph at lines 567--567
+[][]  
+ []
 
-] (./rinko_slide.toc) [38
+[37
 
-] [39
+] [38
 
-] (./rinko_slide.toc) [40
+] (./rinko_slide.toc) [39
+
+] [40
+
+] (./rinko_slide.toc) [41
 
 ]
 (./rinko_slide.bbl
@@ -1409,7 +1411,7 @@ LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
 LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
 (Font)              using `JY1/gt/m/n' instead on input line 6.
 
-) [41
+) [42
 
 ]
 \tf@nav=\write6
@@ -1421,24 +1423,24 @@ LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
 \tf@snm=\write8
 \openout8 = `rinko_slide.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 589.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 589.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 601.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 601.
  (./rinko_slide.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 589.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 589.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 601.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 601.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 589.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 601.
  ) 
 Here is how much of TeX's memory you used:
- 17787 strings out of 493717
- 341287 string characters out of 6150720
- 413284 words of memory out of 5000000
- 20812 multiletter control sequences out of 15000+600000
+ 17789 strings out of 493717
+ 341305 string characters out of 6150720
+ 413332 words of memory out of 5000000
+ 20814 multiletter control sequences out of 15000+600000
  54443 words of font info for 157 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  56i,18n,63p,387b,828s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on rinko_slide.dvi (41 pages, 207344 bytes).
+Output written on rinko_slide.dvi (42 pages, 211568 bytes).

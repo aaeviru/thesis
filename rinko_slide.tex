@@ -154,8 +154,8 @@
 \end{columns}
     \begin{block}{}
     \begin{itemize}
-        \item 検索質問$Q$:単語の集合
-        \item 質問$Q$の検索結果$R(Q)$:文章の集合
+        \item 検索質問$q$:単語の集合
+        \item 質問$q$の検索結果$R(Q)$:文章の集合
     \end{itemize}
     \end{block}
 \end{frame}
@@ -188,6 +188,23 @@
 	\end{block}
 \end{frame}
 
+\begin{frame}{Obfuscation Search}
+    \begin{block}{ユニバーサル質問集合:$Q$}
+		$W$を全ての単語の集合とする．
+		ユニバーサル質問集合$Q$とは$W$の冪集合である，つまり
+		\begin{equation}
+		Q = P(W) = \{X|X \subset W\}
+		\end{equation}
+    \end{block}
+    \begin{block}{質問-トピックスコア関数:$rscore$}
+		$T$を全ての可能なトピックの集合とする．
+		質問$q$とトピック푡の関係を表す関数とは
+		\begin{equation}
+		rscore:Q \times T \to \mathbb{R}
+		\end{equation}
+    \end{block}
+\end{frame}
+
 \begin{frame}{目標}
     \begin{block}{}
     \begin{itemize}
@@ -199,6 +216,17 @@
 \end{frame}
 
 \section{既存研究}
+\begin{frame}{Providing Privacy through Plausibly Deniable Search \cite{pang_embellishing_2010}}
+	\begin{columns}[t]
+		\begin{column}{0.8\textwidth} % 横幅の30％
+			\includegraphics[width=\columnwidth]{rk6.png}
+		\end{column}
+	\end{columns}
+	\begin{block}{}
+		真の質問である可能性がある質問数:$K$	
+	\end{block}
+\end{frame}
+
 \begin{frame}{Embellishing Text Search Queries to Protect User Privacy \cite{pang_embellishing_2010}}
 	\begin{columns}[t]
 		\begin{column}{0.8\textwidth} % 横幅の30％
@@ -208,6 +236,32 @@
 	\begin{block}{}
 		真の質問である可能性がある質問数:$K$	
 	\end{block}
+\end{frame}
+
+\begin{frame}{Obfuscating the Topical Intention in Enterprise Text Search \cite{pang_embellishing_2010}}
+	\begin{columns}[t]
+		\begin{column}{0.8\textwidth} % 横幅の30％
+			\includegraphics[width=\columnwidth]{rk6.png}
+		\end{column}
+	\end{columns}
+	\begin{block}{}
+		真の質問である可能性がある質問数:$K$	
+	\end{block}
+\end{frame}
+
+\begin{frame}{既存研究}
+    \begin{block}{}
+        \fontsize{8pt}{7.2}\selectfont
+        \begin{tabular}{ccc}
+        \noalign{\hrule height 1pt}
+         & 潜在意味分析手法 & 質問列の対応 \\
+        \hline
+         & LSI   &  X\\
+         & WordNet  & O  \\
+         & LDA  &  O \\
+        \noalign{\hrule height 1pt}
+        \end{tabular}
+    \end{block}
 \end{frame}
 
 \begin{frame}{ETS}
