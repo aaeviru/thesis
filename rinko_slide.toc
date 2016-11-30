@@ -1,6 +1,6 @@
 \beamer@endinputifotherversion {3.36pt}
 \beamer@sectionintoc {1}{背景紹介}{3}{0}{1}
 \beamer@sectionintoc {2}{既存研究}{15}{0}{2}
-\beamer@sectionintoc {3}{プライバシー分析}{34}{0}{3}
-\beamer@sectionintoc {4}{まとめ}{42}{0}{4}
-\beamer@sectionintoc {5}{参考文献}{44}{0}{5}
+\beamer@sectionintoc {3}{プライバシー分析}{37}{0}{3}
+\beamer@sectionintoc {4}{まとめ}{44}{0}{4}
+\beamer@sectionintoc {5}{参考文献}{46}{0}{5}

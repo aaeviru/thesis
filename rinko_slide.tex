@@ -198,7 +198,7 @@
     \end{block}
     \begin{block}{質問-トピックスコア関数:$rscore$}
 		$T$を全ての可能なトピックの集合とする．
-		質問$q$とトピック푡の関係を表す関数とは
+		質問$q$とトピック$t$の関係を表す関数とは
 		\begin{equation}
 		rscore:Q \times T \to \mathbb{R}
 		\end{equation}
@@ -218,7 +218,41 @@
 \section{既存研究}
 \begin{frame}{Providing Privacy through Plausibly Deniable Search \cite{providing2009}}
 	\begin{block}{}
-		真の質問である可能性がある質問数:$K$	
+	質問$q$をユーザーが入力した質問とする．ダミー質問生成システム$D$が$k$個の質問を含んでいる質問集合$D(q_u)=\{q_1, \dots , q_k\}$を出力しサー
+	バーに提出する．$D(q_u)$が以下の性質を持つなら，$D(q_u)$をPD-質問集合といい，$D$を$k$−否認可能検索という
+	\begin{enumerate}
+	\item $\exists q_i \in D(q_u),q_i$と$q_u$が意味的に近い
+	\item $\forall q_j \in D(q_u),D(q_j) = D(q_u)$
+	\item $\forall q_j \in D(q_u),q_j$が違うトピックに含まれる
+	\item $\forall q_j \in D(q_u),q_j$が同じような尤もらしさを持つ
+	\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Latent Semantic Indexing}
+    \begin{columns}[c]
+        \begin{column}{1.0\textwidth} % 横幅の30％
+            \includegraphics[width=\columnwidth]{photo11.png}
+		\end{column}
+    \end{columns}
+	\begin{block}{潜在的意味インデキシング}
+	\fontsize{12pt}{7.2}\selectfont
+		単語$\cdot$文書行列$A$の$(i,j)$番目の要素は$i$番目の単語が$j$番目の文章に出現した回数である　\\
+		$A$を特異値分解$A = USV^T$し、$U$、$S$、$V$	の各列ベクトルを特異値が大きい順に
+		$K$個用いて$A$の低ランク近似$A_K=U_KS_KV_{K}^T$を得る \\
+		このように低ランク分解によって、単語とトピックの関係を分析できる \\
+		$A_K$の$(i,j)$番目の要素は$i$番目の単語と$j$番目のトピックの関係を表す
+	\end{block}
+\end{frame}
+
+\begin{frame}{Providing Privacy through Plausibly Deniable Search \cite{providing2009}}
+	\begin{block}{質問-トピックスコア関数:$rscore_{LSI}$}
+		$S_K$を単語$\cdot$文書行列$A$の低ランク近似の結果とし，
+		$S_K(i,j)$を$S_K$の$(i,j)$番目の要素とする．
+		$LSI$による質問$q$とトピック$t$の関係を表す関数とは
+		\begin{equation}
+			rscore_{LSI}(q) = \sum_{w \in q}S_K(w,t)
+		\end{equation}
 	\end{block}
 \end{frame}
 
@@ -252,11 +286,11 @@
 \begin{frame}{既存研究}
     \begin{block}{}
         \fontsize{8pt}{7.2}\selectfont
-        \begin{tabular}{ccc}
+        \begin{tabular}{cccc}
         \noalign{\hrule height 1pt}
          & 潜在意味分析手法 & 質問列への対応 & 長い質問への対応  \\
         \hline
-        \cite{providing2009} & LSI   & X & X\\ 
+        \cite{providing2009} & LSI   & X & X \\ 
         \cite{embellishing2010} & WordNet  & O & O \\
         \cite{masking2014} & LDA & O & O \\
         \noalign{\hrule height 1pt}
@@ -489,22 +523,6 @@
 	\end{exampleblock}
 	\begin{block}{}
 		真の質問の単語は全部燃料電池と関係あるが、ダミー単語の意味がバラバラである \\ もし単語が意味によって分類できるなら、燃料電池と関係がある単語が他のクラスに属する単語の数より多いことが考えられる
-	\end{block}
-\end{frame}
-
-\begin{frame}{Latent Semantic Indexing}
-    \begin{columns}[c]
-        \begin{column}{1.0\textwidth} % 横幅の30％
-            \includegraphics[width=\columnwidth]{photo11.png}
-		\end{column}
-    \end{columns}
-	\begin{block}{潜在的意味インデキシング}
-	\fontsize{12pt}{7.2}\selectfont
-		単語$\cdot$文書行列$A$の$(i,j)$番目の要素は$i$番目の単語が$j$番目の文章に出現した回数である　\\
-		$A$を特異値分解$A = USV^T$し、$U$、$S$、$V$	の各列ベクトルを特異値が大きい順に
-		$K$個用いて$A$の低ランク近似$A_K=U_KS_KV_{K}^T$を得る \\
-		このように低ランク分解によって、単語とトピックの関係を分析できる \\
-		$A_K$の$(i,j)$番目の要素は$i$番目の単語と$j$番目のトピックの関係を表す
 	\end{block}
 \end{frame}
 
