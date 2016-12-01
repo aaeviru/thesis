@@ -49,7 +49,8 @@
 \renewcommand\algorithmicthen{:}
 \renewcommand\algorithmicrequire{\textbf{Input:}}
 \renewcommand\algorithmicensure{\textbf{Output:}}
-
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
 %フラットデザイン化
 \setbeamertemplate{blocks}[rounded] % Blockの影を消す
 \useinnertheme{circles} % 箇条書きをシンプルに
@@ -189,6 +190,7 @@
 \end{frame}
 
 \begin{frame}{Obfuscation Search}
+\fontsize{12pt}{7.2}\selectfont
     \begin{block}{ユニバーサル質問集合:$Q$}
 		$W$を全ての単語の集合とする．
 		ユニバーサル質問集合$Q$とは$W$の冪集合である，つまり
@@ -201,6 +203,12 @@
 		質問$q$とトピック$t$の関係を表す関数とは
 		\begin{equation}
 		rscore:Q \times T \to \mathbb{R}
+		\end{equation}
+    \end{block}
+    \begin{block}{質問間距離関数:$dist$}
+		質問$q_1$と質問$q_2$間の距離を表す関数とは
+		\begin{equation}
+		dist:Q \times Q \to \mathbb{R}
 		\end{equation}
     \end{block}
 \end{frame}
@@ -246,12 +254,19 @@
 \end{frame}
 
 \begin{frame}{Providing Privacy through Plausibly Deniable Search \cite{providing2009}}
+	\fontsize{12pt}{7.2}\selectfont
 	\begin{block}{質問-トピックスコア関数:$rscore_{LSI}$}
 		$S_K$を単語$\cdot$文書行列$A$の低ランク近似の結果とし，
 		$S_K(i,j)$を$S_K$の$(i,j)$番目の要素とする．
 		$LSI$による質問$q$とトピック$t$の関係を表す関数とは
 		\begin{equation}
-			rscore_{LSI}(q) = \sum_{w \in q}S_K(w,t)
+			rscore_{LSI}(q,t) = \sum_{w \in q}S_K(w,t)
+		\end{equation}
+	\end{block}
+	\begin{block}{質問間距離関数:$dist_{LSI}$}
+		$LSI$による質問$q_1$と質問$q_2$のを表す関数とは
+		\begin{equation}
+			dist_{LSI}(q_1,q_2) = 1-\frac{\sum_{t \in T}rscore_{LSI}(q_1,t) \cdot rscore_{LSI}(q_2,t)}{\sum_{t \in T}(rscore_{LSI}(q_1,t))^{1/2}+\sum_{t \in T}(rscore_{LSI}(q_2,t))^{1/2}}
 		\end{equation}
 	\end{block}
 \end{frame}
@@ -504,6 +519,56 @@
 			\includegraphics[width=\columnwidth]{rk13.png}
 		\end{column}
 	\end{columns}
+\end{frame}
+
+\begin{frame}{Simattack}
+\fontsize{12pt}{7.2}\selectfont
+	\begin{block}{類似度:$sim$}
+	\begin{algorithmic}[1]
+		\REQUIRE 質問$q$,ユーザープロフィール$P_u$,スムージングパラメータ:$\alpha$
+		\FOR {$q_i \in P_u$}
+		\STATE $coef[i] \leftarrow 2 \cdot |q \cap q_i| \cdot \frac{1}{|q|+|q_i|}$
+		\ENDFOR
+		\STATE $coef \gets sort(coef)$
+		\STATE $sim \gets coef[0]$
+		\FOR {$i \in [1,|P_u|]$}
+		\STATE $sim \gets \alpha \cdot coef[i] + (1 - \alpha) \cdot sim$
+		\ENDFOR
+		\ENSURE $sim$
+	\end{algorithmic}
+	\end{block}
+	\begin{block}{$simattack$}
+	\begin{algorithmic}[1]
+		\REQUIRE 質問集合$Q$,ユーザープロフィール$P_u$,スムージングパラメータ:$\alpha$
+		\STATE $q^* = \argmax_{q \in Q}sim_{q,P_u}$
+		\ENSURE $q^*$
+	\end{algorithmic}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Simattack}
+\fontsize{12pt}{7.2}\selectfont
+	\begin{block}{類似度:$sim$}
+	\begin{algorithmic}[1]
+		\REQUIRE 質問$q$,ユーザープロフィール$P_u$,スムージングパラメータ:$\alpha$
+		\FOR {$q_i \in P_u$}
+		\STATE $coef[i] \leftarrow 2 \cdot |q \cap q_i| \cdot \frac{1}{|q|+|q_i|}$
+		\ENDFOR
+		\STATE $coef \gets sort(coef)$
+		\STATE $sim \gets coef[0]$
+		\FOR {$i \in [1,|P_u|]$}
+		\STATE $sim \gets \alpha \cdot coef[i] + (1 - \alpha) \cdot sim$
+		\ENDFOR
+		\ENSURE $sim$
+	\end{algorithmic}
+	\end{block}
+	\begin{block}{$simattack$}
+	\begin{algorithmic}[1]
+		\REQUIRE 質問集合$Q$,ユーザープロフィール$P_u$,スムージングパラメータ:$\alpha$
+		\STATE $q^* = \argmax_{q \in Q}sim_{q,P_u}$
+		\ENSURE $q^*$
+	\end{algorithmic}
+	\end{block}
 \end{frame}
 
 \section{プライバシー分析}
