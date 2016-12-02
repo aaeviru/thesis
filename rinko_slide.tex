@@ -264,26 +264,86 @@
 		\end{equation}
 	\end{block}
 	\begin{block}{質問間距離関数:$dist_{LSI}$}
-		$LSI$による質問$q_1$と質問$q_2$のを表す関数とは
+		$LSI$による質問$q_1$と質問$q_2$の距離を表す関数とは
 		\begin{equation}
-			dist_{LSI}(q_1,q_2) = 1-\frac{\sum_{t \in T}rscore_{LSI}(q_1,t) \cdot rscore_{LSI}(q_2,t)}{\sum_{t \in T}(rscore_{LSI}(q_1,t))^{1/2}+\sum_{t \in T}(rscore_{LSI}(q_2,t))^{1/2}}
+			dist_{LSI}(q_1,q_2) = 1-\frac{\sum_{t \in T}rscore_{LSI}(q_1,t) \cdot rscore_{LSI}(q_2,t)}{\sum_{t \in T}(rscore_{LSI}(q_1,t^2))^{1/2}+\sum_{t \in T}(rscore_{LSI}(q_2,t)^2)^{1/2}}
+		\end{equation}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Providing Privacy through Plausibly Deniable Search \cite{providing2009}}
+	\begin{columns}[t]
+		\begin{column}{0.95\textwidth} % 横幅の30％
+			\includegraphics[width=\columnwidth]{th01.png}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Providing Privacy through Plausibly Deniable Search \cite{providing2009}}
+	\begin{block}{問題点}
+		\begin{itemize}
+			\item 	質問の長さの増加に伴って標準質問の数が指数的に増加するため，長い質問対応できない
+			\item 	真の質問ではなく，真の質問に意味的に近い標準質問を用いるため，精度と再現率が低い
+			\item 	\cite{providing2009}ではPD-質問集合を作るときは質問間で距離しか配慮していないため、
+					同じトピックについて複数検索すると真の質問が属するトピック出現回数がほかのトピックより多くなる．
+					したがって出現回数が一番多いトピックに属する質問が真の質問となる可能性が大きい．
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Embellishing Text Search Queries to Protect User Privacy \cite{embellishing2010}}
+	\begin{block}{}
+		\begin{itemize}
+			\item	質問の全体ではなく単語ごとにダミー単語を混ぜる．
+			\item	単語バケットを事前に作り，真の質問の単語と同じバケットにある他の単語をダミー単語とする．
+		\end{itemize}
+	\end{block}
+	\begin{block}{バケット作り}
+		\begin{itemize}
+			\item	同じバケットにある単語の特殊さは近いが，意味的には大きい違いがある. 
+			\item	任意の2つのバケットの全ての単語間の意味的距離の差が近い
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Wordnet}
+\fontsize{12pt}{7.2}\selectfont
+	\begin{columns}[t]
+		\begin{column}{1.0\textwidth} % 横幅の30％
+			\includegraphics[width=\columnwidth]{photo14.png}
+		\end{column}
+	\end{columns}
+	\begin{block}{}
+		単語を類義関係のセット(synset)でグループ化し、一つのsynsetが一つの概念に対応する \\
+		各synsetは上位下位関係などの関係で結ばれている
+	\end{block}
+\end{frame}
+
+\begin{frame}{Wordnet}
+	\begin{columns}[t]
+		\begin{column}{1.0\textwidth} % 横幅の30％
+			\includegraphics[width=\columnwidth]{rk15.png}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Embellishing Text Search Queries to Protect User Privacy \cite{embellishing2010}}
+	\begin{block}{単語間距離関数:$dist_{WordNet}$}
+		単語$a$の$synset$を$A$とし単語$b$の$synset$を$B$とする．
+		$synset \, A$と$synset \, B$間の最短パスを$PATH(A,B)$とする．
+		WordNetによる単語間距離関数$dist_{WordNet}$とは
+		\begin{equation}
+			dist_{WordNet}(a,b) = |PATH(A,B)|
 		\end{equation}
 	\end{block}
 \end{frame}
 
 \begin{frame}{Embellishing Text Search Queries to Protect User Privacy \cite{embellishing2010}}
-	\begin{columns}[t]
-		\begin{column}{0.8\textwidth} % 横幅の30％
-			\includegraphics[width=\columnwidth]{rk6.png}
-		\end{column}
-	\end{columns}
-	\begin{block}{}
-		真の質問である可能性がある質問数:$K$	
-	\end{block}
-\end{frame}
-
-\begin{frame}{Embellishing Text Search Queries to Protect User Privacy \cite{embellishing2010}}
-	\begin{block}{}
+	\begin{block}{問題点}
+		\begin{itemize}
+			\item 	WordNetに含まれていない専門用語が多い
+			\item 	単語バケットを作るときは単語間で距離しか配慮していない．
+		\end{itemize}
 	\end{block}
 \end{frame}
 
@@ -300,13 +360,16 @@
 
 \begin{frame}{既存研究}
     \begin{block}{}
-        \fontsize{8pt}{7.2}\selectfont
+        \fontsize{11pt}{7.2}\selectfont
+		\center
         \begin{tabular}{cccc}
         \noalign{\hrule height 1pt}
          & 潜在意味分析手法 & 質問列への対応 & 長い質問への対応  \\
         \hline
         \cite{providing2009} & LSI   & X & X \\ 
-        \cite{embellishing2010} & WordNet  & O & O \\
+		&&&\\
+        \cite{embellishing2010} & WordNet  & X & O \\
+		&&&\\
         \cite{masking2014} & LDA & O & O \\
         \noalign{\hrule height 1pt}
         \end{tabular}
@@ -459,66 +522,6 @@
 		$R \rightarrow \{ \langle1,1\rangle,\langle2,3\rangle,\langle3,4\rangle,\langle4,0\rangle \}$
 		$\rightarrow  \{ 4,2,3 \}$
 	\end{block}
-\end{frame}
-
-\begin{frame}{Wordnet}
-\fontsize{12pt}{7.2}\selectfont
-	\begin{columns}[t]
-		\begin{column}{1.0\textwidth} % 横幅の30％
-			\includegraphics[width=\columnwidth]{photo14.png}
-		\end{column}
-	\end{columns}
-	\begin{block}{}
-		単語を類義関係のセット(synset)でグループ化し、一つのsynsetが一つの概念に対応する \\
-		各synsetは上位下位関係などの関係で結ばれている
-	\end{block}
-\end{frame}
-
-\begin{frame}{バケツ作り}
-	\begin{block}{}
-		\begin{itemize}
-			\item 全てのsynsetを関係数が多い方から小さい方への順で処理する
-			\item 同じ単語を持つsynsetを隣に並べる
-			\item 反意関係，上位下位関係，全体部分関係を持つsynsetを隣に並べる
-		\end{itemize}
-	\end{block}
-\end{frame}
-
-\begin{frame}{単語列}
-	\begin{columns}[t]
-		\begin{column}{1.0\textwidth} % 横幅の30％
-			\includegraphics[width=\columnwidth]{rk11.png}
-		\end{column}
-	\end{columns}
-\end{frame}
-
-\begin{frame}{Wordnet}
-\fontsize{12pt}{7.2}\selectfont
-	\begin{columns}[t]
-		\begin{column}{1.0\textwidth} % 横幅の30％
-			\includegraphics[width=\columnwidth]{photo14.png}
-		\end{column}
-	\end{columns}
-	\begin{block}{}
-		実体/entity以外全部の名詞の上位語が唯一に存在する \\
-		上下位関係を枝とすると、Wordnet中の名詞が木の形になる
-	\end{block}
-\end{frame}
-
-\begin{frame}{Wordnet}
-	\begin{columns}[t]
-		\begin{column}{1.0\textwidth} % 横幅の30％
-			\includegraphics[width=\columnwidth]{rk15.png}
-		\end{column}
-	\end{columns}
-\end{frame}
-
-\begin{frame}{Wordnet}
-	\begin{columns}[t]
-		\begin{column}{0.8\textwidth} % 横幅の30％
-			\includegraphics[width=\columnwidth]{rk13.png}
-		\end{column}
-	\end{columns}
 \end{frame}
 
 \begin{frame}{Simattack}
