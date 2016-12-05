@@ -97,6 +97,20 @@
 	\end{block}
 \end{frame}
 
+\begin{frame}{国際特許分類}
+	\begin{exampleblock}{\center A61C 5/08A}
+	\begin{tabular}{cc}
+	セクション:A & 健康および娯楽 \\
+ 	サブセクション : 61 & 医学または獣医学:衛生学 \\
+ 	クラス: C & 歯科:口腔または歯科衛生 \\
+ 	メイングループ:5 & 歯の充填または被覆 \\
+ 	サブグループ:08 & 歯冠:その製造;口中での歯冠固定 \\
+	\end{tabular}
+	\end{exampleblock}
+	\begin{block}{}
+		全ての特許が人の手によって分類されている
+	\end{block}
+\end{frame}
 
 \begin{frame}{特許検索}
 	\begin{block}{}
@@ -137,6 +151,7 @@
 	\fontsize{14pt}{7.2}\selectfont
 	\begin{block}{}
     \begin{itemize}
+		\item 請求項から名詞を取り出し，検索質問とする
         \item 検索質問は単語(名詞)の集合である
         \item 質問に含む単語数が多い
 		\begin{itemize}
@@ -348,13 +363,29 @@
 \end{frame}
 
 \begin{frame}{On masking topical intent in keyword search \cite{masking2014}}
-	\begin{columns}[t]
-		\begin{column}{0.8\textwidth} % 横幅の30％
-			\includegraphics[width=\columnwidth]{rk6.png}
-		\end{column}
-	\end{columns}
 	\begin{block}{}
-		真の質問である可能性がある質問数:$K$	
+		\begin{itemize}
+			\item 	Hash関数を用いてダミー質問が属するトピックを決定する
+			\item	LDAを用いてトピック$t$に単語$w$の出現確率$Pr(w|t)$を計算し、$Pr(w|t)$からランダムで取り出した単語の集合をダミー質問にする
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}{latent Dirichlet allocation  \cite{latent2003}}
+	\begin{block}{}
+		\begin{itemize}
+			\item 	Hash関数を用いてダミー質問が属するトピックを決定する
+			\item	LDAを用いてトピック$t$に単語$w$の出現確率$Pr(w|t)$を計算し、$Pr(w|t)$からランダムで取り出した単語の集合をダミー質問にする
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}{On masking topical intent in keyword search \cite{masking2014}}
+	\begin{block}{問題点}
+		\begin{itemize}
+			\item 	単語数が多いデーターベースのLDA計算
+			\item	真の質問が同じトピックに属するとき対応するダミー質問も同じトピックに属するが，これだけで安全だと言えるか
+		\end{itemize}
 	\end{block}
 \end{frame}
 
@@ -376,205 +407,57 @@
     \end{block}
 \end{frame}
 
-\begin{frame}{ETS}
-	\begin{columns}[t]
-		\begin{column}{0.8\textwidth} % 横幅の30％
-			\includegraphics[width=\columnwidth]{rk7.png}
-		\end{column}
-	\end{columns}
-\end{frame}
-
-\begin{frame}{ETS}
-	\begin{columns}[t]
-		\begin{column}{0.8\textwidth} % 横幅の30％
-			\includegraphics[width=\columnwidth]{rk8.png}
-		\end{column}
-	\end{columns}
-	\begin{block}{}
-		真の質問である可能性がある質問数:$K \textcolor{red}\rightarrow K^n$	
-	\end{block}
-\end{frame}
-
-\begin{frame}{テキスト検索}
-\fontsize{12pt}{7.2}\selectfont
-		\center
-		\begin{tabular}{|c|c|}
-		\noalign{\hrule height 1pt}
-		単語 & 文章id \\
-		\hline
-		モーツァルト & $1,3$\\
-		交響曲 & $1,2,3$ \\
-		パン & $2,4$ \\
-		飛行機 & $4$ \\
-		\noalign{\hrule height 1pt}
-		\end{tabular}\\
-		\center
-		転置フィル
-	\begin{block}{}
-	ユーザー質問：モーツァルト 交響曲 \\
-	検索結果:$R = \{1,3\} \cup \{1,2,3\} = \{1,3\}$
-	\end{block}
-\end{frame}
-
-\begin{frame}{テキスト検索}
-\fontsize{12pt}{7.2}\selectfont
-		\center
-		\begin{tabular}{|c|c|}
-		\noalign{\hrule height 1pt}
-		単語 & $\langle$文章id,単語と文章の関係値$\rangle$ \\
-		\hline
-		モーツァルト & $\langle1,1\rangle,\langle3,2\rangle$\\
-		交響曲 & $\langle1,1\rangle,\langle2,3\rangle,\langle3,2\rangle$ \\
-		パン & $\langle2,1\rangle,\langle4,1\rangle$ \\
-		飛行機 & $\langle4,2\rangle$ \\
-		\noalign{\hrule height 1pt}
-		\end{tabular}\\
-		\center
-		転置フィル
-	\begin{block}{}
-	ユーザー質問：モーツァルト 交響曲 \\
-	
-	質問単語の転置リストに存在する各文章の関係値を計算する:\\
-	$\{ \langle1,1+1\rangle,\langle2,3\rangle,\langle3,2+2\rangle \} = \{ \langle1,2\rangle,\langle2,3\rangle,\langle3,4\rangle \}$\\
-	関係値により並び替える:$R = \{ 3,2,1 \}$
-	\end{block}
-\end{frame}
-
-\begin{frame}{テキスト検索}
-\fontsize{12pt}{7.2}\selectfont
-	\begin{columns}[t]
-		\begin{column}{0.8\textwidth} % 横幅の30％
-			\includegraphics[width=\columnwidth]{rk9.png}
-		\end{column}
-	\end{columns}
-	\begin{block}{}
-		単語$W_i$に対して文章$d_j$のスコア:$s_{ij}$ \\
-		質問$Q$に対して文章$d_j$のスコア:$s_{j}=\sum_{i \in Q}s_{ij}$ \\
-		スコアが上位$m$個にある文章を質問$Q$の検索結果として返す
-	\end{block}
-\end{frame}
-
-\begin{frame}{凖同型暗号}
-	\begin{Definition}[凖同型暗号]
-		二つの暗号文 $Enc(m_1), Enc (m_2)$ が与えられた時に、平文や秘密鍵なしで $Enc( m_1 \circ m_2 )$ を計算できる暗号
-	\end{Definition}
-	\begin{Example}[加算ができる凖同型暗号]
-		$E(\cdot):$ 暗号化 \, $D(\cdot):$復号 \\
-		\begin{itemize}
-			\item ランダム性:$E(m) \neq E(m)$
-			\item $ E(m_1) \cdot E (m_2) = E(m_1 + m_2) $
-			\item $ E(m)^q = E(m \cdot q) , \, q \in \mathbb{Z}^+$
-		\end{itemize}
-	\end{Example}
-\end{frame}
-
-\begin{frame}{質問検索-ETS}
-\fontsize{12pt}{7.2}\selectfont
-	\begin{minipage}[c]{0.65\textwidth}
-			\includegraphics[width=\columnwidth]{rk10.png}
-	\end{minipage}%
-	\begin{minipage}[c]{0.25\textwidth}
-			$$\,\,u_i^{(k)}=\left\{
-			\begin{aligned}
-			0& \, i,k \notin Q^* \\
-			1& \, i,k \in Q^*
-			\end{aligned}
-			\right.
-			$$
-	\end{minipage}
-	\begin{block}{}
-		単語$W_i^{(k)}$に対して文章$d_j$のスコア:$s'_{ikj}=E(u_i^{(k)})^{(s_{ikj})}=E(u_i \cdot (s_{ikj}))$ \\
-		質問$Q$に対して文章$d_j$のスコア:$s_{j}=\prod_{i,k \in Q}s'_{ikj}=E(\sum_{i,k \in Q^*}s_{ikj})$ \\
-		スコアが$0$ではない文章を全部返す
-	\end{block}
-\end{frame}
-
-\begin{frame}{質問検索-ETS}
-	\begin{exampleblock}{}
-      		 \begin{columns}[c]
-           		\begin{column}{0.3\textwidth} % 横幅の30％
-               		\includegraphics[width=\columnwidth]{rk16.png}
-		   	\end{column}
-       		\begin{column}{0.68\textwidth} % 横幅の30％
-\fontsize{9pt}{7.2}\selectfont
-				\begin{tabular}{|c|c|}
-				\noalign{\hrule height 1pt}
-				単語 & $\langle$文章id,単語と文章の関係値$\rangle$ \\
-				\hline
-				モーツァルト & $\langle1,1\rangle,\langle3,2\rangle$\\
-				交響曲 & $\langle1,1\rangle,\langle2,3\rangle,\langle3,2\rangle$ \\
-				パン & $\langle2,1\rangle,\langle4,1\rangle$ \\
-				飛行機 & $\langle4,2\rangle$ \\
-				\noalign{\hrule height 1pt}
-				\end{tabular}\\
-			\end{column}
-		\end{columns}
-		ユーザー質問：モーツァルト 交響曲
-	\end{exampleblock}
-	\begin{block}{}
-	\fontsize{10pt}{7.2}\selectfont
-   		質問:$\{ \langle$モーツァルト$,E(1)\rangle,\langle$飛行機$,E(0)\rangle,\langle$パン$,E(0)\rangle,\langle$交響曲$,E(1)\rangle \}$\\
-		質問単語の転置リストに存在する各文章の暗号化した関係値を計算する:\\
-		$R = \{ \langle1,E(1)^1*E(0)^1\rangle,\langle2,E(1)^3*E(0)^1\rangle,\langle3,E(1)^2+E(1)^2\rangle,\langle4,E(0)^1+E(0)^2\rangle \} $\\
-		$= \{ \langle1,E(1*1+0*1)\rangle,\langle2,E(1*3+0*1)\rangle,\langle3,E(1*2+1*2)\rangle,\langle4,E(0*1+0*2)\rangle \} $\\
-		$= \{ \langle1,E(1)\rangle,\langle2,E(3)\rangle,\langle3,E(4)\rangle,\langle4,E(0)\rangle \}$\\
-		質問者が暗号化した関係値を復号し，並び替える:\\
-		$R \rightarrow \{ \langle1,1\rangle,\langle2,3\rangle,\langle3,4\rangle,\langle4,0\rangle \}$
-		$\rightarrow  \{ 4,2,3 \}$
-	\end{block}
-\end{frame}
-
-\begin{frame}{Simattack}
-\fontsize{12pt}{7.2}\selectfont
-	\begin{block}{類似度:$sim$}
-	\begin{algorithmic}[1]
-		\REQUIRE 質問$q$,ユーザープロフィール$P_u$,スムージングパラメータ:$\alpha$
-		\FOR {$q_i \in P_u$}
-		\STATE $coef[i] \leftarrow 2 \cdot |q \cap q_i| \cdot \frac{1}{|q|+|q_i|}$
-		\ENDFOR
-		\STATE $coef \gets sort(coef)$
-		\STATE $sim \gets coef[0]$
-		\FOR {$i \in [1,|P_u|]$}
-		\STATE $sim \gets \alpha \cdot coef[i] + (1 - \alpha) \cdot sim$
-		\ENDFOR
-		\ENSURE $sim$
-	\end{algorithmic}
-	\end{block}
-	\begin{block}{$simattack$}
-	\begin{algorithmic}[1]
-		\REQUIRE 質問集合$Q$,ユーザープロフィール$P_u$,スムージングパラメータ:$\alpha$
-		\STATE $q^* = \argmax_{q \in Q}sim_{q,P_u}$
-		\ENSURE $q^*$
-	\end{algorithmic}
-	\end{block}
-\end{frame}
-
-\begin{frame}{Simattack}
-\fontsize{12pt}{7.2}\selectfont
-	\begin{block}{類似度:$sim$}
-	\begin{algorithmic}[1]
-		\REQUIRE 質問$q$,ユーザープロフィール$P_u$,スムージングパラメータ:$\alpha$
-		\FOR {$q_i \in P_u$}
-		\STATE $coef[i] \leftarrow 2 \cdot |q \cap q_i| \cdot \frac{1}{|q|+|q_i|}$
-		\ENDFOR
-		\STATE $coef \gets sort(coef)$
-		\STATE $sim \gets coef[0]$
-		\FOR {$i \in [1,|P_u|]$}
-		\STATE $sim \gets \alpha \cdot coef[i] + (1 - \alpha) \cdot sim$
-		\ENDFOR
-		\ENSURE $sim$
-	\end{algorithmic}
-	\end{block}
-	\begin{block}{$simattack$}
-	\begin{algorithmic}[1]
-		\REQUIRE 質問集合$Q$,ユーザープロフィール$P_u$,スムージングパラメータ:$\alpha$
-		\STATE $q^* = \argmax_{q \in Q}sim_{q,P_u}$
-		\ENSURE $q^*$
-	\end{algorithmic}
-	\end{block}
-\end{frame}
-
 \section{プライバシー分析}
+\begin{frame}{Simattack}
+\fontsize{12pt}{7.2}\selectfont
+	\begin{block}{類似度:$sim$}
+	\begin{algorithmic}[1]
+		\REQUIRE 質問$q$,ユーザープロフィール$P_u$,スムージングパラメータ:$\alpha$
+		\FOR {$q_i \in P_u$}
+		\STATE $coef[i] \leftarrow 2 \cdot |q \cap q_i| \cdot \frac{1}{|q|+|q_i|}$
+		\ENDFOR
+		\STATE $coef \gets sort(coef)$
+		\STATE $sim \gets coef[0]$
+		\FOR {$i \in [1,|P_u|]$}
+		\STATE $sim \gets \alpha \cdot coef[i] + (1 - \alpha) \cdot sim$
+		\ENDFOR
+		\ENSURE $sim$
+	\end{algorithmic}
+	\end{block}
+	\begin{block}{$simattack$}
+	\begin{algorithmic}[1]
+		\REQUIRE 質問集合$Q$,ユーザープロフィール$P_u$,スムージングパラメータ:$\alpha$
+		\STATE $q^* = \argmax_{q \in Q}sim_{q,P_u}$
+		\ENSURE $q^*$
+	\end{algorithmic}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Simattack}
+\fontsize{12pt}{7.2}\selectfont
+	\begin{block}{類似度:$sim$}
+	\begin{algorithmic}[1]
+		\REQUIRE 質問$q$,ユーザープロフィール$P_u$,スムージングパラメータ:$\alpha$
+		\FOR {$q_i \in P_u$}
+		\STATE $coef[i] \leftarrow 2 \cdot |q \cap q_i| \cdot \frac{1}{|q|+|q_i|}$
+		\ENDFOR
+		\STATE $coef \gets sort(coef)$
+		\STATE $sim \gets coef[0]$
+		\FOR {$i \in [1,|P_u|]$}
+		\STATE $sim \gets \alpha \cdot coef[i] + (1 - \alpha) \cdot sim$
+		\ENDFOR
+		\ENSURE $sim$
+	\end{algorithmic}
+	\end{block}
+	\begin{block}{$simattack$}
+	\begin{algorithmic}[1]
+		\REQUIRE 質問集合$Q$,ユーザープロフィール$P_u$,スムージングパラメータ:$\alpha$
+		\STATE $q^* = \argmax_{q \in Q}sim_{q,P_u}$
+		\ENSURE $q^*$
+	\end{algorithmic}
+	\end{block}
+\end{frame}
+
 \begin{frame}{クエリ分析}
 	\begin{exampleblock}{}
 	\fontsize{5pt}{7.2}\selectfont
@@ -591,21 +474,6 @@
 	\end{exampleblock}
 	\begin{block}{}
 		真の質問の単語は全部燃料電池と関係あるが、ダミー単語の意味がバラバラである \\ もし単語が意味によって分類できるなら、燃料電池と関係がある単語が他のクラスに属する単語の数より多いことが考えられる
-	\end{block}
-\end{frame}
-
-\begin{frame}{国際特許分類}
-	\begin{exampleblock}{\center A61C 5/08A}
-	\begin{tabular}{cc}
-	セクション:A & 健康および娯楽 \\
- 	サブセクション : 61 & 医学または獣医学:衛生学 \\
- 	クラス: C & 歯科:口腔または歯科衛生 \\
- 	メイングループ:5 & 歯の充填または被覆 \\
- 	サブグループ:08 & 歯冠:その製造;口中での歯冠固定 \\
-	\end{tabular}
-	\end{exampleblock}
-	\begin{block}{}
-		今回は同じ分類に属する全部の文章を1文章としてLSIを行った
 	\end{block}
 \end{frame}
 

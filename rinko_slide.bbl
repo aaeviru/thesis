@@ -1,5 +1,10 @@
 \begin{thebibliography}{PDX10}
 
+\bibitem[BNJ03]{latent2003}
+David~M. Blei, Andrew~Y. Ng, and Michael~I. Jordan.
+\newblock Latent dirichlet allocation.
+\newblock {\em Journal of machine Learning research}, 3(Jan):993--1022, 2003.
+
 \bibitem[MC09]{providing2009}
 M.~Murugesan and C.~Clifton.
 \newblock Providing {Privacy} through {Plausibly} {Deniable} {Search}.
