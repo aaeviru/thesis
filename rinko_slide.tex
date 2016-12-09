@@ -389,13 +389,38 @@
 	\end{block}
 \end{frame}
 
+\begin{frame}{Simattack \cite{simattack2016}}
+\fontsize{12pt}{7.2}\selectfont
+	\begin{block}{類似度:$sim$}
+	\begin{algorithmic}[1]
+		\REQUIRE 質問$q$,ユーザープロフィール$P_u$,スムージングパラメータ:$\alpha$
+		\FOR {$q_i \in P_u$}
+		\STATE $coef[i] \leftarrow 2 \cdot |q \cap q_i| \cdot \frac{1}{|q|+|q_i|}$
+		\ENDFOR
+		\STATE $coef \gets sort(coef)$
+		\STATE $sim \gets coef[0]$
+		\FOR {$i \in [1,|P_u|]$}
+		\STATE $sim \gets \alpha \cdot coef[i] + (1 - \alpha) \cdot sim$
+		\ENDFOR
+		\ENSURE $sim$
+	\end{algorithmic}
+	\end{block}
+	\begin{block}{$simattack$}
+	\begin{algorithmic}[1]
+		\REQUIRE 質問集合$Q$,ユーザープロフィール$Pu$,スムージングパラメータ:$\alpha$
+		\STATE $q^* = \argmax_{q \in Q}sim_{q,Pu}$
+		\ENSURE $q^*$
+	\end{algorithmic}
+	\end{block}
+\end{frame}
+
 \begin{frame}{既存研究}
     \begin{block}{}
         \fontsize{11pt}{7.2}\selectfont
 		\center
         \begin{tabular}{cccc}
         \noalign{\hrule height 1pt}
-         & 潜在意味分析手法 & 質問列への対応 & 長い質問への対応  \\
+         & 潜在意味分析手法 & 質問列の対応 & 長い質問の対応  \\
         \hline
         \cite{providing2009} & LSI   & X & X \\ 
 		&&&\\
@@ -408,51 +433,25 @@
 \end{frame}
 
 \section{プライバシー分析}
-\begin{frame}{Simattack}
+\begin{frame}{Simattack New}
 \fontsize{12pt}{7.2}\selectfont
-	\begin{block}{類似度:$sim$}
+	\begin{block}{$simattack_{new}$}
 	\begin{algorithmic}[1]
-		\REQUIRE 質問$q$,ユーザープロフィール$P_u$,スムージングパラメータ:$\alpha$
-		\FOR {$q_i \in P_u$}
-		\STATE $coef[i] \leftarrow 2 \cdot |q \cap q_i| \cdot \frac{1}{|q|+|q_i|}$
+		\REQUIRE 質問集合列$\hat{Q}=\{ Q_1,Q_2, \dots , Q_n\}$,スムージングパラメータ:$\alpha$
+		\FOR {$j \in |Q_1|$}
+			\STATE $\hat{Pu}[j] = Q_1[j]$
+			\STATE $\hat{Put}[j] = \Phi$
+			\STATE $d[j] = 0$
 		\ENDFOR
-		\STATE $coef \gets sort(coef)$
-		\STATE $sim \gets coef[0]$
-		\FOR {$i \in [1,|P_u|]$}
-		\STATE $sim \gets \alpha \cdot coef[i] + (1 - \alpha) \cdot sim$
+		\FOR {$i \in [2,n]$}
+			\FOR {$j \in |Q_i|$}
+				\STATE $\hat{Put}[j] = \argmax_{Pu \in \hat{Put}}sim_{Q_i[j],\hat{Put}[j]}$
+			\ENDFOR
+			\STATE $q^*_i = \argmin_{Q_i[j] \in Q_i}sim_{Q_i[j],\hat{Put}[j]}$
+			\FOR {$j \in |Q_i|$}
+				\STATE $\hat{Pu}[j] = \hat{Put}[j] \cap Q_i[j]$
+			\ENDFOR
 		\ENDFOR
-		\ENSURE $sim$
-	\end{algorithmic}
-	\end{block}
-	\begin{block}{$simattack$}
-	\begin{algorithmic}[1]
-		\REQUIRE 質問集合$Q$,ユーザープロフィール$P_u$,スムージングパラメータ:$\alpha$
-		\STATE $q^* = \argmax_{q \in Q}sim_{q,P_u}$
-		\ENSURE $q^*$
-	\end{algorithmic}
-	\end{block}
-\end{frame}
-
-\begin{frame}{Simattack}
-\fontsize{12pt}{7.2}\selectfont
-	\begin{block}{類似度:$sim$}
-	\begin{algorithmic}[1]
-		\REQUIRE 質問$q$,ユーザープロフィール$P_u$,スムージングパラメータ:$\alpha$
-		\FOR {$q_i \in P_u$}
-		\STATE $coef[i] \leftarrow 2 \cdot |q \cap q_i| \cdot \frac{1}{|q|+|q_i|}$
-		\ENDFOR
-		\STATE $coef \gets sort(coef)$
-		\STATE $sim \gets coef[0]$
-		\FOR {$i \in [1,|P_u|]$}
-		\STATE $sim \gets \alpha \cdot coef[i] + (1 - \alpha) \cdot sim$
-		\ENDFOR
-		\ENSURE $sim$
-	\end{algorithmic}
-	\end{block}
-	\begin{block}{$simattack$}
-	\begin{algorithmic}[1]
-		\REQUIRE 質問集合$Q$,ユーザープロフィール$P_u$,スムージングパラメータ:$\alpha$
-		\STATE $q^* = \argmax_{q \in Q}sim_{q,P_u}$
 		\ENSURE $q^*$
 	\end{algorithmic}
 	\end{block}

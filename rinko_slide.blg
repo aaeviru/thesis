@@ -3,44 +3,49 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: rinko_slide.aux
 The style file: alpha.bst
 Database file #1: thesis.bib
-You've used 4 entries,
+Repeated entry---line 72 of file thesis.bib
+ : @article{simattack2016
+ :                       ,
+I'm skipping whatever remains of this entry
+You've used 5 entries,
             2543 wiz_defined-function locations,
-            587 strings with 5178 characters,
-and the built_in function-call counts, 2046 in all, are:
-= -- 218
-> -- 88
+            593 strings with 5414 characters,
+and the built_in function-call counts, 2558 in all, are:
+= -- 262
+> -- 133
 < -- 2
-+ -- 30
-- -- 30
-* -- 150
-:= -- 323
-add.period$ -- 14
-call.type$ -- 4
-change.case$ -- 26
-chr.to.int$ -- 4
-cite$ -- 4
-duplicate$ -- 81
-empty$ -- 150
-format.name$ -- 34
-if$ -- 435
++ -- 47
+- -- 47
+* -- 199
+:= -- 419
+add.period$ -- 17
+call.type$ -- 5
+change.case$ -- 37
+chr.to.int$ -- 5
+cite$ -- 5
+duplicate$ -- 95
+empty$ -- 174
+format.name$ -- 51
+if$ -- 529
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 4
-newline$ -- 23
-num.names$ -- 12
-pop$ -- 21
+missing$ -- 5
+newline$ -- 29
+num.names$ -- 15
+pop$ -- 29
 preamble$ -- 1
-purify$ -- 30
+purify$ -- 42
 quote$ -- 0
-skip$ -- 74
+skip$ -- 83
 stack$ -- 0
-substring$ -- 145
-swap$ -- 23
+substring$ -- 155
+swap$ -- 24
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 32
+type$ -- 40
 warning$ -- 0
-while$ -- 22
-width$ -- 6
-write$ -- 57
+while$ -- 26
+width$ -- 8
+write$ -- 71
+(There was 1 error message)
