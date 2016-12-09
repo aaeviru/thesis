@@ -78,31 +78,25 @@
 \headcommand {\beamer@framepages {34}{34}}
 \headcommand {\slideentry {3}{0}{4}{35/35}{}{0}}
 \headcommand {\beamer@framepages {35}{35}}
-\headcommand {\slideentry {3}{0}{5}{36/36}{}{0}}
+\headcommand {\sectionentry {4}{まとめ}{36}{まとめ}{0}}
+\headcommand {\beamer@sectionpages {32}{35}}
+\headcommand {\beamer@subsectionpages {32}{35}}
+\headcommand {\slideentry {4}{0}{1}{36/36}{}{0}}
 \headcommand {\beamer@framepages {36}{36}}
-\headcommand {\slideentry {3}{0}{6}{37/37}{}{0}}
+\headcommand {\slideentry {4}{0}{2}{37/37}{}{0}}
 \headcommand {\beamer@framepages {37}{37}}
-\headcommand {\slideentry {3}{0}{7}{38/38}{}{0}}
+\headcommand {\sectionentry {5}{参考文献}{38}{参考文献}{0}}
+\headcommand {\beamer@sectionpages {36}{37}}
+\headcommand {\beamer@subsectionpages {36}{37}}
+\headcommand {\slideentry {5}{0}{1}{38/38}{}{0}}
 \headcommand {\beamer@framepages {38}{38}}
-\headcommand {\sectionentry {4}{まとめ}{39}{まとめ}{0}}
-\headcommand {\beamer@sectionpages {32}{38}}
-\headcommand {\beamer@subsectionpages {32}{38}}
-\headcommand {\slideentry {4}{0}{1}{39/39}{}{0}}
+\headcommand {\sectionentry {6}{\translate {References}}{39}{\translate {References}}{0}}
+\headcommand {\beamer@sectionpages {38}{38}}
+\headcommand {\beamer@subsectionpages {38}{38}}
+\headcommand {\slideentry {6}{0}{0}{39/39}{}{0}}
 \headcommand {\beamer@framepages {39}{39}}
-\headcommand {\slideentry {4}{0}{2}{40/40}{}{0}}
-\headcommand {\beamer@framepages {40}{40}}
-\headcommand {\sectionentry {5}{参考文献}{41}{参考文献}{0}}
-\headcommand {\beamer@sectionpages {39}{40}}
-\headcommand {\beamer@subsectionpages {39}{40}}
-\headcommand {\slideentry {5}{0}{1}{41/41}{}{0}}
-\headcommand {\beamer@framepages {41}{41}}
-\headcommand {\sectionentry {6}{\translate {References}}{42}{\translate {References}}{0}}
-\headcommand {\beamer@sectionpages {41}{41}}
-\headcommand {\beamer@subsectionpages {41}{41}}
-\headcommand {\slideentry {6}{0}{0}{42/42}{}{0}}
-\headcommand {\beamer@framepages {42}{42}}
-\headcommand {\beamer@partpages {1}{42}}
-\headcommand {\beamer@subsectionpages {41}{42}}
-\headcommand {\beamer@sectionpages {41}{42}}
-\headcommand {\beamer@documentpages {42}}
-\headcommand {\def \inserttotalframenumber {42}}
+\headcommand {\beamer@partpages {1}{39}}
+\headcommand {\beamer@subsectionpages {38}{39}}
+\headcommand {\beamer@sectionpages {38}{39}}
+\headcommand {\beamer@documentpages {39}}
+\headcommand {\def \inserttotalframenumber {39}}

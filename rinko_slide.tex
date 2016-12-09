@@ -457,111 +457,25 @@
 	\end{block}
 \end{frame}
 
-\begin{frame}{クエリ分析}
-	\begin{exampleblock}{}
-	\fontsize{5pt}{7.2}\selectfont
-		\begin{tabular}{cccccccccccccccc}
-		\noalign{\hrule height 1pt}
-		メタノール & 水蒸気 & 反応 & 水素 & 透過 & 膜 & $\dots$ & 燃料 \\
-		\hline
-		衡平 & グンバイムシ & 水力 & 上唇 & ドアロック & 沈殿 & $\dots$  & ベーキングパウダー \\
-		ルシタニア & ファースト & テアトル & 水素 & 認知心理学 & 膜 & $\dots$  & 運転者 \\
-		メタノール & 水蒸気 & 反応 & 長引かせること & 透過 & 組織図 & $\dots$  & 燃料 \\
-		分限者 & カランツ & 意味合 & 発明品 & イーサネットケーブル & 原稿 & $\dots$  & 黒泥土 \\
-		\noalign{\hrule height 1pt}
-		\end{tabular}
-	\end{exampleblock}
-	\begin{block}{}
-		真の質問の単語は全部燃料電池と関係あるが、ダミー単語の意味がバラバラである \\ もし単語が意味によって分類できるなら、燃料電池と関係がある単語が他のクラスに属する単語の数より多いことが考えられる
-	\end{block}
-\end{frame}
-
 \begin{frame}{メイントピック攻撃}
-	\begin{exampleblock}{}
-	\fontsize{5pt}{7.2}\selectfont
-		\begin{tabular}{cccccccccccccccc}
-		\noalign{\hrule height 1pt}
-		メタノール & 水蒸気 & 反応 & 水素 & 透過 & 膜 & $\dots$ & 燃料 \\
-		\hline
-		衡平 & グンバイムシ & 水力 & 上唇 & ドアロック & 沈殿 & $\dots$  & ベーキングパウダー \\
-		ルシタニア & ファースト & テアトル & 水素 & 認知心理学 & 膜 & $\dots$  & 運転者 \\
-		メタノール & 水蒸気 & 反応 & 長引かせること & 透過 & 組織図 & $\dots$  & 燃料 \\
-		分限者 & カランツ & 意味合 & 発明品 & イーサネットケーブル & 原稿 & $\dots$  & 黒泥土 \\
-		\noalign{\hrule height 1pt}
-		\end{tabular}
-	\end{exampleblock}
-	\begin{block}{メイントピック攻撃}
-			\begin{itemize}
-			\item ダミーを含んでいる質問のメイントピックを確定する
-			\item 各単語バケツの中，メイントピックと一番関係強い単語を真の質問単語にする
-		\end{itemize}
+	\begin{block}{$maintopic attack$}
+	\begin{algorithmic}[1]
+		\REQUIRE 質問集合$Q$
+		\IF {$Q = \{q_1,q_2 , \dots , q_{|Q|} \} $}
+			\STATE $q^* = \argmax_q \max_t rscore_{LSA}(q,t)$
+		\ELSIF {$Q = \{w_1^1,w_1^2, \dots , w_1^k , \dots , w_n^k\}$}
+			\STATE $t^* = \argmax_t rscore_{LSA}(Q,t)$
+			\FOR {$i \in \{1,2, \dots , n\}$}
+				\STATE $w_i^* = \argmax_{w_i^j} rscore_{LSA}(w_i^j,t^*)$
+			\ENDFOR
+			\STATE $q^* = \{ w_1^*,w_2^*, \dots , w_n^*\}$
+		\ENDIF
+		\ENSURE $q^*$
+	\end{algorithmic}
 	\end{block}
 \end{frame}
 
-\begin{frame}{メイントピック攻撃:例}
-	\begin{exampleblock}{}
-      		 \begin{columns}[c]
-           		\begin{column}{0.3\textwidth} % 横幅の30％
-               		\includegraphics[width=\columnwidth]{rk16.png}
-		   	\end{column}
-       		\begin{column}{0.68\textwidth} % 横幅の30％
-\fontsize{9pt}{7.2}\selectfont
-				\begin{tabular}{|c|c|c|c|}
-				\noalign{\hrule height 1pt}
-				  & $t_1$(食べ物) & $t_2$(音楽) & $t_3$(交通手段) \\
-				\noalign{\hrule height 1pt}
-				$w_1$(モーツァルト) & 0 & 1 & 0 \\
-				\noalign{\hrule height 1pt}
-				$w_2$(交響曲) & 0 & 1.5 & 0 \\
-				\noalign{\hrule height 1pt}
-				$w_3$(パン) & 1.5 & 0 & 0 \\
-				\noalign{\hrule height 1pt}
-				$w_4$(飛行機) & 0 & 0 & 1 \\
-				\noalign{\hrule height 1pt}
-				\end{tabular}
-			\end{column}
-		\end{columns}
-		ユーザー質問：モーツァルト 交響曲
-	\end{exampleblock}
-	\begin{block}{}
-   		$\ell_Q = \ell_{w_1} + \ell_{w_2} + \ell_{w_3} + \ell_{w_4} = (1.5,2.5,1)$ \\
-   		$Maintopic = argmax_t \ell_Q[t] = t_2 $
-	\end{block}
-\end{frame}
-
-\begin{frame}{メイントピック攻撃:例}
-	\begin{exampleblock}{}
-      		 \begin{columns}[c]
-           		\begin{column}{0.3\textwidth} % 横幅の30％
-               		\includegraphics[width=\columnwidth]{rk16.png}
-		   	\end{column}
-       		\begin{column}{0.68\textwidth} % 横幅の30％
-\fontsize{9pt}{7.2}\selectfont
-				\begin{tabular}{|c|c|c|c|}
-				\noalign{\hrule height 1pt}
-				  & $t_1$(食べ物) & $t_2$(音楽) & $t_3$(交通手段) \\
-				\noalign{\hrule height 1pt}
-				$w_1$(モーツァルト) & 0 & 1 & 0 \\
-				\noalign{\hrule height 1pt}
-				$w_2$(交響曲) & 0 & 1.5 & 0 \\
-				\noalign{\hrule height 1pt}
-				$w_3$(パン) & 1.5 & 0 & 0 \\
-				\noalign{\hrule height 1pt}
-				$w_4$(飛行機) & 0 & 0 & 1 \\
-				\noalign{\hrule height 1pt}
-				\end{tabular}
-			\end{column}
-		\end{columns}
-		ユーザー質問：モーツァルト 交響曲
-	\end{exampleblock}
-	\begin{block}{}
-   		$ \ell_{w_1}[t_2] = 1 > \ell_{w_4}[t_2] = 0 $ \\
-   		$ \ell_{w_3}[t_2] = 0 < \ell_{w_2}[t_2] = 1.5 $ \\
-   		$Q^* = \{$モーツァルト,交響曲$\} $
-	\end{block}
-\end{frame}
-
-\begin{frame}{プライバシー分析}
+\begin{frame}{実験}
 	\begin{center}
 		\begin{tabular}{|c|c|}
 		\noalign{\hrule height 1pt}
@@ -595,112 +509,3 @@
 
 \end{document}
 
-
-\begin{frame}{主意味攻撃}
-	\begin{exampleblock}{}
-	\fontsize{5pt}{7.2}\selectfont
-		\begin{tabular}{cccccccccccccccc}
-		\noalign{\hrule height 1pt}
-		メタノール & 水蒸気 & 反応 & 水素 & 透過 & 膜 & $\dots$ & 燃料 \\
-		\hline
-		衡平 & グンバイムシ & 水力 & 上唇 & ドアロック & 沈殿 & $\dots$  & ベーキングパウダー \\
-		ルシタニア & ファースト & テアトル & 水素 & 認知心理学 & 膜 & $\dots$  & 運転者 \\
-		メタノール & 水蒸気 & 反応 & 長引かせること & 透過 & 組織図 & $\dots$  & 燃料 \\
-		分限者 & カランツ & 意味合 & 発明品 & イーサネットケーブル & 原稿 & $\dots$  & 黒泥土 \\
-		\noalign{\hrule height 1pt}
-		\end{tabular}
-	\end{exampleblock}
-	\begin{block}{主意味攻撃}
-	\fontsize{12pt}{7.2}\selectfont
-
-	\end{block}
-\end{frame}
-
-\begin{frame}{Prive Information Retrieval\cite{ostrovsky_survey_2007}}
-	\begin{columns}[t]
-		\begin{column}{0.8\textwidth} % 横幅の30％
-			\includegraphics[width=\columnwidth]{rk5.png}
-		\end{column}
-	\end{columns}
-	\begin{block}{} 
-		\begin{itemize}
-			\item 暗号などの手法を用いて質問の内容を完全に隠す
-		\end{itemize}
-	\end{block}
-\end{frame}
-
-\begin{frame}{凖同型暗号}
-\fontsize{12pt}{7.2}\selectfont
-    \begin{columns}[t]
-        \begin{column}{0.5\textwidth}
-			\begin{block}{ユーザー} 
-			\begin{columns}[t]
-				\begin{column}{0.8\textwidth}
-				\begin{block}{質問生成}
-				\begin{algorithmic}[1]
-					\STATE Input:$i^*,n$
-					\FOR{$i = 1, \dots, n$}
-					\IF{$i == i^*$}
-					\STATE {$ q_i = Enc(1)$}
-					\ELSE
-					\STATE{$ q_i =Enc(0)$}
-					\ENDIF
-					\ENDFOR
-					\RETURN $Q = \{q_1, \dots, q_n\}$
-				\end{algorithmic}
-				\end{block}
-				\begin{block}{復号}
-				\begin{algorithmic}[1]
-					\STATE input:$R$
-					\RETURN $Dec(R)$
-				\end{algorithmic}
-				\end{block}
-				\end{column}
-			\end{columns}
-			\end{block}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-			\begin{block}{サーバー} 
-			\begin{columns}[t]
-				\begin{column}{0.8\textwidth}
-				\begin{block}{結果計算}
-				\begin{algorithmic}[1]
-					\STATE Input:$Q,\{x_1, \dots, x_n \}$
-					\STATE $R = 0$
-					\FOR{$i = 1, \dots, n$}
-					\STATE $R = R \cdot q_i^{x_i}$
-					\ENDFOR
-					\RETURN $R$
-				\end{algorithmic}
-				\end{block}
-				\end{column}
-			\end{columns}
-			\end{block}
-			\begin{block}{Note}
-				$m_1 = m_2 \nRightarrow Enc(m_1) = Enc(m_2)$ \\
-				$Dec(R) = \sum_{x_i = 1}Dec(q_i) = x_{i^*}$
-			\end{block}
-        \end{column}
-    \end{columns}
-\end{frame}
-
-\begin{frame}{性能}
-	\begin{columns}[t]
-	\begin{column}{0.8\textwidth}
-	\begin{exampleblock}{}
-    \begin{tabular}{cccc}
-    \noalign{\hrule height 1pt}
-     & OBS & OBS+PIR & PIR  \\
-    \hline
-    サーバーの協力 & 不要 & ? & 必要 \\
-    安全性 & 弱い & ? & 強い \\
-    スピード & 速い & ? & 遅い \\
-    \noalign{\hrule height 1pt}
-    \end{tabular}
-	\end{exampleblock}
-	\end{column}
-	\end{columns}
-	\begin{block}{}
-		安全性はOBSより強い、スピードはPIRより速い中間手法がほしい
-	\end{block}
-\end{frame}

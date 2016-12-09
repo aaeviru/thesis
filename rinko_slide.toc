@@ -2,5 +2,5 @@
 \beamer@sectionintoc {1}{背景紹介}{3}{0}{1}
 \beamer@sectionintoc {2}{既存研究}{16}{0}{2}
 \beamer@sectionintoc {3}{プライバシー分析}{32}{0}{3}
-\beamer@sectionintoc {4}{まとめ}{39}{0}{4}
-\beamer@sectionintoc {5}{参考文献}{41}{0}{5}
+\beamer@sectionintoc {4}{まとめ}{36}{0}{4}
+\beamer@sectionintoc {5}{参考文献}{38}{0}{5}
