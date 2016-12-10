@@ -389,7 +389,7 @@
 	\end{block}
 \end{frame}
 
-\begin{frame}{Simattack \cite{simattack2016}}
+\begin{frame}{SimAttack \cite{simattack2016}}
 \fontsize{12pt}{7.2}\selectfont
 	\begin{block}{類似度:$sim$}
 	\begin{algorithmic}[1]
@@ -405,7 +405,7 @@
 		\ENSURE $sim$
 	\end{algorithmic}
 	\end{block}
-	\begin{block}{$simattack$}
+	\begin{block}{$SimAttack$}
 	\begin{algorithmic}[1]
 		\REQUIRE 質問集合$Q$,ユーザープロフィール$Pu$,スムージングパラメータ:$\alpha$
 		\STATE $q^* = \argmax_{q \in Q}sim_{q,Pu}$
@@ -432,10 +432,27 @@
     \end{block}
 \end{frame}
 
+\section{提案手法}
+\begin{frame}{単語ベクトル}
+    \begin{block}{}
+		$T$を全てのトピックの集合とし$W$を全て単語の集合とする
+		トピック$t$の単語ベクトル$l_t$とは
+		\begin{equation}
+		\begin{aligned}
+			& l_t  = \{w_1,w_2, \dots , w_{|W|}\}, \\
+			& \forall w \in l_t, w \in W \\
+			& \forall  1 \leq i \neq j \leq, w_i \neq w_j \\
+			& \forall 1 \leq i < j \leq |W|,rscore(w_i,t) \geq rscore(w_j,t) 
+		\end{aligned}
+		\end{equation}
+    \end{block}
+\end{frame}
+
+
 \section{プライバシー分析}
-\begin{frame}{Simattack New}
+\begin{frame}{SimAttack New}
 \fontsize{12pt}{7.2}\selectfont
-	\begin{block}{$simattack_{new}$}
+	\begin{block}{$SimAttack_{New}$}
 	\begin{algorithmic}[1]
 		\REQUIRE 質問集合列$\hat{Q}=\{ Q_1,Q_2, \dots , Q_n\}$,スムージングパラメータ:$\alpha$
 		\FOR {$j \in |Q_1|$}
@@ -458,7 +475,7 @@
 \end{frame}
 
 \begin{frame}{メイントピック攻撃}
-	\begin{block}{$maintopic attack$}
+	\begin{block}{$Main Topic Attack$}
 	\begin{algorithmic}[1]
 		\REQUIRE 質問集合$Q$
 		\IF {$Q = \{q_1,q_2 , \dots , q_{|Q|} \} $}
