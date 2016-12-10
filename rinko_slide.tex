@@ -434,8 +434,8 @@
 
 \section{提案手法}
 \begin{frame}{単語ベクトル}
-    \begin{block}{}
-		$T$を全てのトピックの集合とし$W$を全て単語の集合とする
+    \begin{block}{単語ベクトル$l_t$}
+		$T$を全てのトピックの集合とし$W$を全て単語の集合とする．
 		トピック$t$の単語ベクトル$l_t$とは
 		\begin{equation}
 		\begin{aligned}
@@ -445,6 +445,23 @@
 			& \forall 1 \leq i < j \leq |W|,rscore(w_i,t) \geq rscore(w_j,t) 
 		\end{aligned}
 		\end{equation}
+    \end{block}
+\end{frame}
+
+\begin{frame}{トピック間の距離}
+    \begin{block}{トピック間の$cos$距離関数$dist_{cos}$}
+		$l_{t_1},l_{t_2}$をトピック$t_1,t_2$の単語ベクトルをする．
+		トピック$t_1,t_2$の$cos$距離関数$dist_{cos}$とは
+        \begin{equation}
+			dist_{cos}(t_1,t_2) = dist_{LSA}(l_{t_1}[1:1000],l_{t_2}[1:1000])
+        \end{equation}
+    \end{block}
+    \begin{block}{トピック間の$coef$距離関数$dist_{coef}$}
+		$l_{t_1},l_{t_2}$をトピック$t_1,t_2$の単語ベクトルをする．
+		トピック$t_1,t_2$の$coef$距離関数$dist_{coef}$とは
+        \begin{equation}
+			dist_{coef}(t_1,t_2) = 1 - \frac{l_{t_1}[1:1000] \cap l_{t_2}[1:1000])}{1000}
+        \end{equation}
     \end{block}
 \end{frame}
 
