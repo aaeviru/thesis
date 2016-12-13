@@ -1,0 +1,32 @@
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2016.5.12)  13 DEC 2016 17:38
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**test
+(./test.tex
+pLaTeX2e <2006/11/10> (based on LaTeX2e <2016/03/31> patch level 0)
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+
+! LaTeX Error: File `suribt.cls' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: cls)
+
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.3 \title
+          {タイトル}^^M
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 9 strings out of 493717
+ 83 string characters out of 6150720
+ 54070 words of memory out of 5000000
+ 3653 multiletter control sequences out of 15000+600000
+ 7511 words of font info for 31 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 10i,0n,7p,81b,8s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.

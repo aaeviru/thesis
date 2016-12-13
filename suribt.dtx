@@ -1,0 +1,1114 @@
+% ^^A -*- japanese-latex -*-
+% \iffalse meta-comment
+%
+%  計数工学科数理情報工学コース卒業論文クラス
+%
+%  これは LaTeX3 Project の classes.dtx と株式会社アスキーの jclasses.dtx
+%  に基づいて奥村晴彦さんが作成した新ドキュメントクラスのうち jsbook.cls
+%  を読み込んで，必要な部分だけ上書きないし追記して，東京大学工学部
+%  計数工学科数理情報工学コースの卒業論文用にあわせたクラスファイルです．
+%
+%  TeX Wiki <http://oku.edu.mie-u.ac.jp/~okumura/texwiki/> から有益な情報を得て，
+%  実際に反映させたことを明記しておきます．
+%
+%  ライセンスは，アスキーおよび奥村さんのライセンスに準じて，
+%  modified BSDとすることにします．
+%
+%  Copyright 1993 1994 1995 1996 1997 1998 1999
+%  The LaTeX3 Project and any individual authors listed elsewhere
+%  in this file.
+%
+%  Copyright 1995-1999 ASCII Corporation.
+%
+% \fi
+% \CheckSum{1002}
+%% \CharacterTable
+%%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%%   Digits        \0\1\2\3\4\5\6\7\8\9
+%%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%%   Dollar        \$     Percent       \%     Ampersand     \&
+%%   Acute accent  \'     Left paren    \(     Right paren   \)
+%%   Asterisk      \*     Plus          \+     Comma         \,
+%%   Minus         \-     Point         \.     Solidus       \/
+%%   Colon         \:     Semicolon     \;     Less than     \<
+%%   Equals        \=     Greater than  \>     Question mark \?
+%%   Commercial at \@     Left bracket  \[     Backslash     \\
+%%   Right bracket \]     Circumflex    \^     Underscore    \_
+%%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%%   Right brace   \}     Tilde         \~}
+%
+% \iffalse
+%
+%    \begin{macrocode}
+%<suribt>\NeedsTeXFormat{pLaTeX2e}
+%<suribt>\ProvidesClass{suribt}
+%<*driver>
+\ProvidesFile{suribt.dtx}
+%</driver>
+  [2007/01/18 KUROKI Yusuke]
+%<*driver>
+\documentclass{jsarticle}
+\usepackage{doc}
+%%%
+\makeatletter
+\renewcommand{\maketitle}{%
+  \begin{center}
+    \headfont\LARGE \@title
+  \end{center}
+  \begin{flushright} \headfont
+   {\Large\@author}\par
+   {\large\@date}
+  \end{flushright}
+}
+\long\def\@makecaption#1#2{{\small%
+  \advance\leftskip2zw
+  \advance\rightskip2zw
+  \@tempdimb\hsize
+  \advance\@tempdimb-4zw
+  \vskip\abovecaptionskip
+  \setbox\tw@=\hbox{\hskip2zw{\headfont#1.} }%
+  \sbox\@tempboxa{{\headfont#1.} #2}%
+  \ifdim \wd\@tempboxa >\@tempdimb
+    \list{\headfont#1.}{%
+      \renewcommand{\makelabel}[1]{\hskip2zw##1\hfil}
+      \itemsep    \z@
+      \itemindent \z@
+      \labelsep   \z@
+      \labelwidth \wd\tw@
+      \listparindent\z@
+      \leftmargin \wd\tw@
+      \rightmargin 2zw}\item\relax #2\endlist
+  \else
+    \global \@minipagefalse
+    \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}}
+\makeatother
+%%%
+\addtolength{\textwidth}{-1in}
+\addtolength{\evensidemargin}{1in}
+\addtolength{\oddsidemargin}{1in}
+\addtolength{\marginparwidth}{1in}
+\setlength\marginparpush{0pt}
+% \OnlyDescription
+\DisableCrossrefs
+\setcounter{StandardModuleDepth}{1}
+\GetFileInfo{suribt.dtx}
+\begin{document}
+  \DocInput{suribt.dtx}
+\end{document}
+%</driver>
+%    \end{macrocode}
+%
+% \fi
+%
+% \title{計数工学科数理情報工学コース卒業論文クラス}
+% \author{黒木 裕介}
+% \date{\filedate}
+%
+% \maketitle
+%
+% \MakeShortVerb{\|}
+%
+% \section{はじめに}
+%
+% これは \LaTeX{}3 Project の \texttt{classes.dtx} と株式会社アスキーの \texttt{jclasses.dtx}
+% に基づいて奥村晴彦さんが作成した新ドキュメントクラス \texttt{jsclasses.dtx} のうち 
+% \texttt{jsbook} クラス (以後 \texttt{jsbook} クラスのことを{\em 親クラス}と呼ぶこと
+% にします) を読み込んで，必要な部分だけ上書きないし追記して，
+% 東京大学工学部計数工学科数理情報工学コースの卒業論文用にあわせたクラスファイルです．
+% ライセンスは，アスキーおよび奥村さんのライセンスに準じて，modified BSDとすることにします．
+%
+% このドキュメントはクラスファイルの元ファイル \texttt{suribt.dtx} から自動生成されたもので，
+% 設定のすべておよびコメントが印字されています．クラスファイルに詳しくない人は，
+% 1節の情報をつかんでいただければよいと思います．
+% オプションを設定したいときには2節を読む必要があるかもしれません．
+%
+% \paragraph{サイズオプションの扱い}
+%
+% 強制的に親クラスを \texttt{11pt} オプション付きで呼びます．
+% このため，内部的には10ptで組んで，それを出力時には1.095倍して出力する
+% ことになります．このとき気をつけることを2点挙げます．
+%\begin{description}
+% \item[単位]
+%   \begin{itemize}
+%    \item \texttt{zw} など組版することによって定まる単位は
+%          内部処理でも出力でも1和文字単位として正しく機能します．
+%          \texttt{em}, \texttt{ex} もおそらく内部処理と出力との間に
+%          差はないものと思われます．
+%    \item 一方，\texttt{cm}, \texttt{in} などの単位をもちいて
+%          指定した長さは出力では1.095倍されてしまいます．
+%          出力時の長さで指定したい場合は単位の直前に \texttt{true}
+%          をつけて，\texttt{truecm}, \texttt{truein} などとして
+%          利用してください．
+%   \end{itemize}
+% \item[画像の用意] (この項の記述については自信がないのですが) 
+%          ビットマップフォントの埋め込まれた画像を貼り付けると，
+%          あとから1.095倍する影響で，輪郭がギザギザするかもしれません．
+%\end{description}
+%
+% \paragraph{文書の骨組み見本} \label{文書の骨組み見本}
+%
+% 図\ref{fig:文書の骨組み見本}のような骨組みに文字を埋めることを想定しています．
+%
+%\begin{figure}[tbp]
+%{\narrowbaselines
+%\begin{verbatim}
+% \documentclass{suribt}
+% %\documentclass[oneside]{suribt}% 本文が * ページ以下のときに (掲示に注意)
+% \title{タイトル}
+% %\titlewidth{}% タイトル幅 (指定するときは単位つきで)
+% \author{著者名}
+% \eauthor{著者名の英語つづり}% Copyright 表示で使われる
+% \studentid{学生証番号}
+% \supervisor{指導教員名 役職}% 1 つ引数をとる (役職まで含めて書く)
+% %\supervisor{指導教員名 役職 \and 指導教員名 役職}% 複数教員の場合，\and でつなげる
+% \handin{9999}{99}% 提出月. 2 つ (年, 月) 引数をとる
+% %\keywords{キーワード1, キーワード2} % 概要の下に表示される
+%
+% \begin{document}
+% \maketitle%%%%%%%%%%%%%%%%%%% タイトル %%%%
+%
+% \frontmatter% ここから前文
+% \begin{abstract}%%%%%%%%%%%%% 概要 %%%%%%%%
+%  ここに概要を書く．
+% \end{abstract}
+%
+% \tableofcontents%%%%%%%%%%%%% 目次 %%%%%%%%
+%
+% \mainmatter% ここから本文 %%% 本文 %%%%%%%%
+% \chapter{}
+%
+% \backmatter% ここから後付
+% \chapter{謝辞}%%%%%%%%%%%%%%% 謝辞 %%%%%%%
+%
+% \begin{thebibliography}{}%%%% 参考文献 %%%
+%  \bibitem{}
+% \end{thebibliography}
+% %\bibliographystyle{}%           BibTeX を使う場合
+% %\bibliography{.bib ファイル名}% BibTeX を使う場合
+%
+% \appendix% ここから付録 %%%%% 付録 %%%%%%%
+% \chapter{}
+% \end{document}\end{verbatim}}
+% \caption{文書の骨組み見本．\texttt{skeleton-\{euc,sjis\}.tex} としてzip配布物に同梱．}
+%\label{fig:文書の骨組み見本}
+%\end{figure}
+%
+% \paragraph{キーワード}
+%
+% 演習での指導~\cite{杉原} に従い，キーワードがある場合にもない場合にも
+% 対応しています．
+% |\keywords| を書かなければ，キーワードはないものと思って処理されます．
+% |\keywords{数理情報工学}| と書くと，
+% \begin{description}\item[キーワード] 数理情報工学\end{description}
+% という書式で概要の2行下に表示されます．ただ，キーワードが1つのみとい
+% うことは想定しておらず，|english| オプション使用時に，キーワードが1つ
+% のみのときには単複不一致になります．
+%
+% \paragraph{設定できるオプション}
+%
+% 設定できるオプションを表\ref{tab:設定できるオプション一覧}に
+% まとめました．1列目が初期設定で選択されています．
+%
+% 親クラスで設定できるオプションのうち，いくつかのオプションは
+% \texttt{suribt} クラスでも同じ名前で指定できるようにしました 
+% (\ref{sec:親クラスから受け継いだオプション}項)．
+% 環境や求められている仕上がりによっては指定する必要があります．
+% また，いくつかのオプションを新設しました (\ref{sec:新設したオプション}項)．
+%
+% \clearpage
+%
+% \begin{table}[!htbp]
+%  \caption{設定できるオプション一覧 (1列目が初期設定).}\label{tab:設定できるオプション一覧}
+%  \begin{center}
+%   \begin{tabular}{cccc} \hline
+%    {\em|final|} & |draft| & &\\ \hline
+%    & |mingoth| & |winjis| &\\ \hline
+%    & |tombow| & |tombo| & |mentuke| \\ \hline
+%    {\em |twoside|} & |oneside| & & \\ \hline
+%    & |papersize| & & \\ \hline
+%    & |english| & & \\ \hline
+%    {\em |tocchaplong|} & |tocchapshort| & & \\ \hline
+%    {\em |mi|} (|suri|) & |ipc| (|system|) & & \\ \hline
+%    {\em |bachelor|} & |master| & |doctor| & \\ \hline
+%   \end{tabular}
+%  \end{center}
+% \end{table}
+%
+% \section{オプション}\label{sec:オプション}
+%
+% |\documentclass{suribt}| あるいは |\documentclass[オプション]{suribt}| のように呼び出します。
+%
+% \StopEventually{}
+%
+% \subsection{親クラスから受け継いだオプション}\label{sec:親クラスから受け継いだオプション}
+%
+% \paragraph{ドラフト}
+%
+% \texttt{draft} でoverfull boxの起きた行末に5ptの罫線を引きます。
+%
+%    \begin{macrocode}
+\newif\ifdraft
+\DeclareOption{draft}{\drafttrue}
+\DeclareOption{final}{\draftfalse}
+%    \end{macrocode}
+%
+% \paragraph{JISフォントメトリックの使用}
+%
+% ここでは和文TFM（\TeX フォントメトリック）として東京書籍印刷の小林肇さ
+% んの作られたJISフォントメトリック \texttt{jis.tfm}，\texttt{jisg.tfm}
+% を標準で使います。
+% 従来のフォントメトリック \texttt{min10}，\texttt{goth10} などを
+% 使いたいときは \texttt{mingoth} というオプションを指定します。
+% また，\texttt{winjis} オプションで \texttt{winjis} メトリックが使えます。
+%
+%    \begin{macrocode}
+\newif\ifjisfont
+\jisfonttrue
+\DeclareOption{mingoth}{\jisfontfalse}
+\newif\ifwinjis
+\winjisfalse
+\DeclareOption{winjis}{\winjistrue}
+%    \end{macrocode}
+%
+% \paragraph{トンボ・面付け}
+%
+% 詳しい説明は新ドキュメントクラスのドキュメントを見てください．
+% 初期設定ではトンボ・面付けはしません．
+%
+%    \begin{macrocode}
+\newif\iftombow
+\tombowfalse
+\DeclareOption{tombow}{\tombowtrue}
+\newif\iftombo
+\tombofalse
+\DeclareOption{tombo}{\tombotrue}
+\newif\ifmentuke
+\mentukefalse
+\DeclareOption{mentuke}{\mentuketrue}
+%    \end{macrocode}
+%
+% \paragraph{両面，片面オプション}
+%
+% \texttt{oneside} が片面印刷用，
+% \texttt{twoside} が両面印刷用 (奇数ページ・偶数ページのレイアウトを変更) です．
+% [2005/02/18]
+%
+%    \begin{macrocode}
+\DeclareOption{oneside}{\@twosidefalse}
+\DeclareOption{twoside}{\@twosidetrue}
+%    \end{macrocode}
+%
+% \paragraph{papersizeスペシャルの利用}
+%
+% dvipsやdvioutで用紙設定を自動化するには
+% オプション \texttt{papersize} を与えます。
+%
+%    \begin{macrocode}
+\newif\ifpapersize
+\papersizefalse
+\DeclareOption{papersize}{\papersizetrue}
+%    \end{macrocode}
+%
+% \paragraph{英語化}
+%
+% オプション \texttt{english} を付けることで，定型句が英語に
+% なります．たとえば {\headfont 目次}が {\headfont Contents} % となります．
+%
+%    \begin{macrocode}
+\newif\if@english
+\@englishfalse
+\DeclareOption{english}{\@englishtrue}
+%    \end{macrocode}
+%
+% \subsection{新設したオプション}\label{sec:新設したオプション}
+%
+% \paragraph{目次での章番号表示}
+%
+% また，\TeX{} Q\&A~\cite[33403付近]{texqa} での話題を踏まえ，
+% |tocchaplong|, |tocchapshort| というオプションを新設しました．
+% |tocchapshort| オプションを付けると，目次にて，{\headfont 第1章}/{\headfont Chapter~1}や
+% {\headfont 付録A}/{\headfont Appendix~A}という長い表示をせずに，
+% {\headfont 1} や {\headfont A} という表示を用います．|book| クラスで採用されている表示方法です．
+% 初期設定では (もしくは |tocchaplong| オプションを付けると) 
+% 長い表示を用います．|jsbook| で，|english| オプションを付けないときの出力です．
+%
+%    \begin{macrocode}
+\newif\if@tocchaplong
+\DeclareOption{tocchaplong}{\@tocchaplongtrue}
+\DeclareOption{tocchapshort}{\@tocchaplongfalse}
+%    \end{macrocode}
+%
+% \paragraph{専攻・コースの選択}
+%
+% 数理情報 (|mi|/|suri|) とシステム情報 (|ipc|/|system|) を選択します．
+% 論文の種類にあわせて，専攻・コース名を設定します．
+% 初期設定は数理情報工学コースです．
+%
+%    \begin{macrocode}
+\newif\if@belongstosuri
+\DeclareOption{mi}{\@belongstosuritrue}
+\DeclareOption{suri}{\@belongstosuritrue}
+\DeclareOption{ipc}{\@belongstosurifalse}
+\DeclareOption{system}{\@belongstosurifalse}
+%    \end{macrocode}
+%
+% \paragraph{論文の種類}
+%
+% 卒業論文 (|bachelor|), 修士論文 (|master|), 博士論文 (|doctor|)
+% を指定します．
+% 初期設定は卒業論文です．
+%
+%    \begin{macrocode}
+\newif\if@undergraduate
+\newif\if@graduatedoctor
+\DeclareOption{bachelor}{\@undergraduatetrue}
+\DeclareOption{master}{\@undergraduatefalse\@graduatedoctorfalse}
+\DeclareOption{doctor}{\@undergraduatefalse\@graduatedoctortrue}
+%    \end{macrocode}
+%
+% \paragraph{オプションの実行}
+%
+% 初期設定のオプションを実行します．
+%    \begin{macrocode}
+\ExecuteOptions{final,twoside,tocchaplong,mi,bachelor}
+\ProcessOptions
+%    \end{macrocode}
+%
+% \paragraph{親クラスの導入}
+%
+% 与えられたオプションを含めながら親クラスを導入します．
+%
+%    \begin{macrocode}
+\LoadClass[a4paper,onecolumn,titlepage,11pt
+\ifdraft ,draft\else ,final\fi%
+\ifwinjis ,winjis\else\ifjisfont\else ,mingoth\fi\fi%
+\iftombow ,tombow\else\iftombo ,tombo\else\ifmentuke ,mentuke\fi\fi\fi%
+\if@twoside ,twoside,openright\else ,oneside,openany\fi%
+\ifpapersize ,papersize\fi%
+\if@english ,english\fi%
+]{jsbook}
+%    \end{macrocode}
+%
+% \section{\TeX{} Wikiから情報を得た有益な設定}
+%
+% \subsection{トンボの外に通し番号を表示}
+%
+% \texttt{tombow} オプションを付けたときだけ
+% トンボの外に通し番号をつけます ~\cite[10561]{texqa}．
+% 正しい総ページ数を出力するには，何度かコンパイルする必要があります．
+% ただし，何度かコンパイルしても総ページ数を正しく取得できないこともあります．
+% その場合でも通し番号は正しく振られるようです．
+%
+%    \begin{macrocode}
+\iftombowdate
+  \newcount\@totalpage
+  \def\@lastoftotalpage{?}
+  \AtEndDocument{\protected@write\@auxout{\let\the\relax}%
+      {\gdef\string\@lastoftotalpage{\the\@totalpage}}}
+  \def\@put@totalpage{\global\advance\@totalpage1
+      \raise4pt\hbox to\z@{\hss
+          \@bannerfont page \the\@totalpage\ of \@lastoftotalpage.\hskip5mm}}
+  \AtBeginDocument{%
+      \let\@@TR\@TR
+      \def\@TR{\@@TR\@put@totalpage}}
+\fi
+%    \end{macrocode}
+%
+% \section{ページレイアウト}
+%
+% 版面の設定をします．
+%
+%    \begin{macrocode}
+% 横方向のサイズ指定を親クラスから変更します．
+\setlength{\fullwidth}{\paperwidth}
+\addtolength{\fullwidth}{-36mm}
+\@tempdima=1zw
+\divide\fullwidth\@tempdima \multiply\fullwidth\@tempdima
+\ifdim \fullwidth>42zw
+  \setlength{\fullwidth}{42zw}
+\fi
+\setlength{\textwidth}{\fullwidth}
+%
+\setlength{\oddsidemargin}{\paperwidth}
+\addtolength{\oddsidemargin}{-\textwidth}
+\setlength{\oddsidemargin}{.5\oddsidemargin}
+\iftombow
+  \addtolength{\oddsidemargin}{-1in}
+\else
+  \addtolength{\oddsidemargin}{-1truein}
+\fi
+\setlength{\evensidemargin}{\oddsidemargin}
+%    \end{macrocode}
+%
+% \section{ページスタイル}
+%
+% |\ps@plainhead| と |\ps@headings| のスタイルを変更します．
+%
+% \begin{macro}{\ps@plainhead}
+%
+% |plainhead| スタイルはヘッダの小口側にページ番号を出力します．
+%
+%    \begin{macrocode}
+\def\ps@plainhead{%
+  \let\@mkboth\@gobbletwo
+  \let\@oddfoot\@empty
+  \let\@evenfoot\@empty
+  \def\@oddhead{\hbox to \fullwidth{\hfil%
+      {\small\textbf{\headfont\thepage}}}\hss}
+  \if@twoside
+    \def\@evenhead{\hss \hbox to \fullwidth{%
+        {\small\textbf{\headfont\thepage}}\hfil}}
+  \else
+    \let\@evenhead\@oddhead
+  \fi
+}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\ps@headings}
+%
+% |headings| スタイルはヘッダの小口側に見出しとページ番号を出力します。
+%
+%    \begin{macrocode}
+\def\ps@headings{%
+  \let\@oddfoot\@empty
+  \let\@evenfoot\@empty
+  \if@twoside
+    \def\@oddhead{\hbox to \fullwidth{\hfil%
+        {\small\headfont\rightmark\qquad\textbf{\thepage}}}\hss}%
+    \def\@evenhead{\hss \hbox to \fullwidth{%
+        {\small\headfont\textbf{\thepage}\qquad\leftmark}\hfil}}%
+  \else
+    \def\@oddhead{\hbox to \fullwidth{\hfil%
+        {\small\headfont\leftmark\qquad\textbf{\thepage}}}\hss}%
+    \let\@evenhead\@oddhead
+  \fi
+  \let\@mkboth\markboth
+  \def\chaptermark##1{\markboth{%
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        \@chapapp\thechapter\@chappos\hskip1zw
+      \fi
+    \fi
+    ##1}{}}%
+  \def\sectionmark##1{\markright{%
+    \ifnum \c@secnumdepth >\z@ \thesection \hskip1zw\fi
+    ##1}}}%
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{environment}{titlepage}
+%
+% タイトルを独立のページに出力するのに使われます。|oneside| オプション指定時にも
+% |twoside| 指定時と同じようにページ番号が振られるように改変します．
+%
+%    \begin{macrocode}
+\renewenvironment{titlepage}{%
+  \cleardoublepage
+  \newpage
+  \thispagestyle{empty}%
+  \setcounter{page}\@ne
+}%
+{\newpage} % [2005/02/18 cf. qa:34535]
+%    \end{macrocode}
+% \end{environment}
+%
+% \section{文書のマークアップ}
+%
+% \subsection{表題}
+%
+% \begin{macro}{\titlewidth}
+% \begin{macro}{\studentid}
+% \begin{macro}{\supervisor}
+% \begin{macro}{\handin}
+% \begin{macro}{\eauthor}
+% \begin{macro}{\email}
+% \begin{macro}{\keywords}
+%
+% 表題に必要な情報の設定です．\LaTeX 本体で定義されているものは
+% コメントアウトした形で示します。
+% |\titlewidth| はタイトルを都合のよい幅で折り曲げたいときに指定する幅です．
+% 指定しなければ版面いっぱいで折り曲げます．
+% |\handin| や |\date| を書かなければ今日の日付を出力します．
+% |\handin| を正しく指定すれば，|\date| は書く必要がありません (「文書
+% のテンプレート」(図\ref{fig:文書の骨組み見本}) 参照のこと)．
+%
+%    \begin{macrocode}
+% \newcommand*{\title}[1]{\gdef\@title{#1}}
+\newcommand*{\titlewidth}[1]{\gdef\title@width{#1}}% #1: タイトル幅
+\gdef\title@width{\hsize}
+\newcommand*{\studentid}[1]{\gdef\@studentid{#1}}% #1: 学生証番号
+% \newcommand*{\author}[1]{\gdef\@author{#1}}% #1: 著者名
+\renewcommand{\and}{\\ &}% [2005/12/09]
+\newcommand*{\supervisor}[1]{\gdef\@supervisor{#1}}% #1: 指導教員名 + 役職 [2005/12/09]
+\gdef\@supervisor@prefix{\if@english Supervisor\else 指導教員\fi}
+% \newcommand*{\date}[1]{\gdef\@date{#1}}
+% \date{\today}
+\newcommand*{\handin}[2]{\year #1 \month #2 \day 0}% #1: 年, #2: 月
+\newcommand*{\eauthor}[1]{\gdef\@eauthor{#1}}% #1: 著者名英語つづり
+\newcommand*{\email}[1]{\gdef\authors@email{#1}}% #1: e-mail アドレス
+\newcommand*{\keywords}[1]{\gdef\@keywords{#1}}% #1: キーワード
+\gdef\@keywordsprefix{\if@english Keywords\else キーワード\fi}
+\if@undergraduate
+  \if@english
+    \gdef\@subtitle{Bachelor's~Thesis}
+    \if@belongstosuri
+      \gdef\@belongsto{Mathematical Information Engineering Course\\%
+      Department of Mathematical Engineering and Information Physics\\%
+      Faculty of Engineering, the University of Tokyo}%
+    \else
+      \gdef\@belongsto{Information Physics Course\\%
+      Department of Mathematical Engineering and Information Physics\\%
+      Faculty of Engineering, the University of Tokyo}%
+    \fi
+  \else
+    \gdef\@subtitle{卒業論文}
+    \if@belongstosuri
+      \gdef\@belongsto{東京大学工学部計数工学科数理情報工学コース}%
+    \else
+      \gdef\@belongsto{東京大学工学部計数工学科システム情報工学コース}%
+    \fi
+  \fi
+\else
+  \if@english
+    \if@belongstosuri
+      \gdef\@belongsto{Department of Mathematical Informatics\\%
+        Graduate School of Information Science and Technology\\%
+        the University of Tokyo}%
+    \else
+      \gdef\@belongsto{Department of Information Physics and Computing\\%
+        Graduate School of Information Science and Technology\\%
+        the University of Tokyo}%
+    \fi
+  \else
+    \if@belongstosuri
+      \gdef\@belongsto{東京大学大学院情報理工学系研究科数理情報学専攻}%
+    \else
+      \gdef\@belongsto{東京大学大学院情報理工学系研究科システム情報学専攻}%
+    \fi
+  \fi
+  \if@graduatedoctor
+    \if@english
+      \gdef\@subtitle{Doctoral~Thesis}
+    \else
+      \gdef\@subtitle{博士論文}
+    \fi
+  \else
+    \if@english
+      \gdef\@subtitle{Master's~Thesis}
+    \else
+      \gdef\@subtitle{修士論文}
+    \fi
+  \fi
+\fi
+%    \end{macrocode}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+%
+%
+% \begin{macro}{\maketitle}
+%
+% 表題と表題裏を出力します。
+% 表題では |\thanks|, |\footnote| を強制的に使えないようにしました [2005/12/09]．
+%
+%    \begin{macrocode}
+\renewcommand{\maketitle}{%
+  \global\let\thanks\relax
+  \global\let\@thanks\@empty
+  \begin{titlepage}%
+%    \let\footnotesize\small
+%    \let\footnoterule\relax
+%    \let\footnote\thanks
+    \let\footnote\relax
+    \null\vskip60\p@
+    \if@graduatedoctor
+    \else
+      \begin{center}
+        {\headfont\Large \@subtitle \par}
+      \end{center}%
+    \fi
+    \begin{center}\headfont\Huge%
+      \parbox{\title@width}{\begin{center}\@title\end{center}}%
+    \end{center}
+    \vfill
+    \if@graduatedoctor
+      \begin{center}
+        {\headfont\Huge\@author}
+      \end{center}%
+    \else
+      \begin{center}
+        \Large\headfont
+        {\begin{tabular}[t]{rl}%
+          \ifx\@studentid\@undefined\else\@studentid\fi &
+            {\LARGE\@author} \\[16\p@]
+          \@supervisor@prefix & \@supervisor
+        \end{tabular}\par}%
+        \vskip 2cm
+        {\@date\par}%
+        \vskip 2cm
+        {\@belongsto \par}%
+      \end{center}\par
+      \@thanks%
+    \fi
+    \vskip60\p@\null
+    \newpage\clearpage
+    \thispagestyle{empty}
+    \setcounter{page}{0}
+    \null\vfill
+    \begin{flushleft}
+      Copyright {\copyright} {\number\year},~%
+      \ifx\@eauthor\@undefined \@author\else\@eauthor\fi.
+    \end{flushleft}\par
+    \vskip60\p@\null
+  \end{titlepage}
+  \setcounter{footnote}{0}%
+  \global\let\maketitle\relax
+  \global\let\@author\@empty
+  \global\let\@date\@empty
+  \global\let\@title\@empty
+  \global\let\subtitle\relax
+  \global\let\title\relax
+  \global\let\supervisor\relax
+  \global\let\belongto\relax
+  \global\let\email\relax
+  \global\let\eauthor\relax
+  \global\let\author\relax
+  \global\let\date\relax
+  \global\let\and\relax
+}
+%    \end{macrocode}
+% \end{macro}
+%
+% \subsection{前付・本文・後付，付録}
+%
+% 算用数字の章番号があるのが「本文」，
+% それ以外が「前付」「後付」です。付録は参考文献などよりも後ろにつける
+% 流儀をとったときにも英大文字の章番号が付くように設定し直してあります．
+%
+% \begin{macro}{\frontmatter}
+%
+% ページ番号をローマ数字にし，章番号を付けないようにします。
+%
+%    \begin{macrocode}
+\renewcommand\frontmatter{%
+  \if@openright
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+  \@mainmatterfalse
+  \pagenumbering{roman}}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\mainmatter}
+%
+% ページ番号を算用数字にし，章番号を付けるようにします。
+%
+%    \begin{macrocode}
+\renewcommand\mainmatter{%
+  \if@twoside
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+  \@openrightfalse
+  \@mainmattertrue
+  \pagenumbering{arabic}}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\backmatter}
+%
+% 章番号を付けないようにします。ページ番号の付け方は変わりません。
+%
+%    \begin{macrocode}
+\renewcommand\backmatter{%
+  \clearpage
+  \@openrightfalse
+  \@mainmatterfalse}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\appendix}
+%
+% 付録を本文の最後に置いても後付の後に置いても，
+% 章番号が英大文字で付くようにします．
+% ページ番号の付け方は変わりません．
+%
+%    \begin{macrocode}
+\renewcommand{\appendix}{\par
+  \@mainmattertrue%
+  \setcounter{chapter}{0}%
+  \setcounter{section}{0}%
+  \gdef\@chapapp{\appendixname}%
+  \gdef\@chappos{}%
+  \gdef\thechapter{\@Alph\c@chapter}}
+%    \end{macrocode}
+% \end{macro}
+%
+% \subsection{章・節}
+%
+% |tocchaplong|, |tocchapshort| オプションに連動して，目次での番号表示を
+% 変えるようにします．
+%
+% \begin{macro}{\@chapter}
+%
+% 章見出しを出力します。
+% |secnumdepth| が0以上かつ |\@mainmatter| が真のとき章番号を出力します。
+%
+%    \begin{macrocode}
+\def\@chapter[#1]#2{%
+  \ifnum \c@secnumdepth >\m@ne
+    \if@mainmatter
+      \refstepcounter{chapter}%
+      \typeout{\@chapapp\thechapter\@chappos}%
+      \if@tocchaplong\addcontentsline{toc}{chapter}%
+        {\protect\numberline{\@chapapp\thechapter\@chappos}#1}%
+      \else\addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}%
+      \fi%
+    \else\addcontentsline{toc}{chapter}{#1}\fi
+  \else
+    \addcontentsline{toc}{chapter}{#1}%
+  \fi
+  \chaptermark{#1}%
+  \addtocontents{lof}{\protect\addvspace{10\p@}}%
+  \addtocontents{lot}{\protect\addvspace{10\p@}}%
+  \if@twocolumn
+    \@topnewpage[\@makechapterhead{#2}]%
+  \else
+    \@makechapterhead{#2}%
+    \@afterheading
+  \fi}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\l@chapter}
+%
+% 章の目次です。
+%
+%    \begin{macrocode}
+\renewcommand*{\l@chapter}[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \addvspace{1.0em \@plus\p@}
+%   \vskip 1.0em \@plus\p@   % book.clsでは↑がこうなっている
+    \begingroup
+      \parindent\z@
+%     \rightskip\@pnumwidth
+      \rightskip\@tocrmarg
+      \parfillskip-\rightskip
+      \leavevmode\headfont
+      \if@tocchaplong
+        \@tempdima4.683zw%
+        \setbox\tw@=\hbox{\headfont{}\appendixname{}M\hskip.683zw}%
+        \ifdim \wd\tw@>\@tempdima \@tempdima\wd\tw@\fi
+        \setbox\thr@@=\hbox{\headfont{}\@chapapp{99}\@chappos\hskip.683zw}%
+        \ifdim \wd\thr@@>\@tempdima \@tempdima\wd\thr@@\fi
+        \setlength\@lnumwidth{\@tempdima}%
+      \else
+        \setlength\@lnumwidth{1.5em}%
+      \fi
+      \advance\leftskip\@lnumwidth \hskip-\leftskip
+      #1\nobreak\hfil\nobreak\hbox to\@pnumwidth{\hss#2}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\l@section}
+%
+% 節の目次です。
+%
+%    \begin{macrocode}
+\renewcommand*{\l@section}{%
+  \if@tocchaplong% [2005/01/20] 改善
+    \@tempdima4.683zw%
+    \setbox\tw@=\hbox{\headfont{}\appendixname{}M\hskip.683zw}%
+    \ifdim \wd\tw@>\@tempdima \@tempdima\wd\tw@\fi
+    \setbox\thr@@=\hbox{\headfont{}\@chapapp{99}\@chappos\hskip.683zw}%
+    \ifdim \wd\thr@@>\@tempdima \@tempdima\wd\thr@@\fi
+    \advance\@tempdima-3.683zw%
+    \ifdim \@tempdima<1zw \@tempdima1zw\fi
+    \@tempdimb3.683zw%
+  \else
+    \@tempdima1.5em \@tempdimb2.3em
+  \fi
+  \@dottedtocline{1}{\@tempdima}{\@tempdimb}}
+%    \end{macrocode}
+% \end{macro}
+%
+% \subsection{\texttt{paragraph} 見出しの設定}
+%
+% \begin{macro}{\paragraph}
+%
+% 不評なようなので，黒四角が出ないスタイルに戻しておきます．
+%
+%    \begin{macrocode}
+  \renewcommand{\paragraph}{\@startsection{paragraph}{4}{\z@}%
+    {0.5\Cvs \@plus.5\Cdp \@minus.2\Cdp}%
+    {-1zw}% 改行せず 1zw のアキ
+    {\normalfont\normalsize\headfont}}
+%    \end{macrocode}
+% \end{macro}
+%
+% \subsection{概要・キーワード}
+%
+% \begin{macro}{\abstractname}
+%
+% 概要の見出しです．
+%
+%    \begin{macrocode}
+\newcommand{\abstractname}{\if@english Abstract\else 概要\fi}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{environment}{abstract}
+%
+% 概要と，必要があればキーワードを出力します．
+%
+%    \begin{macrocode}
+\renewenvironment{abstract}{%
+  \titlepage
+  \null\vfill
+  \@beginparpenalty\@lowpenalty
+  \begin{center}%
+    \headfont \abstractname
+    \@endparpenalty\@M
+  \end{center}\par}%
+  {\par%
+    \ifx\@keywords\@undefined\else%
+      \vskip2\baselineskip
+      \begin{description}%
+        \item[\@keywordsprefix]\@keywords%
+      \end{description}%
+    \fi%
+    \vfill\vfill\vfill\null
+    \endtitlepage}
+%    \end{macrocode}
+% \end{environment}
+%
+% \subsection{参考文献リスト}
+%
+% \begin{environment}{thebibliography}
+%
+% 参考文献リストを出力します。hyperref 使用時にアンカーの設定の仕方がほかの
+% 章立てと等しくなるように，
+% |\chapter*| のアスタリスク (と |\addtocontentsline| の記述) を取り除きました．
+% |\backmatter| 宣言とともに用いてください．
+%
+%    \begin{macrocode}
+\renewenvironment{thebibliography}[1]{%
+  \global\let\presectionname\relax
+  \global\let\postsectionname\relax
+  \chapter{\bibname}\@mkboth{\bibname}{}%
+  \list{\@biblabel{\@arabic\c@enumiv}}%
+       {\settowidth\labelwidth{\@biblabel{#1}}%
+        \leftmargin\labelwidth
+        \advance\leftmargin\labelsep
+        \@openbib@code
+        \usecounter{enumiv}%
+        \let\p@enumiv\@empty
+        \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+  \sloppy
+  \clubpenalty4000
+  \@clubpenalty\clubpenalty
+  \widowpenalty4000%
+  \sfcode`\.\@m}
+  {\def\@noitemerr
+    {\@latex@warning{Empty `thebibliography' environment}}%
+  \endlist}
+%    \end{macrocode}
+% \end{environment}
+%
+% \subsection{キャプション}
+%
+% \begin{macro}{\@makecaption}
+%
+% 演習での指導~\cite{杉原} に従い，{\headfont\small 図 1.1.} のような形式でキャプションを出力します．
+% 最大でも本文長より左右2zwずつ内側に寄せ，さらに，
+% 長い名前だったときにはラベルの下に文字が回りこまないようにしました．
+%
+%    \begin{macrocode}
+\long\def\@makecaption#1#2{{\small%
+  \advance\leftskip2zw
+  \advance\rightskip2zw
+  \@tempdimb\hsize
+  \advance\@tempdimb-4zw
+  \vskip\abovecaptionskip
+  \setbox\tw@=\hbox{\hskip2zw{\headfont#1.}~}%
+  \sbox\@tempboxa{{\headfont#1.}~#2}%
+  \ifdim \wd\@tempboxa >\@tempdimb
+    \list{\headfont#1.}{%
+      \renewcommand{\makelabel}[1]{\hskip2zw##1\hfil}
+      \itemsep    \z@
+      \itemindent \z@
+      \labelsep   \z@
+      \labelwidth \wd\tw@
+      \listparindent\z@
+      \leftmargin \wd\tw@
+      \rightmargin 2zw}\item\relax #2\endlist
+  \else
+    \global \@minipagefalse
+    \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}}
+%    \end{macrocode}
+% \end{macro}
+%
+% \paragraph{日付}
+%
+% \LaTeX で処理した日付を出力します。年月だけ表示されるようにします．
+%
+% \begin{macro}{\today}
+%    \begin{macrocode}
+\def\today{%
+  \if@english
+    \ifcase\month\or
+      January\or February\or March\or April\or May\or June\or
+      July\or August\or September\or October\or November\or December\fi
+      %\space\number\day
+      , \number\year
+  \else
+    \if西暦
+      \number\year 年
+      \number\month 月
+      %\number\day 日
+    \else
+      平成\number\heisei 年
+      \number\month 月
+      %\number\day 日
+    \fi
+  \fi}
+%    \end{macrocode}
+% \end{macro}
+%
+% \section{ページ設定}
+%
+% ページ設定の初期化です (|\pagestyle{headings}| 以外は不要かもしれません)。
+%
+%    \begin{macrocode}
+\pagestyle{headings}
+\pagenumbering{arabic}
+\onecolumn
+\raggedbottom
+%    \end{macrocode}
+%
+%\begin{thebibliography}{9}
+% \bibitem{Knuth1986}
+%         Donald E.\ Knuth: {\em The \TeX{}book}, Addison-Wisley, 1986;
+%         斎藤信男 (監修), 鷺谷好輝 (訳): 『[改訂新版] \TeX{}ブック』, アスキー, 1992.        
+% \bibitem{奥村2000}
+%         奥村晴彦: 『[改訂版] \LaTeXe{}美文書作成入門』, 
+%         技術評論社, 2000.^^A\ 12.
+% \bibitem{奥村2004}
+%         奥村晴彦: 『[改訂第3版] \LaTeXe{}美文書作成入門』, 
+%         技術評論社, 2004.^^A\ 2.
+% \bibitem{奥村js}
+%         奥村晴彦: \pLaTeXe{}新ドキュメントクラス, 
+%         \texttt{http://oku.edu.mie-u.ac.jp/\hspace{0pt}\~{}okumura/\hspace{0pt}jsclasses/%
+%         \hspace{0pt}jsclasses-041229.zip}, 2004.^^A\ 12.\ 29.
+% \bibitem{基礎解説}
+%         ページ・エンタープライゼス: 
+%         『\LaTeXe{}【マクロ\&クラス】プログラミング基礎解説』, 
+%         技術評論社, 2002.^^A\ 9.
+% \bibitem{杉原}
+%         杉原厚吉: 『論文の書き方――説得力のある文章を書くために』, 
+%         数理情報工学演習第二B参考資料, 2004.^^A\ 12.
+% \bibitem{texqa}
+%         \TeX{} Q \& A, \texttt{http://oku.edu.mie-u.ac.jp/\~{}okumura/texfaq/qa/}.
+% \bibitem{texwiki}
+%         \TeX{} Wiki, \texttt{http://oku.edu.mie-u.ac.jp/\~{}okumura/texwiki/}.
+%\end{thebibliography}
+%
+% \section*{著作権表示}
+%
+% \begin{verbatim}
+% Copyright 1993 1994 1995 1996 1997 1998 1999
+% The LaTeX3 Project and any individual authors listed elsewhere
+% in this file.
+%
+% Copyright 1995-1999 ASCII Corporation.
+% \end{verbatim}
+%
+% \section*{変更履歴}
+%
+%\begin{description}
+% \item[2007-01-15]\mbox{}
+%            \begin{itemize}
+%             \item |\@makecaption| で番号の後に入る空白量を，
+%                   単語間空白量から文末空白量に変更しました．
+%            \end{itemize}
+% \item[2006-12-30]\mbox{}
+%            \begin{itemize}
+%             \item |\chapter| の実装が悪く，hyperref との相性が悪かっ
+%                   たので，修正しました．
+%            \end{itemize}
+% \item[2005-12-09]\mbox{}
+%            \begin{itemize}
+%             \item 複数教員に対応しました．このため，指導教員の指定に関
+%                   する仕様を変更しました．役職は第2引数として与えること
+%                   にしていたものを，役職まで含めて |\supervisor| に指定
+%                   することになります．複数教員の場合は |\and| で
+%                   つなぐことで，教員名が (上下に) 並んで出力されます．
+%                   また，無用のトラブルを避けるため，表題ページにおける
+%                   |\thanks|, |\footnote| の使用を無効化しました．
+%             \item (備忘録として注記)
+%                   今回の改変は，デザイン的にすぐ対処できるものでしたが，
+%                   複数人で1本の学位論文を書くといった状況にユーザ・フ
+%                   レンドリーに対処するためには，もっといろいろな変更を
+%                   加えなければならず，さらなる仕様変更が必要になる可能
+%                   性もあります．
+%            \end{itemize}
+% \item[2005-03-30]\mbox{}
+%            \begin{itemize}
+%             \item 英語表記について確認を取り，正しく変更しました．
+%             \item 博士論文に関して，研究科からの指示に従い，タイトルと氏名だけが載る
+%                   表紙へと変更しました．ただし，卒業論文や修士論文から引き続いて使う人が
+%                   他のパッケージを自作していたような場合にそのまま使えるよう，いろいろな
+%                   項目に値を代入してあります．
+%            \end{itemize}
+% \item[2005-02-18]\mbox{}
+%            \begin{itemize}
+%             \item 片面印刷用に，|oneside| オプションを新設しました．
+%                   ノンブルや柱の出力 (位置とレベル) とページの割付けを変化させているだけ
+%                   であって，印刷ジョブを変更しているわけではないので，実際に印刷する際には，
+%                   プリンタの設定に注意してください．
+%            \end{itemize}
+% \item[2005-01-20]\mbox{}
+%            \begin{itemize}
+%             \item 骨組み見本に |\tableofcontents| を加えました．
+%             \item |english| オプションを復帰させたときに改変した目次の出力の設定が，
+%                             新ドキュメントクラスの体裁を再現していなかったので，
+%                             改善しました．具体的には，|tocchaplong| 使用時に，
+%                             節見出しの開始位置を章見出しの開始位置と揃えました．
+%            \end{itemize}
+% \item[2005-01-08]\mbox{}
+%            \begin{itemize}
+%             \item 指導教員に関する英訳をadvisorからsupervisorに変更しました．
+%                   |\advisor| ではなく，|\supervisor| に変更したので注意してください．
+%             \item |tocchaplong|, |mi|, |bachelor| オプションを新設しました．
+%             \item |english| オプションを復帰させました．
+%                   |english| オプション指定時に，|\supervisor{First Family}{Prof.}| としたときには
+%                   タイトルでは\\
+%                   \hfil{\Large\headfont Supervisor\hspace{2\tabcolsep}Prof.~First Family}\\
+%                   と表示されるようにしてあります．そのほかの定型句も自然に拡張してあるはずです．
+%            \end{itemize}
+% \item[2005-01-06]\mbox{}
+%            \begin{itemize}
+%             \item 公開．
+%            \end{itemize}
+%\end{description}
+%
+% \Finale
+%
+\endinput
