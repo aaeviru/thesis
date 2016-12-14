@@ -15,7 +15,12 @@
 
 \frontmatter% ここから前文
 \begin{abstract}%%%%%%%%%%%%% 概要 %%%%%%%%
- ここに概要を書く．
+ 企業が特許を取る前に，類似な特許が既に存在するかを確かめるために特許データベースを検索する必要がある．
+ しかし，検索の質問から企業秘密が漏洩する可能性がある．
+ ウェブテキスト検索の質問からユーザーの興味を守る手法が多数存在している．
+ その中真の質問と同時にダミー質問を提出する手法が一番効率的、現実的である．
+ 一般的なウェブテキスト検索と違い，特許データベース検索は長い検索質問を用い，検索の精度と再現率を重視しているため、既存手法を直接特許検索に適用することはできない．
+ 本発表では既存手法を破られる攻手法を提案し、その攻撃手法に対応できるダミー質問生成システムを提案する．
  \end{abstract}
 
  \tableofcontents%%%%%%%%%%%%% 目次 %%%%%%%%
@@ -24,20 +29,30 @@
  \chapter{はじめに}
  \chapter{特許}
  \section{特許文章}
+ \section{国際特許分類}
  \section{特許検索}
  \chapter{曖昧化検索}
- \section{}
- \section{}
- \section{}
+ \section{否認可能検索を利用したプライバシー保護\cite{providing2009}}
+ \section{質問者のプライバシーを保護する質問加工法\cite{embellishing2010}}
+ \section{質問意図を曖昧化するキーワード検索\cite{masking2014}}
  \chapter{語意分析}
  \section{tf-idf}
  \section{潜在意味解析}
  \section{潜在的ディリクレ配分法}
+ \chapter{プライバシー分析(攻撃手法)}
+ \section{メイントピック攻撃}
+ \section{類似度攻撃\cite{simattack2016}(事前情報あり)}
+ \section{類似度攻撃2(事前情報なし)}
+ \chapter{質問曖昧化(提案手法)}
+ \section{単語ベクトル}
+ \section{質問曖昧化}
+ \chapter{データベース分割}
+ \chapter{実験}
+ \section{データベース}
+ \section{tfidf vs lda vs lsa}
+ \section{データベース分割}
+ \section{検索結果分析(真の質問が当たられる確率 vs ダミー質問と真の質問の検索結果の類似度)}
  \chapter{おわりに}
- \section{特許検索}
- \section{特許検索}
- \section{特許検索}
- \section{特許検索}
 
  \backmatter% ここから後付
  \chapter{謝辞}%%%%%%%%%%%%%%% 謝辞 %%%%%%%
@@ -45,8 +60,8 @@
   %\begin{thebibliography}{}%%%% 参考文献 %%%
   % \bibitem{}
   %\end{thebibliography}
-  \bibliographystyle{thesis}%           BibTeX を使う場合
-  %\bibliography{.bib ファイル名}% BibTeX を使う場合
+  \bibliographystyle{tieice}%           BibTeX を使う場合
+  \bibliography{thesis}% BibTeX を使う場合
 
   \appendix% ここから付録 %%%%% 付録 %%%%%%%
   \chapter{}
