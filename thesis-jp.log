@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2016.5.12)  1 DEC 2016 18:01
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2016.5.12)  19 DEC 2016 15:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -265,7 +265,7 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 9.60999pt on input line 56.
 
 
-LaTeX Warning: Reference `fig:' on page 1 undefined on input line 56.
+LaTeX Warning: Reference `' on page 1 undefined on input line 56.
 
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 6.72699pt on input line 62.
@@ -284,11 +284,11 @@ LaTeX Warning: There were undefined references.
  ) 
 Here is how much of TeX's memory you used:
  2454 strings out of 493717
- 30024 string characters out of 6150720
+ 30020 string characters out of 6150720
  100863 words of memory out of 5000000
  5977 multiletter control sequences out of 15000+600000
  19701 words of font info for 93 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 27i,12n,26p,281b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,12n,26p,281b,346s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis-jp.dvi (5 pages, 15612 bytes).
+Output written on thesis-jp.dvi (5 pages, 15668 bytes).

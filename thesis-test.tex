@@ -1,4 +1,11 @@
 \documentclass[master]{suribt}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\newcommand{\argmax}{\mathop{\rm argmax}\limits}
 \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
 %\documentclass[oneside]{suribt}% 本文が * ページ以下のときに (掲示に注意)
 \title{特許検索における質問意図の曖昧化}
@@ -46,8 +53,17 @@
  単一性:発明の単一性の要件を満たさない二以上の発明は一つの願書で出願することができない．
 
  特許を受けようとする発明を特定するために特許請求の範囲を記載する必要がある．
+ \begin{figure}
+  \hspace*{-2cm}
+  \begin{tabular}{cc}
+  \includegraphics[width=0.55\textwidth,natwidth=500,natheight=1100]{ex1-1.pdf}
+  \includegraphics[width=0.55\textwidth,natwidth=500,natheight=1100]{ex1-2.pdf}
+  \end{tabular}
+  \caption{特許文章例}
+  \label{fig:exp}
+ \end{figure}
 
- 図\ref{fig:}で表した例のように，特許の請求項は特定の書き方がある．
+ 図\ref{fig:exp}で表した例のように，特許の請求項は特定の書き方がある．
  誤解を招かないように技術用語は、学術用語を用いる．
  また，一般的な文章は単語をなるべく重複しないようにする一方，特許文章は単語を全体を通じて統一して使用する．
  \section{特許分類}
@@ -55,7 +71,19 @@
  特許分類を用いることより検索する特許文章が減り，似たようなキーワードを含むが分類が違う特許文章を排除することができる．
  今最も使われている特許分類が世界知的所有権機関(WIPO)による管理されている国際特許分類(IPC)である．
  国際特許分類は階層構造であり，一番上の階層はAからHまでの8個のセクションである．
- セクション以下は\ref{}に表したように四つの階層に分類されている．
+ セクション以下は\ref{tab:IPC}に表したように四つの階層に分類されている．
+ 
+ \begin{table}[!hbp]
+ \center
+ \begin{tabular}{cc}
+    セクション:A & 健康および娯楽 \\
+    サブセクション : 61 & 医学または獣医学:衛生学 \\
+    クラス: C & 歯科:口腔または歯科衛生 \\
+    メイングループ:5 & 歯の充填または被覆 \\
+    サブグループ:08 & 歯冠:その製造;口中での歯冠固定 \\
+ \end{tabular}
+ \caption{国際特許分類例:A61C 5/08}
+ \end{table}
 
  \section{特許検索}
  \begin{table}[!hbp]
@@ -73,6 +101,24 @@
  \end{table}
 
 
+ \begin{table}[!hbp]
+ \center
+ \begin{tabular}{|c|c|}
+ \hline
+ 符号 & 意味 \\
+ \hline
+ $N$ & 辞書中の単語の数 \\
+ $W = \{1,2,3, \dots ,N\} $ & 単語集合 \\
+ $M$ & コーパス中の文書の数 \\
+ $D = \{1,2,3, \dots ,M\}$ & 文章集合 \\
+ $K$ & トピック数 \\
+ $T = \{1,2,3, \dots ,K\}$ & トピック集合 \\
+ $\ell_i = \{t_1,t_2,\dots,K\} $ & 単語$i$のトピックベクトル \\
+ $\ell$ & 質問のトピックベクトル \\
+ \hline
+ \end{tabular}
+ \caption{表記法}
+ \end{table}
 
  \chapter{曖昧化検索}
 
@@ -85,16 +131,35 @@
  \section{潜在的ディリクレ配分法}
  \chapter{プライバシー分析(攻撃手法)}
  \section{メイントピック攻撃}
+ \begin{algorithm}
+ \caption{メイントピック攻撃}
+ \begin{algorithmic}[1]
+  \Require 質問:$q=\{t_i\},$単語のトピックベクトル集合$L=\{\ell_i\}$
+  \State $R=\phi, \, \ell=0$
+  \State $\ell=\sum_{t_i \in Q}\ell_{t_i}$
+  \State $maintopic = \argmax_j \ell[j]$
+  \ForAll {$bk_k \in q $}
+  \State $R=R \cup \{\max_{t_i}l_{t_i}[maintopic]\}$
+  \EndFor　\\
+  \Return $R$
+ \end{algorithmic}
+ \end{algorithm}
+
  \section{類似度攻撃\cite{simattack2016}(事前情報あり)}
+
  \section{類似度攻撃2(事前情報なし)}
  \chapter{質問曖昧化(提案手法)}
  \section{単語ベクトル}
  \section{質問曖昧化}
  \chapter{データベース分割}
+ 特許分類を用いることにより特許データベースを分割することができる．
+ 分割したデータベース各々に対して同じような信憑性を持つ質問を提出すると真に検索したいデータベースを隠すことができると考えられる．
+
  \chapter{実験}
  \section{データベース}
  \section{tfidf vs lda vs lsa}
  \section{データベース分割}
+
  \section{検索結果分析(真の質問が当たられる確率 vs ダミー質問と真の質問の検索結果の類似度)}
  \chapter{おわりに}
 

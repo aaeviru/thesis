@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2016.5.12)  15 DEC 2016 18:12
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2016.5.12)  19 DEC 2016 18:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -45,75 +45,135 @@ LaTeX Info: Redefining \LaTeXe on input line 1866.
 \heisei=\count90
 )
 \@totalpage=\count91
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvips.def on input line 95.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
+))
+\Gin@req@height=\dimen122
+\Gin@req@width=\dimen123
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count92
+\float@exts=\toks16
+\float@box=\box41
+\@float@everytoks=\toks17
+\@floatcapt=\box42
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks18
+\c@algorithm=\count93
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count94
+\c@ALG@rem=\count95
+\c@ALG@nested=\count96
+\ALG@tlm=\skip43
+\ALG@thistlm=\skip44
+\c@ALG@Lnr=\count97
+\c@ALG@blocknr=\count98
+\c@ALG@storecount=\count99
+\c@ALG@tmpcounter=\count100
+\ALG@tmplength=\skip45
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (./thesis-test.aux)
 \openout1 = `thesis-test.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 15.
+(Font)              scaled to size 9.60999pt on input line 22.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 15.
+(Font)              scaled to size 9.60999pt on input line 22.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 15.
+(Font)              scaled to size 13.83836pt on input line 22.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 15.
+(Font)              scaled to size 13.83836pt on input line 22.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 15.
+(Font)              scaled to size 23.90964pt on input line 22.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 15.
+(Font)              scaled to size 23.90964pt on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <24.88> on input line 15.
+(Font)              <24.88> on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <20.74> on input line 15.
+(Font)              <20.74> on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 15.
+(Font)              <17.28> on input line 22.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 15.
+(Font)              scaled to size 23.90964pt on input line 22.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 19.9311pt on input line 15.
+(Font)              scaled to size 19.9311pt on input line 22.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 15.
+(Font)              scaled to size 16.60605pt on input line 22.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 15.
+(Font)              scaled to size 13.83836pt on input line 22.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 15.
+(Font)              scaled to size 13.83836pt on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 15.
+(Font)              <14.4> on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 15.
+(Font)              <7> on input line 22.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 15.
+(Font)              scaled to size 6.72699pt on input line 22.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 15.
+(Font)              scaled to size 16.60605pt on input line 22.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 15.
+(Font)              scaled to size 16.60605pt on input line 22.
  [1
 
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 15.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 22.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 15.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
  [0
 
 ] [1
@@ -123,7 +183,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 
 ]
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 29.
+(Font)              scaled to size 23.90964pt on input line 36.
 
 (./thesis-test.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -157,77 +217,94 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
  [4]
 第1章
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 19.9311pt on input line 32.
+(Font)              scaled to size 19.9311pt on input line 39.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 19.9311pt on input line 32.
+(Font)              scaled to size 19.9311pt on input line 39.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 19.9311pt on input line 32.
+(Font)              scaled to size 19.9311pt on input line 39.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 41.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 41.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 41.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 41.
+
+LaTeX Warning: Citation `_face_2006' on page 1 undefined on input line 41.
+
 [1
 
 
 ]
 第2章
 
-Overfull \hbox (15.53824pt too wide) in paragraph at lines 39--48
+LaTeX Warning: Citation `https://www.jpo.go.jp/seido/s_tokkyo/chizai04.htm' on 
+page 2 undefined on input line 49.
+
+File: ex1-1.pdf Graphic file (type eps)
+<ex1-1.pdf>
+File: ex1-2.pdf Graphic file (type eps)
+ <ex1-2.pdf>
+
+LaTeX Warning: Reference `tab:IPC' on page 2 undefined on input line 74.
+
+
+Overfull \hbox (15.53824pt too wide) in paragraph at lines 91--100
  [] 
  []
 
 [2
 
-]
+] [3] [4]
 第3章
-[3
-
-]
-第4章
-[4
-
-]
-第5章
 [5
 
 ]
-第6章
+第4章
 [6
 
 ]
-第7章
+第5章
 [7
 
 ]
-第8章
+第6章
 [8
 
 ]
-第9章
+第7章
 [9
 
-] (./thesis-test.bbl [10
-
+]
+第8章
+[10
 
 ]
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 10.
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 10.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 10.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 10.
-) [11
+第9章
+[11
+
+] (./thesis-test.bbl [12
+
+
+]) [13
 
 ]
 付録A
-[12
+[14
 
-] (./thesis-test.aux) ) 
+] (./thesis-test.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 562 strings out of 493717
- 6154 string characters out of 6150720
- 67346 words of memory out of 5000000
- 4168 multiletter control sequences out of 15000+600000
+ 1505 strings out of 493717
+ 19284 string characters out of 6150720
+ 82131 words of memory out of 5000000
+ 5070 multiletter control sequences out of 15000+600000
  18158 words of font info for 81 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 33i,13n,21p,200b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 32i,13n,22p,206b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis-test.dvi (18 pages, 14432 bytes).
+Output written on thesis-test.dvi (20 pages, 20568 bytes).

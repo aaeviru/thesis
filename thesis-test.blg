@@ -36,6 +36,8 @@ Repeated entry---line 72 of file thesis.bib
  : @article{simattack2016
  :                       ,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "_face_2006"
+Warning--I didn't find a database entry for "https://www.jpo.go.jp/seido/s_tokkyo/chizai04.htm"
 is.kanji.str$ is an unknown function---line 1248 of file tieice.bst
 is.kanji.str$ is an unknown function---line 1249 of file tieice.bst
 is.kanji.str$ is an unknown function---line 1250 of file tieice.bst
@@ -169,7 +171,7 @@ year, year, year, year, year, year
 while executing---line 1294 of file tieice.bst
 You've used 4 entries,
             2323 wiz_defined-function locations,
-            573 strings with 4667 characters,
+            575 strings with 4726 characters,
 and the built_in function-call counts, 1566 in all, are:
 = -- 138
 > -- 46
