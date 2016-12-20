@@ -125,6 +125,26 @@
  \section{否認可能検索を利用したプライバシー保護\cite{providing2009}}
  \section{質問者のプライバシーを保護する質問加工法\cite{embellishing2010}}
  \section{質問意図を曖昧化するキーワード検索\cite{masking2014}}
+ \begin{algorithm}
+ \caption{HDGA(On Masking Topical Intent in Keyword Search)}
+ \begin{algorithmic}[1]
+  \Require 質問:$q_1$
+  \State $Q = \{q_1\}\delta_{q_1} = \argmax_{t \in T} Pr[t|q_1]$
+  \ForAll {$t \in T \setminus \{\delta_{q_1}\}$}
+  \State $e_t = h(\delta_{q_1}||t||s)$
+  \EndFor
+  \State $T_D = \{t^1_{q1},t^2_{q1}, \dots , t^2_{q1} | \forall t_1 \ \in T_D , \forall t_2 \ \in T \setminus T_D, e_{t_1} > e_{t_2} \}$
+  \ForAll {$t \in T_D $}
+  \While { $ \argmax_{t \in T} Pr[t|q'] \neq t$}
+  \State randomly select $|q_1|$ keywords for $t$ based on $Pr[w|t]$, to form a dummy query $q'$
+  \EndWhile
+  \State $Q = Q \cup \{q'\}$
+  \EndFor　
+  \State Shuffle queries in Q
+  \Return $Q$
+ \end{algorithmic}
+ \end{algorithm}
+
  \chapter{語意分析}
  \section{tf-idf}
  \section{潜在意味解析}
@@ -146,8 +166,29 @@
  \end{algorithm}
 
  \section{類似度攻撃\cite{simattack2016}(事前情報あり)}
+ \begin{algorithm}
+ \caption{類似攻撃}
+ \begin{algorithmic}[1]
+  \Require 質問集合:$Q=\{q^r_i\, | i \in \{1,2,3,4\},r \in \{1,2, \dots ,R\}\},$単語のトピックベクトル集合$L=\{\ell_i\}$
+  \State $p_i= q^1_i \, \, i \in \{1,2,3,4\} , result = \phi $
+  \For {$r = 2,3 \dots ,R $}
+   \For {$i = 1,2,3,4$}
+    \State $j = \argmax_j \frac{p_i \cdot q^r_j}{|p_i||q^r_j|}$
+    \State $d_i = \frac{p_i \cdot q^r_j}{|p_i||q^r_j|}$
+    \State $temp_i = \frac{1}{r}(p_i(r-1) + q_j)$
+   \EndFor
+   \For {$i = 1,2,3,4$}
+    \State $p_i = temp_i $
+   \EndFor
+   \State $result =result \cup \{\argmax_{i}d_i\}$
+  \EndFor　\\
+  \Return $result$
+ \end{algorithmic}
+ \end{algorithm}
 
  \section{類似度攻撃2(事前情報なし)}
+
+
  \chapter{質問曖昧化(提案手法)}
  \section{単語ベクトル}
  \section{質問曖昧化}

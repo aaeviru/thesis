@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2016.5.12)  10 DEC 2016 22:15
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2016.5.12)  20 DEC 2016 17:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1296,15 +1296,7 @@ LaTeX Font Info:    Font shape `OT1/txss/m/sl' will be
 
 ] (./rinko_slide.toc) [16
 
-]
-LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 19.70294pt on input line 253.
-
-
-LaTeX Warning: Citation `providing2009' on page 17 undefined on input line 253.
-
-
-[17
+] [17
 
 ]
 File: photo11.png Graphic file (type bmp)
@@ -1317,38 +1309,15 @@ Overfull \hbox (21.37085pt too wide) detected at line 287
 /12 ^^@ []
  []
 
-
-LaTeX Warning: Citation `providing2009' on page 19 undefined on input line 287.
-
-
 [19
 
 ]
 File: th01.png Graphic file (type bmp)
- <th01.png>
+ <th01.png> [20
 
-LaTeX Warning: Citation `providing2009' on page 20 undefined on input line 295.
+] [21
 
-
-[20
-
-]
-
-LaTeX Warning: Citation `providing2009' on page 21 undefined on input line 307.
-
-
-
-LaTeX Warning: Citation `providing2009' on page 21 undefined on input line 307.
-
-
-[21
-
-]
-
-LaTeX Warning: Citation `embellishing2010' on page 22 undefined on input line 3
-22.
-
-[22
+] [22
 
 ]
 File: photo14.png Graphic file (type bmp)
@@ -1358,44 +1327,26 @@ File: photo14.png Graphic file (type bmp)
 File: rk15.png Graphic file (type bmp)
  <rk15.png> [24
 
-]
+] [25
 
-LaTeX Warning: Citation `embellishing2010' on page 25 undefined on input line 3
-54.
-
-[25
+] [26
 
 ]
-
-LaTeX Warning: Citation `embellishing2010' on page 26 undefined on input line 3
-63.
-
-[26
-
-]
-
-LaTeX Warning: Citation `masking2014' on page 27 undefined on input line 372.
-
 [27
 
-]
+] [28
 
-LaTeX Warning: Citation `latent2003' on page 28 undefined on input line 381.
-
-[28
+] [29
 
 ]
+LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
+(Font)              scaled to size 19.70294pt on input line 415.
+LaTeX Font Info:    Font shape `OT1/txss/m/it' in size <20.74> not available
+(Font)              Font shape `OT1/txss/m/sl' tried instead on input line 415.
 
-LaTeX Warning: Citation `masking2014' on page 29 undefined on input line 390.
-
-[29
-
-]
-
-LaTeX Warning: Citation `simattack2016' on page 30 undefined on input line 415.
-
-
-[30
+LaTeX Font Info:    Font shape `OT1/txss/m/sl' will be
+(Font)              scaled to size 19.70294pt on input line 415.
+ [30
 
 ]
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
@@ -1425,25 +1376,6 @@ LaTeX Font Info:    Font shape `OT1/txss/m/it' in size <5.5> not available
 
 LaTeX Font Info:    Font shape `OT1/txss/m/sl' will be
 (Font)              scaled to size 5.22498pt on input line 433.
-LaTeX Font Info:    Font shape `JT1/gt/bx/n' in size <11> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 433.
-LaTeX Font Info:    Font shape `JY1/gt/bx/n' in size <11> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 433.
-LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <11> not available
-(Font)              Font shape `OT1/txss/b/n' tried instead on input line 433.
-LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
-(Font)              scaled to size 10.44997pt on input line 433.
-
-LaTeX Warning: Citation `providing2009' on page 31 undefined on input line 433.
-
-
-
-LaTeX Warning: Citation `embellishing2010' on page 31 undefined on input line 4
-33.
-
-
-LaTeX Warning: Citation `masking2014' on page 31 undefined on input line 433.
-
 [31
 
 ] (./rinko_slide.toc) [32
@@ -1467,7 +1399,16 @@ LaTeX Warning: Citation `masking2014' on page 31 undefined on input line 433.
 
 ] (./rinko_slide.toc) [41
 
-] (./rinko_slide.bbl) [42
+] (./rinko_slide.bbl
+
+LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
+(Font)              using `JT1/gt/m/n' instead on input line 7.
+
+
+LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
+(Font)              using `JY1/gt/m/n' instead on input line 7.
+
+) [42
 
 ]
 \tf@nav=\write6
@@ -1495,12 +1436,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 544.
  ) 
 Here is how much of TeX's memory you used:
- 17808 strings out of 493717
- 340919 string characters out of 6150720
+ 17858 strings out of 493717
+ 342437 string characters out of 6150720
  407924 words of memory out of 5000000
- 20848 multiletter control sequences out of 15000+600000
- 64027 words of font info for 181 fonts, out of 8000000 for 9000
+ 20897 multiletter control sequences out of 15000+600000
+ 67189 words of font info for 191 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  56i,18n,63p,387b,838s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on rinko_slide.dvi (42 pages, 234928 bytes).
+Output written on rinko_slide.dvi (42 pages, 239296 bytes).
