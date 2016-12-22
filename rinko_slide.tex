@@ -63,7 +63,7 @@
 
 \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
 
-\title{\bfseries プライバシーを保護する特許検索}
+\title{\bfseries 特許検索における質問意図の曖昧化}
 
 \date{2016年月日}
 \author{中川研M2 胡 瀚林 \\ 指導教員：中川 裕志 教授}
@@ -373,8 +373,6 @@
 
 \begin{frame}{latent Dirichlet allocation  \cite{latent2003}}
 	\begin{block}{}
-		\begin{itemize}
-		\end{itemize}
 	\end{block}
 \end{frame}
 
@@ -448,14 +446,14 @@
 
 \begin{frame}{トピック間の距離}
     \begin{block}{トピック間の$cos$距離関数$dist_{cos}$}
-		$l_{t_1},l_{t_2}$をトピック$t_1,t_2$の単語ベクトルをする．
+		$l_{t_1},l_{t_2}$をトピック$t_1,t_2$の単語ベクトルとする．
 		トピック$t_1,t_2$の$cos$距離関数$dist_{cos}$とは
         \begin{equation}
 			dist_{cos}(t_1,t_2) = dist_{LSA}(l_{t_1}[1:1000],l_{t_2}[1:1000])
         \end{equation}
     \end{block}
     \begin{block}{トピック間の$coef$距離関数$dist_{coef}$}
-		$l_{t_1},l_{t_2}$をトピック$t_1,t_2$の単語ベクトルをする．
+		$l_{t_1},l_{t_2}$をトピック$t_1,t_2$の単語ベクトルとする．
 		トピック$t_1,t_2$の$coef$距離関数$dist_{coef}$とは
         \begin{equation}
 			dist_{coef}(t_1,t_2) = 1 - \frac{l_{t_1}[1:1000] \cap l_{t_2}[1:1000])}{1000}
@@ -463,6 +461,27 @@
     \end{block}
 \end{frame}
 
+\begin{frame}{流れ}
+	\fontsize{10pt}{7.2}\selectfont
+	\center
+	\begin{tabular}{ccccc}
+	\noalign{\hrule height 1pt}
+	 && 文章単語行列 &&  \\
+	\hline
+	&tfidf & LSI   & LDA& \\ 
+	\hline
+	 && トピック単語ベクトル(辞書) && \\  
+	\hline
+	 cos-近い& cos-遠い & データベース分割 & coef-近い & coef-遠い \\
+	\hline
+	&&トピック分類&& \\
+	\hline
+	&同じ位置&同じ位置+ノイズ&zipf分布& \\
+	\hline
+	&&ダミー質問&& \\
+	\noalign{\hrule height 1pt}
+	\end{tabular}
+\end{frame}
 
 \section{プライバシー分析}
 \begin{frame}{SimAttack New}
@@ -515,20 +534,66 @@
 		文章数 & $3,496,253$ \\
 		質問数 & $2,908$ \\
 		質問平均単語数 & $21.0$ \\
-		メイントピック攻撃成功率 & $90.1\%$ \\
+		国際特許分類数 & 623 \\
 		\noalign{\hrule height 1pt}
 		\end{tabular}
 	\end{center}
 \end{frame}
 
+\begin{frame}{実験}
+\fontsize{11pt}{7.2}\selectfont
+	\begin{block}{LSA ランダムトピック}
+	\center
+		\begin{tabular}{|c|c|c|c|c|c|}
+		\noalign{\hrule height 1pt}
+		評価方法:ダミー質問数  & 3 & 4 & 5 & 6 & 7i    \\
+		SimAtt New &  & 78.2 & 78.5 & 77.3 & 63.8 \\
+		SimAtt LSA & 65.5 &55.6 & 50.8 & 48.2 & 50.7 \\
+		Maintopic & 75.2 & 72.3 & 67.6 & 64.2 & 58.5 \\ 
+		100番までの検索結果重複率 & 6.0 & 1.9 & 2.0 & 1.9 & 1.9 \\
+		\noalign{\hrule height 1pt}
+		\end{tabular}
+	\end{block}
+	\begin{block}{同トピック}
+	\center
+		\begin{tabular}{|c|c|c|c|c|}
+		\noalign{\hrule height 1pt}
+		評価方法  & SimAtt New & SimAtt LSA  & Maintopic & 重複率  \\
+		tfidf  & 25.1 & 25.0 & 25.1 & 28.5 \\
+		LSA  & 27.6 & 27.0 & 25.8 & 20.7 \\
+		LDA  & 25.8 & 24.6 & 24.8 & 32.3 \\
+		\noalign{\hrule height 1pt}
+		\end{tabular}
+	\end{block}
+    \begin{block}{データベース分割(8)}
+    \center
+        \begin{tabular}{|c|c|c|c|c|}
+        \noalign{\hrule height 1pt}
+		評価方法  & SimAtt New & SimAtt LSA  & Maintopic & 重複率  \\
+        データベース分割(8)  & 52.3 & 11.6 & 42.1 & 1.5 \\
+        \noalign{\hrule height 1pt}
+        \end{tabular}
+    \end{block}
+\end{frame}
+
+\begin{frame}{実験}
+\fontsize{11pt}{7.2}\selectfont
+    \begin{block}{LSAトピック分類方法}
+    \center
+		\begin{tabular}{|c|c|c|c|}
+        \noalign{\hrule height 1pt}
+        評価方法  & SimAtt LSA  & Maintopic & 重複率  \\
+        coef-far  & 88.7 & 69.2 & 5.2 \\
+        coef-near & 35.5 & 28.2 & 8.5 \\
+        \noalign{\hrule height 1pt}
+        \end{tabular}
+    \end{block}
+\end{frame}
+
+
 \section{まとめ}
 \begin{frame}{まとめ}
 	\begin{block}{}
-		\begin{itemize}
-			\item 質問を単語ごとに分割し，暗号と組み合わせする手法
-			\item 質問のメイントピックを保護するのは難しい
-			\item Wordnetではなく他のダミー単語を生成するツールが欲しい
-		\end{itemize}
 	\end{block}
 \end{frame}
 
