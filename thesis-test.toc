@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {3.1}否認可能検索を利用したプライバシー保護\cite {providing2009}}{5}
 \contentsline {section}{\numberline {3.2}質問者のプライバシーを保護する質問加工法\cite {embellishing2010}}{5}
 \contentsline {section}{\numberline {3.3}質問意図を曖昧化するキーワード検索\cite {masking2014}}{5}
-\contentsline {chapter}{\numberline {第4章}語意分析}{6}
+\contentsline {chapter}{\numberline {第4章}意味分析}{6}
 \contentsline {section}{\numberline {4.1}tf-idf}{6}
 \contentsline {section}{\numberline {4.2}潜在意味解析}{6}
 \contentsline {section}{\numberline {4.3}潜在的ディリクレ配分法}{6}
@@ -18,7 +18,7 @@
 \contentsline {section}{\numberline {6.1}単語ベクトル}{9}
 \contentsline {section}{\numberline {6.2}質問曖昧化}{9}
 \contentsline {chapter}{\numberline {第7章}データベース分割}{10}
-\contentsline {chapter}{\numberline {第8章}実験}{11}
+\contentsline {chapter}{\numberline {第8章}評価実験}{11}
 \contentsline {section}{\numberline {8.1}データベース}{11}
 \contentsline {section}{\numberline {8.2}tfidf vs lda vs lsa}{11}
 \contentsline {section}{\numberline {8.3}データベース分割}{11}
