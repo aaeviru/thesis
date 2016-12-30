@@ -3,27 +3,26 @@
 \contentsline {section}{\numberline {2.1}特許分類}{2}
 \contentsline {section}{\numberline {2.2}特許検索}{2}
 \contentsline {chapter}{\numberline {第3章}曖昧化検索}{5}
-\contentsline {section}{\numberline {3.1}否認可能検索を利用したプライバシー保護\cite {providing2009}}{5}
-\contentsline {section}{\numberline {3.2}質問者のプライバシーを保護する質問加工法\cite {embellishing2010}}{5}
-\contentsline {section}{\numberline {3.3}質問意図を曖昧化するキーワード検索\cite {masking2014}}{5}
-\contentsline {chapter}{\numberline {第4章}意味分析}{6}
-\contentsline {section}{\numberline {4.1}tf-idf}{6}
-\contentsline {section}{\numberline {4.2}潜在意味解析}{6}
-\contentsline {section}{\numberline {4.3}潜在的ディリクレ配分法}{6}
-\contentsline {chapter}{\numberline {第5章}プライバシー分析(攻撃手法)}{7}
-\contentsline {section}{\numberline {5.1}メイントピック攻撃}{7}
-\contentsline {section}{\numberline {5.2}類似度攻撃\cite {simattack2016}(事前情報あり)}{7}
-\contentsline {section}{\numberline {5.3}類似度攻撃2(事前情報なし)}{7}
-\contentsline {chapter}{\numberline {第6章}質問曖昧化(提案手法)}{9}
-\contentsline {section}{\numberline {6.1}単語ベクトル}{9}
-\contentsline {section}{\numberline {6.2}質問曖昧化}{9}
-\contentsline {chapter}{\numberline {第7章}データベース分割}{10}
-\contentsline {chapter}{\numberline {第8章}評価実験}{11}
-\contentsline {section}{\numberline {8.1}データベース}{11}
-\contentsline {section}{\numberline {8.2}tfidf vs lda vs lsa}{11}
-\contentsline {section}{\numberline {8.3}データベース分割}{11}
-\contentsline {section}{\numberline {8.4}検索結果分析(真の質問が当たられる確率 vs ダミー質問と真の質問の検索結果の類似度)}{11}
-\contentsline {chapter}{\numberline {第9章}おわりに}{12}
-\contentsline {chapter}{謝辞}{13}
-\contentsline {chapter}{参考文献}{14}
-\contentsline {chapter}{\numberline {付録A}}{15}
+\contentsline {section}{\numberline {3.1}否認可能検索を利用したプライバシー保護\cite {providing2009}}{6}
+\contentsline {section}{\numberline {3.2}質問者のプライバシーを保護する質問加工法\cite {embellishing2010}}{6}
+\contentsline {section}{\numberline {3.3}質問意図を曖昧化するキーワード検索\cite {masking2014}}{6}
+\contentsline {chapter}{\numberline {第4章}意味分析}{8}
+\contentsline {section}{\numberline {4.1}tf-idf}{8}
+\contentsline {section}{\numberline {4.2}潜在意味解析}{8}
+\contentsline {section}{\numberline {4.3}潜在的ディリクレ配分法}{8}
+\contentsline {chapter}{\numberline {第5章}プライバシー分析(攻撃手法)}{9}
+\contentsline {section}{\numberline {5.1}メイントピック攻撃}{9}
+\contentsline {section}{\numberline {5.2}類似度攻撃\cite {simattack2016}(事前情報あり)}{9}
+\contentsline {section}{\numberline {5.3}類似度攻撃2(事前情報なし)}{10}
+\contentsline {chapter}{\numberline {第6章}質問曖昧化(提案手法)}{11}
+\contentsline {section}{\numberline {6.1}単語ベクトル}{11}
+\contentsline {section}{\numberline {6.2}質問曖昧化}{12}
+\contentsline {chapter}{\numberline {第7章}データベース分割}{13}
+\contentsline {chapter}{\numberline {第8章}評価実験}{14}
+\contentsline {section}{\numberline {8.1}データベース}{14}
+\contentsline {section}{\numberline {8.2}tfidf vs lda vs lsa}{14}
+\contentsline {section}{\numberline {8.3}データベース分割}{14}
+\contentsline {section}{\numberline {8.4}検索結果分析(真の質問が当たられる確率 vs ダミー質問と真の質問の検索結果の類似度)}{14}
+\contentsline {chapter}{\numberline {第9章}おわりに}{15}
+\contentsline {chapter}{謝辞}{16}
+\contentsline {chapter}{\numberline {付録A}}{17}
