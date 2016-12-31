@@ -6,6 +6,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage{latexsym}
 
 \theoremstyle{definition}
 \newtheorem{thm}{定理}
@@ -130,7 +131,6 @@
  \end{tabular}
  \caption{特許検索タイプー}
  \end{table}
-
 
  \begin{table}[!hbp]
  \center
@@ -739,6 +739,7 @@
   \end{aligned}
   \end{equation}
  \end{defi}
+
  質問のメイントピックを計算し，
  質問に含まれている単語をその単語が質問のメイントピックの単語ベクトルにいる順番にすれば，
  質問を数字ベクトルで表わすことができる．
@@ -761,11 +762,110 @@
  分割したデータベース各々に対して同じような信憑性を持つ質問を提出すると真に検索したいデータベースを隠すことができると考えられる．
 
  \chapter{評価実験}
- \section{データベース}
+
+ \begin{table}[!hbp]
+ \center
+ \begin{tabular}{|c|c|}
+ \hline
+ 重複を除いた単語数 & $2,973,096$  \\
+ 文章数 & $3,496,253$ \\
+ 質問数 & $2,908$ \\
+ 質問平均単語数 & $21.0$ \\
+ 国際特許分類数 & 623 \\
+ \hline
+ \end{tabular}
+ \caption{データベース}
+ \end{table}
+
+
+
  \section{tfidf vs lda vs lsa}
+ \begin{table}[!hbp]
+ \center
+ \begin{tabular}{|c|c|c|c|c|c|}
+ \hline
+ 評価方法:ダミー質問数  & 3 & 4 & 5 & 6 & 7    \\
+ SimAtt New &  & 78.2 & 78.5 & 77.3 & 63.8 \\
+ SimAtt LSA & 65.5 &55.6 & 50.8 & 48.2 & 50.7 \\
+ Maintopic & 75.2 & 72.3 & 67.6 & 64.2 & 58.5 \\
+ 100番までの検索結果重複率 & 6.0 & 1.9 & 2.0 & 1.9 & 1.9 \\
+ \hline
+ \end{tabular}
+ \caption{SA:LSA ダミートピック選び方:ランダム ダミー質問数の影響1}
+ \end{table}
+
+ \begin{table}[!hbp]
+ \center
+ \begin{tabular}{|c|c|c|c|c|c|}
+ \hline
+ 評価方法:ダミー質問数  & 3 & 4 & 5 & 6 & 7    \\
+ SimAtt New &  & 82.8 & 77.0 & 74.4 & 72.6 \\
+ SimAtt LSA &  & 52.5 & 47.8 & 43.7 & 42.4 \\
+ Maintopic &  & 81.8 & 78.0 & 76.0 & 74.1 \\
+ 100番までの検索結果重複率 &  & 1.5 & 1.9 & 1.7 & 1.6 \\
+ \hline
+ \end{tabular}
+ \caption{SA:tfidf ダミートピック選び方:ランダム ダミー質問数の影響2}
+ \end{table}
+
+ \begin{table}[!hbp]
+ \center
+ \begin{tabular}{|c|c|c|c|c|}
+ \hline
+ 評価方法:ダミトピックの選び方 & cos-near & cos-far & coef-near & coef-far \\
+ SimAtt New & 72.7 & 86.0 & 66.8 & 90.3 \\
+ SimAtt LSA & 33.5 & 51.8 & 34.5 & 87.2 \\
+ Maintopic &  38.3 & 77.5 & 28.2 & 69.2 \\
+ 100番までの検索結果重複率 & 2.8 & 2.0 & 2.8 & 1.7 \\
+ \hline
+ \end{tabular}
+ \caption{SA:LSA ダミー質問数:3  ダミトピックの選び方の影響1}
+ \end{table}
+
+ \begin{table}[!hbp]
+ \center
+ \begin{tabular}{|c|c|c|}
+ \hline
+ 評価方法:ダミトピックの選び方 & coef-near & coef-far \\
+ SimAtt New & 76.3 & 86.9 \\
+ SimAtt LSA & 63.4 & 63.1 \\
+ Maintopic  & 77.7 & 87.4 \\
+ 100番までの検索結果重複率 & 6.5 & 1.3 \\
+ \hline
+ \end{tabular}
+ \caption{SA:tfidf ダミー質問数:3  ダミトピックの選び方の影響2}
+ \end{table}
+
+ \begin{table}[!hbp]
+ \center
+ \begin{tabular}{|c|c|c|c|c|}
+ \hline
+ 評価方法  & SimAtt New & SimAtt LSA  & Maintopic & 重複率  \\
+ tfidf  & 25.1 & 25.0 & 25.1 & 28.5 \\
+ LSA  & 27.6 & 27.0 & 25.8 & 20.7 \\
+ LDA  & 25.8 & 24.6 & 24.8 & 32.3 \\
+ \hline
+ \end{tabular}
+ \caption{ダミー質問数:3  ダミトピックの選び方:真の質問と同じトピック SAの影響}
+ \end{table}
+
+
+
  \section{データベース分割}
 
- \section{検索結果分析(真の質問が当たられる確率 vs ダミー質問と真の質問の検索結果の類似度)}
+ \begin{table}[!hbp]
+ \center
+ \begin{tabular}{|c|c|c|c|c|}
+ \hline
+ 評価方法  & SimAtt New & SimAtt LSA  & Maintopic & 重複率  \\
+ データベース分割(8)  & 52.3 & 11.6 & 42.1 & 1.5 \\
+ \hline
+ \end{tabular}
+ \caption{データベース分割}
+ \end{table}
+
+
+
  \chapter{おわりに}
 
  \backmatter% ここから後付

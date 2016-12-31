@@ -30,11 +30,9 @@
 \contentsline {section}{\numberline {6.2}質問曖昧化}{21}
 \contentsline {chapter}{\numberline {第7章}データベース分割}{22}
 \contentsline {chapter}{\numberline {第8章}評価実験}{23}
-\contentsline {section}{\numberline {8.1}データベース}{23}
-\contentsline {section}{\numberline {8.2}tfidf vs lda vs lsa}{23}
-\contentsline {section}{\numberline {8.3}データベース分割}{23}
-\contentsline {section}{\numberline {8.4}検索結果分析(真の質問が当たられる確率 vs ダミー質問と真の質問の検索結果の類似度)}{23}
-\contentsline {chapter}{\numberline {第9章}おわりに}{24}
-\contentsline {chapter}{謝辞}{25}
-\contentsline {chapter}{参考文献}{26}
-\contentsline {chapter}{\numberline {付録A}}{27}
+\contentsline {section}{\numberline {8.1}tfidf vs lda vs lsa}{23}
+\contentsline {section}{\numberline {8.2}データベース分割}{24}
+\contentsline {chapter}{\numberline {第9章}おわりに}{25}
+\contentsline {chapter}{謝辞}{26}
+\contentsline {chapter}{参考文献}{27}
+\contentsline {chapter}{\numberline {付録A}}{28}
