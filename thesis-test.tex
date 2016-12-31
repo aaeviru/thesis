@@ -177,32 +177,42 @@
   $x_i$は質問者がトピック$i$に対して持つ興味の強さを表す．
  \end{defi}
  曖昧化検索メカニズムはAliceのコンピュータで実行する．
- 曖昧化検索メカニズムが意味分析ツール$SA$を用いて真の質問$q_R$を分析しダミー質問$q_D$を生成し，検索サーバーに提出する．
+ 曖昧化検索メカニズムが意味分析ツール$SA$を用いて真の質問$q_R$を分析しダミー質問$q_D$を生成する．
+ 生成したしダミー質問$q_D$と真の質問$q_R$を1つの質問グループにし，検索サーバーに提出する．
  質問$q$とトピック$t$の関係を表す関数は以下のように定義する，
  
- \begin{defi}{質問-トピックスコア関数:$rscore_SA$．}
+ \begin{defi}{質問-トピックスコア関数:$rscore_{SA}$．}
   $T$を全てのトピックの集合とする．
   質問$q$とトピック$t$の関係を表す関数とは
   \begin{equation}
-   rscore_SA:Q \times T \to \mathbb{R}
+   rscore_{SA}:Q \times T \to \mathbb{R}
+  \end{equation}
+ \end{defi}
+
+ \begin{defi}{質問$q$のメイントピック:$\delta_{SA}(q)$．}
+  $T$を全てのトピックの集合とする．
+  質問$q$のメイントピック$\delta_q$とは
+  \begin{equation}
+   \delta_{SA}(q) = \argmax_{t \in T} rscore_{SA}(q,t)
   \end{equation}
  \end{defi}
 
  次は質問$q$のトピックベクトルを定義する．
- 質問$q$のトピックベクトル$vec_SA(q) = (rscore_SA(q,t_1 ), \dots , rscore_SA(q,t_{|T|})$とは
+ 質問$q$のトピックベクトル$vec_{SA}(q) = (rscore_{SA}(q,t_1 ), \dots , rscore_{SA}(q,t_{|T|})$とは
  $q$と全てのトピック$t_i$の質問-トピックスコア関数$rscore(q, t_i)$を要素として持つ$|T|$次元ベクトルである．
  質問のトピックベクトルを使って質問間の関係を評価することができる．
+
  検索サーバーがAliceからもらった質問をすべて記録し，その質問たちを分析し得るプロフィールを$Y$にする．
 
-% \begin{defi}{質問比較関数:$C$．}
-%  質問比較関数$C:Q \times Q \rightarrow \mathbb{R}$を以下のように定義する
-%  \begin{equation}
-%  C_SA(q_1,q_2) = \frac{(vec_SA(q_1) \cdot vec_SA(q_1))}{||q_1|| ||q_2||}
-%  \end{equation}
-% \end{defi}
+ \begin{defi}{質問比較関数:$C$．}
+  質問比較関数$C:Q \times Q \rightarrow \mathbb{R}$を以下のように定義する
+  \begin{equation}
+  C_{SA}(q_1,q_2) = \frac{(vec_{SA}(q_1) \cdot vec_{SA}(q_1))}{||q_1|| ||q_2||}
+  \end{equation}
+ \end{defi}
  
  
- 曖昧化検索は3つ違うレベルな目的がある．
+ 曖昧化検索は3つ違うレベルな目標がある．
  まずは質問そのものの曖昧化である．
  質問者が検索した真の質問$q_R$はどの質問であるかをわからないようにする．
  2つ目は質問意図の曖昧化である．
@@ -215,7 +225,7 @@
  同じように{林檎}と{梨}の2つ質問から質問者が検索したいを確定することができないが，質問者が果物に興味を持つことが確定できる．
  本論文では質問意図の曖昧化をメインにする．
 
- 次は検索質問のプライバシー保護の代表的な手法:
+ 次に検索質問のプライバシー保護の代表的な手法，
  否認可能検索(PDS)\cite{providing2009}，
  質問者のプライバシーを保護する質問加工法(ETSQ)\cite{embellishing2010}，
  質問意図を曖昧化するキーワード検索(OMTI)\cite{masking2014}を紹介する．
@@ -569,6 +579,17 @@
  \subsection{プライバシー分析}
  
  \section{質問意図を曖昧化するキーワード検索}
+
+ HDGAは\cite{}提案した潜在的ディリクレ配分法(LDA)に基づく質問意図の曖昧化メカニズム(TIO)の改良手法である．
+ LDAの詳細は第\ref{s:sm}章で述べる．
+ HDGAが以下の特徴を持つ，
+ まず，サーバーに提出した質問グループに属する各質問が違うトピックに属し，ダミー質問の生成過程が相互独立である．
+
+ 次に，HDGAはTIOのように真の質問をカバーできるトピックからダミー質問を作るではなく
+ 同じ質問グループに属する質問が同じ地位を持つ．
+
+ そして，HDGAがハッシュ関数Highest Random Weigh(HRW)\cite{}を用いてダミートピックを選び，トピックの出現頻度を均一にする．
+
  \begin{algorithm}
  \caption{HDGA(On Masking Topical Intent in Keyword Search)}
  \begin{algorithmic}[1]
@@ -580,14 +601,18 @@
   \State $T_D = \{t^1_{q1},t^2_{q1}, \dots , t^2_{q1} | \forall t_1 \ \in T_D , \forall t_2 \ \in T \setminus T_D, e_{t_1} > e_{t_2} \}$
   \ForAll {$t \in T_D $}
   \While { $ \argmax_{t \in T} Pr[t|q'] \neq t$}
-  \State randomly select $|q_1|$ keywords for $t$ based on $Pr[w|t]$, to form a dummy query $q'$
+  \State $Pr[w|t]$に基づいて$|q_1|$個の単語をランダムに選び，ダミー質問$q'$を作る
   \EndWhile
   \State $Q = Q \cup \{q'\}$
   \EndFor　
-  \State Shuffle queries in Q
-  \Return $Q$
+  \State $Q$をシャッフルする
+  \Ensure $Q$
  \end{algorithmic}
+ \label{a:HDGA}
  \end{algorithm}
+
+ アルゴリズム\ref{a:HDGA}がHDGAの質問生成メカニズムを表す．
+ ここで$Pt[w|t]$がLDA分析の結果であり，$h$がHRWハッシュ関数である．
 
  \subsection{プライバシー分析}
 
@@ -595,8 +620,33 @@
  \section{tf-idf}
  \section{潜在意味解析}
  \section{潜在的ディリクレ配分法}
+
  \chapter{プライバシー分析(攻撃手法)}
+ 本論文では攻撃者が質問者が質問意図を隠していること
+ と
+ 質問者が用いている質問曖昧化手法のメカニズムを知っているを前提とし，
+ 攻撃手法を考える．
+
+ 曖昧化検索は3つの違うレベルな目標があると同じように
+ 曖昧化検索に対する攻撃手法も3つの違うレベルな目標がある．
+ ダミー質問が混ぜられた質問グループから真の質問$q_R$を見つかる．
+ ダミー質問が混ぜられた質問グループから質問者が検索したいものを見つかる．
+ ダミー質問が混ぜられた質問ログから質問者が興味を持つトピックを見つかる．
+
+ 1つ目の目標に対して本論文では質問$q$と質問$q$のメイントピック$\delta_{SA}$間の関連性を攻撃するメイントピック攻撃を提案する．
+ 質問者が検索したいものを定義するのは難しいため，本論文ではダミー質問の検索結果と真の質問の検索結果が一致する割合を用いて評価する．
+ そして，3つ目の目標を達成できる既存な攻撃手法類似度攻撃\cite{simattack2016}を紹介し，改良手法を提案する．
+
  \section{メイントピック攻撃}
+
+ ダミー単語が真の質問単語と同様にいつのトピックに集中することが失敗したら，
+ 真の質問のメイントピックと関係が強い単語が他のトピックと関係が強い単語の数より多い，
+ 加工した質問のトピックと真の質問のトピックが一致することが考えられる．
+ また，一つのバケツの中の単語が意味的に遠いため，
+ ダミー単語が真の質問単語のメイントピックとの関連性が弱いと考えられる．
+ メイントピック攻撃では各単語バケツ中質問のメイントピックと一番関連性が強い単語を真の質問の単語と推定する．
+ アルゴリズム\ref{a:mt}はその流れを表している．
+
  \begin{algorithm}
  \caption{メイントピック攻撃}
  \begin{algorithmic}[1]
@@ -609,6 +659,7 @@
   \EndFor　\\
   \Return $R$
  \end{algorithmic}
+ \label{a:mt}
  \end{algorithm}
 
  \section{類似度攻撃\cite{simattack2016}(事前情報あり)}

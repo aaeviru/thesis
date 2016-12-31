@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2016.5.12)  30 DEC 2016 23:30
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2016.5.12)  31 DEC 2016 18:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -345,65 +345,65 @@ Overfull \hbox (15.53824pt too wide) in paragraph at lines 122--131
 
 ] [6]
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 246.
+(Font)              scaled to size 11.53198pt on input line 256.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 246.
+(Font)              scaled to size 11.53198pt on input line 256.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 246.
+(Font)              scaled to size 11.53198pt on input line 256.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 246.
+(Font)              scaled to size 11.53198pt on input line 256.
  [7] [8] [9]
 LaTeX Font Info:    Font shape `JT1/mc/m/sc' in size <10> not available
-(Font)              Font shape `JT1/mc/m/n' tried instead on input line 407.
+(Font)              Font shape `JT1/mc/m/n' tried instead on input line 417.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 407.
+(Font)              scaled to size 9.60999pt on input line 417.
 LaTeX Font Info:    Font shape `JY1/mc/m/sc' in size <10> not available
-(Font)              Font shape `JY1/mc/m/n' tried instead on input line 407.
+(Font)              Font shape `JY1/mc/m/n' tried instead on input line 417.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 407.
+(Font)              scaled to size 9.60999pt on input line 417.
 File: rk11.png Graphic file (type eps)
  <rk11.png>
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 442.
- [10]
+(Font)              scaled to size 5.76599pt on input line 452.
+ [10] [11]
 File: rk13.png Graphic file (type eps)
- <rk13.png> [11]
+ <rk13.png> [12]
 
-LaTeX Warning: Citation `benaloh_dense_1994' on page 12 undefined on input line
- 533.
+LaTeX Warning: Citation `benaloh_dense_1994' on page 13 undefined on input line
+ 543.
 
-[12] [13] [14]
+[13] [14] [15]
 第4章
-[15
+[16
 
 ]
 第5章
-[16
+[17
 
-] [17]
+] [18] [19]
 第6章
-[18
-
-] [19]
-第7章
 [20
+
+] [21]
+第7章
+[22
 
 ]
 第8章
-[21
+[23
 
 ]
 第9章
-[22
+[24
 
-] (./thesis-test.bbl [23
+] (./thesis-test.bbl [25
 
 
-]) [24
+]) [26
 
 ]
 付録A
-[25
+[27
 
 ] (./thesis-test.aux)
 
@@ -411,12 +411,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2561 strings out of 493717
- 31315 string characters out of 6150720
- 100136 words of memory out of 5000000
- 6076 multiletter control sequences out of 15000+600000
+ 2563 strings out of 493717
+ 31329 string characters out of 6150720
+ 101136 words of memory out of 5000000
+ 6078 multiletter control sequences out of 15000+600000
  26748 words of font info for 120 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 32i,13n,26p,245b,367s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 32i,13n,26p,245b,403s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis-test.dvi (31 pages, 67472 bytes).
+Output written on thesis-test.dvi (33 pages, 72280 bytes).
