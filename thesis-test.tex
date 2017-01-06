@@ -617,8 +617,15 @@
  \subsection{プライバシー分析}
 
  \chapter{意味分析} \label{s:sm}
- 第\ref{s:OBS}章で述べたように質問意図を隠すために質問が持つ意味を数字にしなければならない．
- 質問が単語からなるベクトルであると考えると質問が持つ意味を数字にすることは
+ 第\ref{s:OBS}章で述べたように質問意図を隠せるダミー質問を作るために
+ 質問が持つ意味を計算機に理解させなければならない．
+ まず，文章や質問などをベクトルで表す必要がある．
+ 自然言語研究で多く使用されるベクトル表現方法がbag-of-wordsである．
+ bag-of-wordsとは単語を袋に入れるように，単語の出現順番などの情報を捨て，
+ 単語の出現頻度だけをベクトル要素とする表現方法である．
+ 次に質問が持つ意味を数字にすると，
+ 質問をトピックベクトルで表現できる．
+ したがって，質問が持つ意味を数字にすることは
  質問を記述するために必要な次元数を減らすことであると考えられる．
  情報検索分野ではコーパス中の文章を記述するために必要な次元数を減らす研究を進めている．
 
@@ -627,7 +634,7 @@
  潜在的意味解析(LSA)は行列$G$を特異値分解(SVD)し低ランク近似し，より高い圧縮を得る．
  しかし，LSAモデルのパラメータ数がコーパス中の文章数の共に増加するためオーバーフィットの恐れがあり，
  コーパスに含まれていない文章を記述する方法が明らかにさせていない．
- そのような問題を解決するために確率モデルである潜在的ディリクレ配分法が提案された．
+ そのような問題を解決するために確率モデルである潜在的ディリクレ配分法(LDA)が提案された．
 
  以下では上記意味分析手法を紹介する．
 
@@ -679,6 +686,37 @@
  文章数の増加によるオーバーフィットを防ぐ．
 
  \section{潜在的ディリクレ配分法}
+ 潜在的ディリクレ配分法(LDA)は文章の確率生成モデルである．
+ LDAでは文章が複数の潜在的トピックからランダムに生成されると仮定し，
+ トピックをそのトピックごとに単語の出現頻度で表す．
+
+ 
+ LDAではコーパス$D$に含まれている長さが$n_d$である文章$d$の生成過程を以下のように仮定する:
+ \begin{itemize}
+ \item {\em コーパス$D$における各潜在的トピック$t$を生成する}$\phi_{t} \thicksim Dir(\beta)$
+ \item {\em トピック分布ベクトル$\theta_d$を生成する}$n_d \thicksim Dir(\alpha)$
+ \item 各単語$w \in d$に対して:
+  \begin{itemize}
+   \item {\em $w$が属するトピック$t$を決める}$t_i \thicksim Mulinomail(\theta_d)$
+   \item {\em $w$を決める}$w \thicksim Multinomial(\phi_{t})$
+  \end{itemize}
+ \end{itemize}
+ 
+ ここで$\alpha,\beta$は$T$次元ベクトルで，Dirichlet分布のパラメータであり，
+ $\theta_d,\phi_{t}$は確率ベクトルである．
+
+ このグラフィカルモデルを図\ref{}に示す．
+
+ 全ての文章が同じ確率を持つと仮定すると，
+ \begin{equation}
+ p(t) = \sum_{d \in D}\theta_{d,t}p(d) = \frac{\sum_{d \in D} \theta_{d,t}}{|D|}
+ \end{equation}
+ によってコーパス$D$の中の各トピックの確率を計算し，
+ \begin{equation}
+ rscore_{LDA}(q,t) = p(t|q) \thicksim p(q|t)p(t) = \prod_{w \in q}p(w|t)p(t)
+ \end{equation}
+ によって質問$q$と各トピックの関係性を計算できる．
+
 
  \chapter{プライバシー分析(攻撃手法)}
  本論文では攻撃者が質問者が質問意図を隠していること
@@ -724,7 +762,13 @@
  \label{a:mt}
  \end{algorithm}
 
- \section{類似度攻撃\cite{simattack2016}(事前情報あり)}
+ \section{類似度攻撃(事前情報あり)}
+ 類似度攻撃(SimAtt)\cite{simattack2016}は質問者が提出した質問と攻撃者が事前に得た質問者のプロフィール間の類似度を計算し，
+ この類似度を用い質問者の新の質問を見破る．
+ Simattでは単語ベクトルで質問を表し，
+ 質問のプロフィールを質問の集合とする．
+ アルゴリズム\ref{a:simatt}が質問$q$と質問者のプロフィール$P_u$間の類似度$sim_{q,P_u}$の計算方法を示す．
+
  \begin{algorithm}
  \caption{類似度計算}
  \begin{algorithmic}[1]
@@ -737,10 +781,14 @@
   \For {$i \in [1,|P_u|]$}
   \State $sim \gets \alpha \cdot coef[i] + (1 - \alpha) \cdot sim$
   \EndFor
-  \Ensure $sim$
+  \Ensure $sim_{q,P_u}$
  \end{algorithmic}
+ \label{a:simatt}
  \end{algorithm}
- 
+
+ ここで$coef[i]$は質問$q$と$P_u$に属する質問$q_i$間のDice係数\cite{}で,
+ $\alpha$が重み係数である．
+  
  \begin{algorithm}
  \caption{類似度攻撃}
  \begin{algorithmic}[1]
@@ -750,8 +798,11 @@
  \end{algorithmic}
  \end{algorithm}
 
- \section{類似度攻撃2(事前情報なし)}
+ SimAttは質問グループの中質問者のプロフィールと一番類似度が高い質問が真の質問であると判定する．
+ 攻撃方法は単純であるが，\ref{s:}の実験結果は特許データベースにおける攻撃の強さを示す．
 
+ \section{類似度攻撃2(事前情報なし)}
+ 
  \begin{algorithm}
  \caption{類似度攻撃}
  \begin{algorithmic}[1]

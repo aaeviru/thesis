@@ -21,18 +21,18 @@
 \contentsline {section}{\numberline {4.1}tf-idf}{16}
 \contentsline {section}{\numberline {4.2}潜在的意味解析}{17}
 \contentsline {section}{\numberline {4.3}潜在的ディリクレ配分法}{17}
-\contentsline {chapter}{\numberline {第5章}プライバシー分析(攻撃手法)}{18}
-\contentsline {section}{\numberline {5.1}メイントピック攻撃}{18}
-\contentsline {section}{\numberline {5.2}類似度攻撃\cite {simattack2016}(事前情報あり)}{18}
-\contentsline {section}{\numberline {5.3}類似度攻撃2(事前情報なし)}{18}
-\contentsline {chapter}{\numberline {第6章}質問曖昧化(提案手法)}{21}
-\contentsline {section}{\numberline {6.1}単語ベクトル}{21}
-\contentsline {section}{\numberline {6.2}質問曖昧化}{22}
-\contentsline {chapter}{\numberline {第7章}データベース分割}{23}
-\contentsline {chapter}{\numberline {第8章}評価実験}{24}
-\contentsline {section}{\numberline {8.1}tfidf vs lda vs lsa}{24}
-\contentsline {section}{\numberline {8.2}データベース分割}{25}
-\contentsline {chapter}{\numberline {第9章}おわりに}{26}
-\contentsline {chapter}{謝辞}{27}
-\contentsline {chapter}{参考文献}{28}
-\contentsline {chapter}{\numberline {付録A}}{29}
+\contentsline {chapter}{\numberline {第5章}プライバシー分析(攻撃手法)}{19}
+\contentsline {section}{\numberline {5.1}メイントピック攻撃}{19}
+\contentsline {section}{\numberline {5.2}類似度攻撃(事前情報あり)}{19}
+\contentsline {section}{\numberline {5.3}類似度攻撃2(事前情報なし)}{20}
+\contentsline {chapter}{\numberline {第6章}質問曖昧化(提案手法)}{22}
+\contentsline {section}{\numberline {6.1}単語ベクトル}{22}
+\contentsline {section}{\numberline {6.2}質問曖昧化}{23}
+\contentsline {chapter}{\numberline {第7章}データベース分割}{24}
+\contentsline {chapter}{\numberline {第8章}評価実験}{25}
+\contentsline {section}{\numberline {8.1}tfidf vs lda vs lsa}{25}
+\contentsline {section}{\numberline {8.2}データベース分割}{26}
+\contentsline {chapter}{\numberline {第9章}おわりに}{27}
+\contentsline {chapter}{謝辞}{28}
+\contentsline {chapter}{参考文献}{29}
+\contentsline {chapter}{\numberline {付録A}}{30}
