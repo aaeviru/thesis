@@ -1,21 +1,24 @@
 \begin{thebibliography}{1}
 
 \bibitem{providing2009}
-``Providing {Privacy} through {Plausibly} {Deniable} {Search}'', Proceedings of
-  the 2009 {SIAM} {International} {Conference} on {Data} {Mining}, Proceedings,
-  Society for Industrial and Applied Mathematics, pp. 768--779 (2009).
+M.~Murugesan and C.~Clifton: ``Providing {Privacy} through {Plausibly}
+  {Deniable} {Search}'', Proceedings of the 2009 {SIAM} {International}
+  {Conference} on {Data} {Mining}, Proceedings, Society for Industrial and
+  Applied Mathematics, pp. 768--779 (2009).
 
 \bibitem{embellishing2010}
-``Embellishing {Text} {Search} {Queries} to {Protect} {User} {Privacy}'', Proc.
-  VLDB Endow., {\bf 3}, 1-2, pp. 598--607 (2010).
+H.~Pang, X.~Ding and X.~Xiao: ``Embellishing {Text} {Search} {Queries} to
+  {Protect} {User} {Privacy}'', Proc. VLDB Endow., {\bf 3}, 1-2, pp. 598--607
+  (2010).
 
 \bibitem{masking2014}
-``On masking topical intent in keyword search'', 2014 {IEEE} 30th
-  {International} {Conference} on {Data} {Engineering}, IEEE, pp. 256--267
-  (2014).
+P.~Wang and C.~V. Ravishankar: ``On masking topical intent in keyword search'',
+  2014 {IEEE} 30th {International} {Conference} on {Data} {Engineering}, IEEE,
+  pp. 256--267 (2014).
 
 \bibitem{simattack2016}
-``{SimAttack}: private web search under fire'', Journal of Internet Services
-  and Applications, {\bf 7}, 1, p.~1 (2016).
+A.~Petit, T.~Cerqueus, A.~Boutet, S.~B. Mokhtar, D.~Coquil, L.~Brunie and
+  H.~Kosch: ``{SimAttack}: private web search under fire'', Journal of Internet
+  Services and Applications, {\bf 7}, 1, p.~1 (2016).
 
 \end{thebibliography}
