@@ -26,8 +26,8 @@
 \contentsline {section}{\numberline {5.2}類似度攻撃(事前情報あり)}{19}
 \contentsline {section}{\numberline {5.3}類似度攻撃2(事前情報なし)}{20}
 \contentsline {chapter}{\numberline {第6章}質問曖昧化(提案手法)}{22}
-\contentsline {section}{\numberline {6.1}単語ベクトル}{22}
-\contentsline {section}{\numberline {6.2}質問曖昧化}{23}
+\contentsline {section}{\numberline {6.1}AAAA}{22}
+\contentsline {section}{\numberline {6.2}BBBB}{23}
 \contentsline {chapter}{\numberline {第7章}データベース分割}{24}
 \contentsline {chapter}{\numberline {第8章}評価実験}{25}
 \contentsline {section}{\numberline {8.1}tfidf vs lda vs lsa}{25}
