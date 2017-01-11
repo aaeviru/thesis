@@ -1,55 +1,56 @@
-This is pBibTeX, Version 0.99d-j0.33 (sjis.euc) (TeX Live 2015/W32TeX)
+This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis-test.aux
-The style file: tieice.bst
+The style file: ieicetr.bst
 Database file #1: thesis.bib
-Repeated entry---line 141 of file thesis.bib
+Repeated entry---line 67 of file thesis.bib
  : @article{simattack2016
  :                       ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "2006"
-Warning--I didn't find a database entry for "https://www.jpo.go.jp/seido/s_tokkyo/chizai04.htm"
 Warning--I didn't find a database entry for "benaloh_dense_1994"
-You've used 4 entries,
-            2358 wiz_defined-function locations,
-            577 strings with 4691 characters,
-and the built_in function-call counts, 1695 in all, are:
-= -- 141
-> -- 46
-< -- 4
-+ -- 18
-- -- 14
-* -- 95
-:= -- 202
-add.period$ -- 4
-call.type$ -- 4
-change.case$ -- 4
+Warning--I didn't find a database entry for "toi2012"
+Warning--to sort, need author or key in patent
+You can't pop an empty literal stack for entry apriori2010
+while executing---line 1124 of file ieicetr.bst
+You've used 21 entries,
+            2213 wiz_defined-function locations,
+            660 strings with 7704 characters,
+and the built_in function-call counts, 8219 in all, are:
+= -- 863
+> -- 380
+< -- 0
++ -- 151
+- -- 128
+* -- 593
+:= -- 1271
+add.period$ -- 21
+call.type$ -- 21
+change.case$ -- 128
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 105
-empty$ -- 170
-format.name$ -- 28
-if$ -- 429
+cite$ -- 22
+duplicate$ -- 336
+empty$ -- 626
+format.name$ -- 128
+if$ -- 1840
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 4
-newline$ -- 15
-num.names$ -- 4
-pop$ -- 31
+int.to.str$ -- 21
+missing$ -- 18
+newline$ -- 66
+num.names$ -- 40
+pop$ -- 145
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 106
 quote$ -- 0
-skip$ -- 121
+skip$ -- 293
 stack$ -- 0
-substring$ -- 98
-swap$ -- 31
-text.length$ -- 4
+substring$ -- 518
+swap$ -- 102
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 14
-width$ -- 5
-write$ -- 41
-is.kanji.str$ -- 54
-(There was 1 error message)
+type$ -- 84
+warning$ -- 1
+while$ -- 83
+width$ -- 23
+write$ -- 210
+(There were 2 error messages)
