@@ -788,7 +788,7 @@
 %  \Return $R$
 % \end{algorithmic}
 % \label{a:mt}
- \end{algorithm}
+% \end{algorithm}
 
  \section{類似度攻撃(事前情報あり)}
  類似度攻撃(SimAtt)\cite{simattack2016}は質問者が提出した質問と攻撃者が事前に得た質問者の質問ログ間の類似度を計算し，
@@ -998,7 +998,7 @@
  を用いて検索精度を上げる．
  しかし，本論文は検索結果の精度ついて評価していないため，単純に請求項から名詞を抽出し検索質問をする．
  また第\ref{s:sm}章で説明したように本論文はIPCコードを用いて特許文章を623個のIPCサブクラスに分類する．
- 文章集合と質問集合の詳細は\ref{tab:data}に示す． 
+ 文章集合と質問集合の詳細は表\ref{tab:data}に示す． 
 
  \begin{table}[!hbp]
  \center
@@ -1016,9 +1016,37 @@
  \end{table}
 
  \section{メイントピック攻撃}
-
+ \subsection{ETQS}
+ ETQSでは任意2つの単語バケットで全ての同じ位置の単語ペア間の意味的距離の差が小さいなら，
+ 真の質問の単語が意味的に近いときあるいは一つのトピックに集中したとき，
+ バケットの中のダミー単語も同じように一つのトピックに集中できると考えるため，
+ 本論文はSegSzを一番単語ペア間の意味的距離の差を小さくでき，攻撃しづらいと考えた1に設定する．
+ LSAを用いてメイントピック攻撃した結果が図\ref{fig:mt1}で表している．
+  
+ \begin{figure}
+ \begin{minipage}[t]{0.5\linewidth}
+ \centering
+ \includegraphics[width=0.9\textwidth]{a1.eps}
+ \caption{単語バケットに対してメイントピック攻撃の成功率}
+ \label{fig:mt1}
+ \end{minipage}%
+ \begin{minipage}[t]{0.5\linewidth}
+ \centering
+ \includegraphics[width=0.9\textwidth]{a2.eps}
+ \caption{加工した質問のメイントピックと真の質問のメイントピックが一致する確率}
+ \label{fig:mt2}
+ \end{minipage}
+ \end{figure}
+ 
+ 単語ごとに$9$個のダミー単語を加えても$80\%$以上の確率で真の質問の単語を見破られる．
+ 図\ref{fig:mt2}が加工した質問のメイントピックと真の質問のメイントピックが一致する確率を表している．
+ ダミー質問の単語を1つトピックに集中しないと真の質問のメイントピックを隠すことが困難であると考えられる．
+ 
  \section{HDGA}
- HDGAは
+ HDGAはダミートピックの決定し，ダミートピックにおける単語の出現率でランダムに単語を選び真の質問と同じ長さのダミー質問を作る．
+ 攻撃者が質問者と同様にLDAを用いてメイントピック攻撃する結果が\ref{}に示す．
+ トピックにおける単語の出現率は文章集合から学習したLDAの結果であるため，
+ 質問
 
  \section{tfidf vs lda vs lsa}
  \begin{table}[!hbp]
