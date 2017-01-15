@@ -123,7 +123,7 @@
  \end{table}
  
  一般に，1つの特許が複数の分類に属する．
- 本論文で用いる特許データベースでは一件あたり個の??分類コードが付いている．
+ 本論文で用いる特許データベースでは一件あたり個の2.4個の分類コードが付いている．
  本論文では特許発明の主体を表す筆頭コードをその特許が属する分類とする．
  
  \section{特許検索}
@@ -156,22 +156,7 @@
  特定発明の特許性の有無を判断することは新規性調査と一致であるため，
  無効資料検索タスクの質問を新規性調査の質問とすることが妥当であると考えられる．
  
- \begin{table}[!hbp]
- \center
- \begin{tabular}{|c|c|}
- \hline
- 符号 & 意味 \\
- \hline
- $W = \{1,2,3, \dots ,N\} $ & 単語集合 \\
- $D = \{1,2,3, \dots ,M\}$ & 文章集合 \\
- $K$ & トピック数 \\
- $T = \{1,2,3, \dots ,K\}$ & トピック集合 \\
- $\ell_i = \{t_1,t_2,\dots,K\} $ & 単語$i$のトピックベクトル \\
- $\ell$ & 質問のトピックベクトル \\
- \hline
- \end{tabular}
- \caption{表記法}
- \end{table}
+
 
  \chapter{曖昧化検索} \label{s:OBS}
  曖昧化検索は質問者が検索したい真の質問と質問者側で生成したダミー質問を一緒に検索サーバーに提出し，真の質問がどれかを曖昧化するものである．
@@ -1060,7 +1045,7 @@
  \hline
  評価方法:ダミー質問数  & 3 & 4 & 5 & 6 & 7    \\
  LDA & 23.9 & 18.8 & 14.9 & 13.5 & 12.0 \\
- LSA & 23.9 & 18.8 & 14.9 & 13.5 & 12.0 \\
+ 
  理想 & 25 & 20 & 16.7 & 14.3 & 12.5 \\
  \hline
  \end{tabular}
@@ -1085,8 +1070,6 @@
  意味分析手法:ダミトピックの選び方 & rand & cos-near & cos-far & coef-near & coef-far \\
  LDA & 74.9 & 87.5  & 90.1  & 61.0 & 88.9 \\
  LSA &  75.2 & 38.3 & 77.5 & 28.2 & 69.2 \\
- 100番までの検索結果重複率(LSA) 2.8 & 2.0 & 2.8 & 1.7 \\ 
- 100番までの検索結果重複率(LDA)  &  &  &  \\ 
  \hline
  \end{tabular}
  \caption{質問曖昧化 vs. MTA}
@@ -1166,12 +1149,63 @@
  \label{tab:mt:AAAA}
  \end{table}
 
- \subsection{データベース分割}
+ 質問曖昧化2では1つ質問グループの中の質問全部1つのトピックに属し，
+ 質問を持つ単語も意味的近いため，
+ 類似度攻撃2を防げる．
+ その結果は図\ref{}に示す．
+ 
+ \section{類似攻撃}
+ 類似攻撃の評価実験では類似攻撃2で用いた各質問者の質問からランダムに3つを選び，
+ その質問者が攻撃者に知らせれている質問ログとし，
+ その質問ログを用いて類似攻撃する．
+ 
+ 実験結果は図\ref{}に表している．
 
+ \backmatter% ここから後付
+ \chapter{謝辞}%%%%%%%%%%%%%%% 謝辞 %%%%%%%
+
+  %\begin{thebibliography}{}%%%% 参考文献 %%%
+  % \bibitem{}
+  %\end{thebibliography}
+  \bibliographystyle{ieicetr}%           BibTeX を使う場合
+  \bibliography{thesis}% BibTeX を使う場合
+
+  \appendix% ここから付録 %%%%% 付録 %%%%%%%
+  \chapter{}
+  \end{document}
+ 
+ \section{データベース分割}
+ 
+ \begin{table}[!hbp]
+ \center
+ \begin{tabular}{|c|c|c|c|c|}
+ \hline
+ 評価方法  & SimAtt New & SimAtt LSA  & Maintopic & 重複率  \\
+ データベース分割(8)  & 52.3 & 11.6 & 42.1 & 1.5 \\
+ \hline
+ \end{tabular}
+ \caption{データベース分割}
+ \end{table} 
+ \section{LDA vs LSA}
  
  
+  \begin{table}[!hbp]
+ \center
+ \begin{tabular}{|c|c|c|c|c|c|}
+ \hline
+ 評価方法:ダミー質問数  & 3 & 4 & 5 & 6 & 7    \\
+ Maintopic & 98.9 & 98.7 & 98.1 & 98.1 & 97.8 \\
+ 理想値 & 25 & 20 & 16.7 & 14.3 & 0.125 \\
+ \hline
+ \end{tabular}
+ \label{tab:mt:HDGA2}
+ \end{table}
 
- \section{tfidf vs lda vs lsa}
+ 図\ref{tab:mt:HDGA2}は攻撃者がLSAを用いてメイントピック攻撃する結果を表している．
+ LDAモデルのトピックとLSAモデルのトピックは一対一に対応できないため，
+ LDAモデルでは1つのトピックに集中している質問がLSAモデルの中でも1つのトピックに集中すると限れない．
+ ダミートピックからランダムに生成したデミー質問は真の質問のように複数の意味分析に対応できる強さを持たない．
+ 
  \begin{table}[!hbp]
  \center
  \begin{tabular}{|c|c|c|c|c|c|}
@@ -1228,39 +1262,6 @@
  \caption{SA:tfidf ダミー質問数:3  ダミトピックの選び方の影響2}
  \end{table}
 
- \begin{table}[!hbp]
- \center
- \begin{tabular}{|c|c|c|c|c|}
- \hline
- 評価方法  & SimAtt New & SimAtt LSA  & Maintopic & 重複率  \\
- tfidf  & 25.1 & 25.0 & 25.1 & 28.5 \\
- LSA  & 27.6 & 27.0 & 25.8 & 20.7 \\
- LDA  & 25.8 & 24.6 & 24.8 & 32.3 \\
- \hline
- \end{tabular}
- \caption{ダミー質問数:3  ダミトピックの選び方:真の質問と同じトピック SAの影響}
- \end{table}
-
-
-
- \section{データベース分割}
-
- \begin{table}[!hbp]
- \center
- \begin{tabular}{|c|c|c|c|c|}
- \hline
- 評価方法  & SimAtt New & SimAtt LSA  & Maintopic & 重複率  \\
- データベース分割(8)  & 52.3 & 11.6 & 42.1 & 1.5 \\
- \hline
- \end{tabular}
- \caption{データベース分割}
- \end{table}
-
-
- 攻撃者が質問者と違う意味分析手法を用いて攻撃する結果はは\ref{}に表している．
- HDGAに対する評価実験と同じように違う意味分析手法を用い，
- トピックの計算方法を変えることより，
- 真の質問がの確率で見破られる．
 
  \chapter{おわりに}
 
@@ -1285,20 +1286,27 @@
 
 
  
- \begin{table}[!hbp]
+
+ 
+ 
+ 攻撃者が質問者と違う意味分析手法を用いて攻撃する結果はは\ref{}に表している．
+ HDGAに対する評価実験と同じように違う意味分析手法を用い，
+ トピックの計算方法を変えることより，
+ 真の質問がの確率で見破られる．
+ 
+  \begin{table}[!hbp]
  \center
- \begin{tabular}{|c|c|c|c|c|c|}
+ \begin{tabular}{|c|c|}
  \hline
- 評価方法:ダミー質問数  & 3 & 4 & 5 & 6 & 7    \\
- Maintopic & 98.9 & 98.7 & 98.1 & 98.1 & 97.8 \\
- 理想値 & 25 & 20 & 16.7 & 14.3 & 0.125 \\
+ 符号 & 意味 \\
+ \hline
+ $W = \{1,2,3, \dots ,N\} $ & 単語集合 \\
+ $D = \{1,2,3, \dots ,M\}$ & 文章集合 \\
+ $K$ & トピック数 \\
+ $T = \{1,2,3, \dots ,K\}$ & トピック集合 \\
+ $\ell_i = \{t_1,t_2,\dots,K\} $ & 単語$i$のトピックベクトル \\
+ $\ell$ & 質問のトピックベクトル \\
  \hline
  \end{tabular}
- \label{tab:mt:HDGA2}
+ \caption{表記法}
  \end{table}
-
- 図\ref{tab:mt:HDGA2}は攻撃者がLSAを用いてメイントピック攻撃する結果を表している．
- LDAモデルのトピックとLSAモデルのトピックは一対一に対応できないため，
- LDAモデルでは1つのトピックに集中している質問がLSAモデルの中でも1つのトピックに集中すると限れない．
- ダミートピックからランダムに生成したデミー質問は真の質問のように複数の意味分析に対応できる強さを持たない．
- 
