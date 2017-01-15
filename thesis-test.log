@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2016.5.12)  15 JAN 2017 22:12
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2016.5.12)  16 JAN 2017 00:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -394,16 +394,14 @@ LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
 [15
 
 ] [16]
-
-LaTeX Warning: Reference `' on page 17 undefined on input line 707.
-
-[17]
+File: LDA.png Graphic file (type eps)
+ <LDA.png> [17]
 第5章
 [18
 
 ]
 
-LaTeX Warning: Reference `s:' on page 19 undefined on input line 803.
+LaTeX Warning: Reference `s:' on page 19 undefined on input line 808.
 
 [19] [20]
 第6章
@@ -423,18 +421,18 @@ File: HMD.eps Graphic file (type eps)
 File: HMD.eps Graphic file (type eps)
  <HMD.eps>
 
-LaTeX Warning: Reference `' on page 25 undefined on input line 1066.
+LaTeX Warning: Reference `' on page 25 undefined on input line 1071.
 
 [25]
 
-LaTeX Warning: Reference `' on page 26 undefined on input line 1091.
+LaTeX Warning: Reference `' on page 26 undefined on input line 1096.
 
 [26]
 
-LaTeX Warning: Reference `' on page 27 undefined on input line 1159.
+LaTeX Warning: Reference `' on page 27 undefined on input line 1164.
 
 
-LaTeX Warning: Reference `' on page 27 undefined on input line 1166.
+LaTeX Warning: Reference `' on page 27 undefined on input line 1171.
 
 [27] (./thesis-test.bbl [28
 
@@ -454,12 +452,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2712 strings out of 493717
- 33235 string characters out of 6150720
+ 2715 strings out of 493717
+ 33258 string characters out of 6150720
  101634 words of memory out of 5000000
- 6206 multiletter control sequences out of 15000+600000
+ 6208 multiletter control sequences out of 15000+600000
  28594 words of font info for 133 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  30i,13n,26p,302b,428s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis-test.dvi (37 pages, 110552 bytes).
+Output written on thesis-test.dvi (37 pages, 110696 bytes).

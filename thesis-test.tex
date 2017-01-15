@@ -693,19 +693,24 @@
  LDAではコーパス$D$に含まれている長さが$n_d$である文章$d$の生成過程を以下のように仮定する:
  \begin{itemize}
  \item {\em コーパス$D$における各潜在的トピック$t$を生成する}$\phi_{t} \thicksim Dir(\beta)$
- \item {\em トピック分布ベクトル$\theta_d$を生成する}$n_d \thicksim Dir(\alpha)$
+ \item {\em トピック分布ベクトル$\theta_d$を生成する}$theta_d \thicksim Dir(\alpha)$
  \item 各単語$w \in d$に対して:
   \begin{itemize}
-   \item {\em $w$が属するトピック$t$を決める}$t_i \thicksim Mulinomail(\theta_d)$
+   \item {\em $w$が属するトピック$t$を決める}$t \thicksim Mulinomail(\theta_d)$
    \item {\em $w$を決める}$w \thicksim Multinomial(\phi_{t})$
   \end{itemize}
  \end{itemize}
  
- ここで$\alpha,\beta$は$T$次元ベクトルで，Dirichlet分布のパラメータであり，
+ ここで$\alpha,\beta$は$|T|$次元ベクトルで，Dirichlet分布のパラメータであり，
  $\theta_d,\phi_{t}$は確率ベクトルである．
 
- このグラフィカルモデルを図\ref{}に示す．
-
+ このグラフィカルモデルを図\ref{fig:LDA}に示す．
+ \begin{figure}
+ \includegraphics[width=0.9\textwidth,natwidth=557,natheight=141]{LDA.png}
+ \caption{LDAのグラフィカルモデル}
+ \label{fig:LDA}
+ \end{figure}
+ 
  全ての文章が同じ確率を持つと仮定すると，
  \begin{equation}
  p(t) = \sum_{d \in D}\theta_{d,t}p(d) = \frac{\sum_{d \in D} \theta_{d,t}}{|D|}
