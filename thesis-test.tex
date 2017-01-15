@@ -1037,21 +1037,25 @@
  ダミー質問の単語を1つトピックに集中しないと真の質問のメイントピックを隠すことが困難であると考えられる．
  
  HDGAはダミートピックの決定し，ダミートピックにおける単語の出現率でランダムに単語を選び真の質問と同じ長さのダミー質問を作る．
- 攻撃者が質問者と同様にLDAを用いてメイントピック攻撃する結果が\ref{tab:mt:HDGA1}に示す．
-
- \begin{table}[!hbp]
- \center
- \begin{tabular}{|c|c|c|c|c|c|}
- \hline
- 評価方法:ダミー質問数  & 3 & 4 & 5 & 6 & 7    \\
- LDA & 23.9 & 18.8 & 14.9 & 13.5 & 12.0 \\
+ 攻撃者が質問者と同様にLDAを用いてメイントピック攻撃する結果が図\ref{fig:mt:HDGA}に示す．
  
- 理想 & 25 & 20 & 16.7 & 14.3 & 12.5 \\
- \hline
- \end{tabular}
- \label{tab:mt:HDGA1}
- \caption{質問曖昧化2 vs. MTA}
- \end{table}
+ \begin{figure}
+ \begin{minipage}[t]{0.5\linewidth}
+ \centering
+ \includegraphics[width=0.9\textwidth]{HMD.eps}
+ \vspace{5em}
+ \caption{HDGA vs. メイントピック攻撃}
+ \label{fig:mt:HDGA}
+ \end{minipage}%
+ \begin{minipage}[t]{0.5\linewidth}
+ \centering
+ \includegraphics[width=0.9\textwidth]{HMD.eps}
+ \vspace{5em}
+ \caption{単語バケツ間単語の意味的距離の差，BktSz$=4$}
+ \label{fig:r2}
+ \end{minipage}
+ \end{figure}
+
 
  評価実験で用いた質問は特許文章第一請求項から抽出したため，
  特許文章全文よりもっと1つのトピックに集中していることが原因であると考えられる．

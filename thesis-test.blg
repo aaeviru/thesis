@@ -1,9 +1,9 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/W32TeX)
+This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis-test.aux
 The style file: ieicetr.bst
 Database file #1: thesis.bib
-Repeated entry---line 133 of file thesis.bib
+Repeated entry---line 67 of file thesis.bib
  : @article{simattack2016
  :                       ,
 I'm skipping whatever remains of this entry
@@ -11,7 +11,7 @@ Warning--I didn't find a database entry for "benaloh_dense_1994"
 Warning--I didn't find a database entry for "toi2012"
 Warning--to sort, need author or key in patent
 You can't pop an empty literal stack for entry apriori2010
-while executing---line 2247 of file ieicetr.bst
+while executing---line 1124 of file ieicetr.bst
 You've used 22 entries,
             2213 wiz_defined-function locations,
             665 strings with 7847 characters,
