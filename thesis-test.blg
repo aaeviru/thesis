@@ -1,56 +1,55 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
+This is pBibTeX, Version 0.99d-j0.33 (sjis.euc) (TeX Live 2015/W32TeX)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis-test.aux
 The style file: ieicetr.bst
 Database file #1: thesis.bib
-Repeated entry---line 67 of file thesis.bib
+Repeated entry---line 133 of file thesis.bib
  : @article{simattack2016
  :                       ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "benaloh_dense_1994"
-Warning--I didn't find a database entry for "toi2012"
 Warning--to sort, need author or key in patent
 You can't pop an empty literal stack for entry apriori2010
-while executing---line 1124 of file ieicetr.bst
-You've used 22 entries,
+while executing---line 2247 of file ieicetr.bst
+You've used 26 entries,
             2213 wiz_defined-function locations,
-            665 strings with 7847 characters,
-and the built_in function-call counts, 8509 in all, are:
-= -- 888
-> -- 398
+            688 strings with 8406 characters,
+and the built_in function-call counts, 10048 in all, are:
+= -- 1055
+> -- 443
 < -- 0
-+ -- 158
-- -- 134
-* -- 612
-:= -- 1320
-add.period$ -- 22
-call.type$ -- 22
-change.case$ -- 134
++ -- 176
+- -- 148
+* -- 703
+:= -- 1539
+add.period$ -- 26
+call.type$ -- 26
+change.case$ -- 153
 chr.to.int$ -- 0
-cite$ -- 23
-duplicate$ -- 350
-empty$ -- 652
-format.name$ -- 134
-if$ -- 1902
+cite$ -- 27
+duplicate$ -- 428
+empty$ -- 790
+format.name$ -- 148
+if$ -- 2263
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 19
-newline$ -- 69
-num.names$ -- 42
-pop$ -- 156
+int.to.str$ -- 26
+missing$ -- 23
+newline$ -- 81
+num.names$ -- 50
+pop$ -- 186
 preamble$ -- 1
-purify$ -- 111
+purify$ -- 126
 quote$ -- 0
-skip$ -- 299
+skip$ -- 365
 stack$ -- 0
-substring$ -- 523
-swap$ -- 102
+substring$ -- 647
+swap$ -- 128
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 88
+type$ -- 104
 warning$ -- 1
-while$ -- 85
-width$ -- 24
-write$ -- 218
+while$ -- 102
+width$ -- 28
+write$ -- 255
+is.kanji.str$ -- 0
 (There were 2 error messages)

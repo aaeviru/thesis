@@ -44,12 +44,16 @@ E.~Balsa, C.~Troncoso, and C.~Diaz, ``{OB}-{PWS}: {Obfuscation}-{Based}
   {Privacy}, pp.491--505, May\ 2012.
 
 \bibitem{patent}
-``ÁâπË®±„ÉªÂÆüÁî®Êñ∞Ê°à„Å®„ÅØ.''
+``ì¡ãñÅEé¿ópêVàƒÇ∆ÇÕ.''
   \url{https://www.jpo.go.jp/seido/s_tokkyo/chizai04.htm/}.
 
 \bibitem{NTCIR6}
 A.~Fujii, M.~Iwayama, and N.~Kando, ``Overview of the {Patent} {Retrieval}
   {Task} at the {NTCIR}-6 {Workshop}.,'' {NTCIR}, 2007.
+
+\bibitem{PDS2008}
+M.~Murugesan and C.~Clifton, ``Plausibly deniable search,'' Proceedings of the
+  {Workshop} on {Secure} {Knowledge} {Management} ({SKM} 2008), 2008.
 
 \bibitem{LSA1990}
 S.~Deerwester, S.T. Dumais, G.W. Furnas, T.K. Landauer, and R.~Harshman,
@@ -58,7 +62,7 @@ S.~Deerwester, S.T. Dumais, G.W. Furnas, T.K. Landauer, and R.~Harshman,
 
 \bibitem{apriori2010}
 F.~Bodon, ``A fast apriori implementation,'' Proceedings of the {IEEE} {ICDM}
-  workshop on frequent itemset mining implementations ({FIMI}‚Äô03), 2010.
+  workshop on frequent itemset mining implementations ({FIMI}Åf03), 2010.
 
 \bibitem{if2006}
 J.~Zobel and A.~Moffat, ``Inverted {Files} for {Text} {Search} {Engines},'' ACM
@@ -86,15 +90,24 @@ D.X. Song, D.~Wagner, and A.~Perrig, ``Practical techniques for searches on
   2000 {IEEE} {Symposium} on, pp.44--55, IEEE, 2000.
 
 \bibitem{praw2005}
-B.~Shapira, Y.~Elovici, A.~Meshiach, and T.~Kuflik, ``{PRAW}‚Äî{A} {PRivAcy}
+B.~Shapira, Y.~Elovici, A.~Meshiach, and T.~Kuflik, ``{PRAW}Å\{A} {PRivAcy}
   model for the {Web},'' Journal of the American Society for Information
   Science and Technology, vol.56, no.2, pp.159--172, Jan.\ 2005.
 
 \bibitem{goo2009}
-{Josep Domingo‚ÄêFerrer}, {Agusti Solanas}, and {Jordi Castell√†‚ÄêRoca},
-  ``h(k)‚Äêprivate information retrieval from privacy‚Äêuncooperative queryable
+{Josep DomingoÅ]Ferrer}, {Agusti Solanas}, and {Jordi Castell^^c3^^a0Å]Roca},
+  ``h(k)Å]private information retrieval from privacyÅ]uncooperative queryable
   databases,'' Online Information Review, vol.33, no.4, pp.720--744, Aug.\
   2009.
+
+\bibitem{dpe1994}
+J.~Benaloh, ``Dense probabilistic encryption,'' Proceedings of the workshop on
+  selected areas of cryptography, pp.120--128, 1994.
+
+\bibitem{oti2012}
+H.H. Pang, X.~Xiao, and J.~Shen, ``Obfuscating the {Topical} {Intention} in
+  {Enterprise} {Text} {Search},'' 2012 {IEEE} 28th {International} {Conference}
+  on {Data} {Engineering}, pp.1168--1179, April\ 2012.
 
 \bibitem{lda2003}
 D.M. Blei, A.Y. Ng, and M.I. Jordan, ``Latent dirichlet allocation,'' Journal
@@ -104,5 +117,9 @@ D.M. Blei, A.Y. Ng, and M.I. Jordan, ``Latent dirichlet allocation,'' Journal
 D.G. Thaler and C.V. Ravishankar, ``Using name-based mappings to increase hit
   rates,'' IEEE/ACM Transactions on Networking (TON), vol.6, no.1, pp.1--14,
   1998.
+
+\bibitem{dice1945}
+L.R. Dice, ``Measures of the amount of ecologic association between species,''
+  Ecology, vol.26, no.3, pp.297--302, 1945.
 
 \end{thebibliography}
