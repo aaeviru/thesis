@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.sjis) (TeX Live 2015/W32TeX) (preloaded format=platex 2016.4.9)  19 JAN 2017 16:04
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.sjis) (TeX Live 2015/W32TeX) (preloaded format=platex 2016.4.9)  19 JAN 2017 16:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -196,11 +196,7 @@ LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 )
 \c@thm=\count113
- (./thesis-test.aux
-
-LaTeX Warning: Label `fig:mt:HDGA' multiply defined.
-
-)
+ (./thesis-test.aux)
 \openout1 = `thesis-test.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
@@ -238,7 +234,8 @@ LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 16.60605pt on input line 39.
 LaTeX Font Info:    Try loading font information for U+msa on input line 39.
- (c:/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(c:/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 39.
@@ -456,18 +453,14 @@ File: CROSS1.eps Graphic file (type eps)
 ]
 Missing character: There is no ^^c3 in font cmr10!
 Missing character: There is no ^^a0 in font cmr10!
-) [33] (./thesis-test.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+) [33] (./thesis-test.aux) ) 
 Here is how much of TeX's memory you used:
- 2733 strings out of 493717
- 32931 string characters out of 6153662
+ 2734 strings out of 493717
+ 32944 string characters out of 6153662
  102634 words of memory out of 5000000
- 6219 multiletter control sequences out of 15000+600000
+ 6220 multiletter control sequences out of 15000+600000
  28426 words of font info for 132 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  33i,13n,26p,330b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis-test.dvi (39 pages, 121688 bytes).
+Output written on thesis-test.dvi (39 pages, 121712 bytes).
