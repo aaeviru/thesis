@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.sjis) (TeX Live 2015/W32TeX) (preloaded format=platex 2016.4.9)  19 JAN 2017 03:37
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.sjis) (TeX Live 2015/W32TeX) (preloaded format=platex 2016.4.9)  19 JAN 2017 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -198,84 +198,81 @@ LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 \c@thm=\count113
  (./thesis-test.aux
 
-LaTeX Warning: Label `s:ex' multiply defined.
-
-
 LaTeX Warning: Label `fig:mt:HDGA' multiply defined.
 
 )
 \openout1 = `thesis-test.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 36.
+(Font)              scaled to size 9.60999pt on input line 39.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 36.
+(Font)              scaled to size 9.60999pt on input line 39.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 36.
+(Font)              scaled to size 13.83836pt on input line 39.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 36.
+(Font)              scaled to size 13.83836pt on input line 39.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 36.
+(Font)              scaled to size 23.90964pt on input line 39.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 36.
+(Font)              scaled to size 23.90964pt on input line 39.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 36.
+(Font)              scaled to size 23.90964pt on input line 39.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 19.9311pt on input line 36.
+(Font)              scaled to size 19.9311pt on input line 39.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 36.
-LaTeX Font Info:    Try loading font information for U+msa on input line 36.
+(Font)              scaled to size 16.60605pt on input line 39.
+LaTeX Font Info:    Try loading font information for U+msa on input line 39.
  (c:/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 36.
+LaTeX Font Info:    Try loading font information for U+msb on input line 39.
 
 (c:/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 36.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 39.
 
 (c:/texlive/2015/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 36.
+(Font)              scaled to size 13.83836pt on input line 39.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 36.
+(Font)              scaled to size 13.83836pt on input line 39.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 36.
+(Font)              scaled to size 6.72699pt on input line 39.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 36.
+(Font)              scaled to size 16.60605pt on input line 39.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 36.
+(Font)              scaled to size 16.60605pt on input line 39.
  [1
 
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 36.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 39.
 
 (c:/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 36.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
  [0
 
 ] [1
@@ -285,7 +282,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 
 ]
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 51.
+(Font)              scaled to size 23.90964pt on input line 54.
 
 (./thesis-test.toc
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
@@ -317,76 +314,94 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
  [4]
 第1章
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 19.9311pt on input line 54.
+(Font)              scaled to size 19.9311pt on input line 57.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 19.9311pt on input line 54.
+(Font)              scaled to size 19.9311pt on input line 57.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 19.9311pt on input line 54.
+(Font)              scaled to size 19.9311pt on input line 57.
 [1
 
 
 ]
 第2章
 LaTeX Font Info:    Font shape `JT1/gt/m/it' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 85.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 88.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 85.
+(Font)              scaled to size 9.60999pt on input line 88.
 LaTeX Font Info:    Font shape `JY1/gt/m/it' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 85.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 88.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 85.
+(Font)              scaled to size 9.60999pt on input line 88.
 File: ex1-1.pdf Graphic file (type eps)
 <ex1-1.pdf>
 File: ex1-2.pdf Graphic file (type eps)
  <ex1-2.pdf> [2
 
 ] [3]
-Overfull \hbox (15.53824pt too wide) in paragraph at lines 140--150
+Overfull \hbox (15.53824pt too wide) in paragraph at lines 143--153
  [] 
  []
 
 [4]
 第3章
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 169.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 172.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 169.
+(Font)              scaled to size 9.60999pt on input line 172.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 169.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 172.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 169.
+(Font)              scaled to size 9.60999pt on input line 172.
 [5
 
-] [6]
+]
+Overfull \hbox (49.08182pt too wide) in paragraph at lines 238--242
+[]\JY1/mc/m/n/10 次に検索質問のプライバシ ー保護の代表的な手法 ， 否認可能検索 
+\OT1/cmr/m/n/10 (PDS)[[]]\JY1/mc/m/n/10 ，
+ []
+
+[6]
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 263.
+(Font)              scaled to size 11.53198pt on input line 266.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 263.
+(Font)              scaled to size 11.53198pt on input line 266.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 263.
+(Font)              scaled to size 11.53198pt on input line 266.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 263.
- [7] [8] [9]
+(Font)              scaled to size 11.53198pt on input line 266.
+ [7] [8]
+Underfull \hbox (badness 2452) in paragraph at lines 383--390
+[]\OT1/cmr/m/n/10 PDS \JY1/mc/m/n/10 をはじめに多くの曖昧化検索メカニズム \OT1/
+cmr/m/n/10 [[],
+ []
+
+[9]
 LaTeX Font Info:    Font shape `JT1/mc/m/sc' in size <10> not available
-(Font)              Font shape `JT1/mc/m/n' tried instead on input line 418.
+(Font)              Font shape `JT1/mc/m/n' tried instead on input line 421.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 418.
+(Font)              scaled to size 9.60999pt on input line 421.
 LaTeX Font Info:    Font shape `JY1/mc/m/sc' in size <10> not available
-(Font)              Font shape `JY1/mc/m/n' tried instead on input line 418.
+(Font)              Font shape `JY1/mc/m/n' tried instead on input line 421.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 418.
+(Font)              scaled to size 9.60999pt on input line 421.
 File: rk11.png Graphic file (type eps)
  <rk11.png>
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 453.
- [10]
+(Font)              scaled to size 5.76599pt on input line 456.
+ [10] [11]
 File: rk13.png Graphic file (type eps)
- <rk13.png> [11] [12] [13] [14]
+ <rk13.png> [12] [13]
+Overfull \hbox (22.00882pt too wide) in paragraph at lines 593--594
+[]\JY1/mc/m/n/10 そして ， \OT1/cmr/m/n/10 HDGA \JY1/mc/m/n/10 がハ ッシ ュ関数
+ \OT1/cmr/m/n/10 High-est Ran-dom Weigh(HRW)[[]]
+ []
+
+[14]
 第4章
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 629.
+(Font)              scaled to size 6.72699pt on input line 632.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 629.
+(Font)              scaled to size 4.805pt on input line 632.
 [15
 
 ] [16]
@@ -447,12 +462,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2736 strings out of 493717
- 32960 string characters out of 6153662
- 101634 words of memory out of 5000000
- 6221 multiletter control sequences out of 15000+600000
- 28594 words of font info for 133 fonts, out of 8000000 for 9000
+ 2733 strings out of 493717
+ 32931 string characters out of 6153662
+ 102634 words of memory out of 5000000
+ 6219 multiletter control sequences out of 15000+600000
+ 28426 words of font info for 132 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  33i,13n,26p,330b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis-test.dvi (39 pages, 118360 bytes).
+Output written on thesis-test.dvi (39 pages, 121688 bytes).

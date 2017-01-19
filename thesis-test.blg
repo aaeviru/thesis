@@ -1,55 +1,52 @@
 This is pBibTeX, Version 0.99d-j0.33 (sjis.euc) (TeX Live 2015/W32TeX)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis-test.aux
-The style file: ieicetr.bst
+The style file: apalike.bst
 Database file #1: thesis.bib
 Repeated entry---line 133 of file thesis.bib
  : @article{simattack2016
  :                       ,
 I'm skipping whatever remains of this entry
-Warning--to sort, need author or key in patent
-You can't pop an empty literal stack for entry apriori2010
-while executing---line 2247 of file ieicetr.bst
-You've used 26 entries,
-            2213 wiz_defined-function locations,
-            688 strings with 8406 characters,
-and the built_in function-call counts, 10048 in all, are:
-= -- 1055
-> -- 443
-< -- 0
-+ -- 176
+You've used 25 entries,
+            1935 wiz_defined-function locations,
+            625 strings with 8001 characters,
+and the built_in function-call counts, 11244 in all, are:
+= -- 1136
+> -- 442
+< -- 20
++ -- 152
 - -- 148
-* -- 703
-:= -- 1539
-add.period$ -- 26
-call.type$ -- 26
-change.case$ -- 153
-chr.to.int$ -- 0
-cite$ -- 27
-duplicate$ -- 428
-empty$ -- 790
-format.name$ -- 148
-if$ -- 2263
-int.to.chr$ -- 0
-int.to.str$ -- 26
+* -- 902
+:= -- 1852
+add.period$ -- 81
+call.type$ -- 25
+change.case$ -- 200
+chr.to.int$ -- 25
+cite$ -- 25
+duplicate$ -- 477
+empty$ -- 809
+format.name$ -- 185
+if$ -- 2302
+int.to.chr$ -- 1
+int.to.str$ -- 0
 missing$ -- 23
-newline$ -- 81
-num.names$ -- 50
-pop$ -- 186
+newline$ -- 127
+num.names$ -- 75
+pop$ -- 213
 preamble$ -- 1
-purify$ -- 126
+purify$ -- 199
 quote$ -- 0
-skip$ -- 365
+skip$ -- 355
 stack$ -- 0
-substring$ -- 647
-swap$ -- 128
-text.length$ -- 0
+substring$ -- 775
+swap$ -- 108
+text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 104
-warning$ -- 1
-while$ -- 102
-width$ -- 28
-write$ -- 255
+type$ -- 150
+warning$ -- 0
+while$ -- 95
+width$ -- 0
+write$ -- 330
 is.kanji.str$ -- 0
-(There were 2 error messages)
+(There was 1 error message)

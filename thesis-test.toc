@@ -9,10 +9,10 @@
 \contentsline {subsection}{\numberline {3.1.3}凝集型クラスタリング}{8}
 \contentsline {subsection}{\numberline {3.1.4}PD-質問集合の使用}{9}
 \contentsline {section}{\numberline {3.2}質問者のプライバシーを保護する質問加工法}{9}
-\contentsline {subsection}{\numberline {3.2.1}類似検索}{9}
+\contentsline {subsection}{\numberline {3.2.1}類似検索}{10}
 \contentsline {subsection}{\numberline {3.2.2}単語バケツ}{10}
 \contentsline {subsection}{\numberline {3.2.3}バケツ作り}{10}
-\contentsline {subsection}{\numberline {3.2.4}プライベート検索スキーム}{12}
+\contentsline {subsection}{\numberline {3.2.4}プライベート検索スキーム}{13}
 \contentsline {section}{\numberline {3.3}質問意図を曖昧化するキーワード検索}{14}
 \contentsline {chapter}{\numberline {第4章}意味分析}{15}
 \contentsline {section}{\numberline {4.1}tf-idf}{15}

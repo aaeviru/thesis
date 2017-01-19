@@ -1,125 +1,149 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{}
 
-\bibitem{providing2009}
-M.~Murugesan and C.~Clifton, ``Providing {Privacy} through {Plausibly}
-  {Deniable} {Search},'' in Proceedings of the 2009 {SIAM} {International}
-  {Conference} on {Data} {Mining}, Proceedings, pp.768--779, Society for
-  Industrial and Applied Mathematics, April\ 2009.
+\bibitem[Balsa et~al., 2012]{obs2012}
+Balsa, E., Troncoso, C., and Diaz, C. (2012).
+\newblock {OB}-{PWS}: {Obfuscation}-{Based} {Private} {Web} {Search}.
+\newblock In {\em 2012 {IEEE} {Symposium} on {Security} and {Privacy}}, pages
+  491--505.
 
-\bibitem{embellishing2010}
-H.~Pang, X.~Ding, and X.~Xiao, ``Embellishing {Text} {Search} {Queries} to
-  {Protect} {User} {Privacy},'' Proc. VLDB Endow., vol.3, no.1-2, pp.598--607,
-  Sept.\ 2010.
+\bibitem[Benaloh, 1994]{dpe1994}
+Benaloh, J. (1994).
+\newblock Dense probabilistic encryption.
+\newblock In {\em Proceedings of the workshop on selected areas of
+  cryptography}, pages 120--128.
 
-\bibitem{masking2014}
-P.~Wang and C.V. Ravishankar, ``On masking topical intent in keyword search,''
-  2014 {IEEE} 30th {International} {Conference} on {Data} {Engineering},
-  pp.256--267, IEEE, 2014.
+\bibitem[Bethencourt et~al., 2006]{pss2006}
+Bethencourt, J., Song, D., and Waters, B. (2006).
+\newblock New constructions and practical applications for private stream
+  searching.
+\newblock In {\em 2006 {IEEE} {Symposium} on {Security} and {Privacy}
+  ({S}\&{P}'06)}, pages 6--pp. IEEE.
 
-\bibitem{simattack2016}
-A.~Petit, T.~Cerqueus, A.~Boutet, S.B. Mokhtar, D.~Coquil, L.~Brunie, and
-  H.~Kosch, ``{SimAttack}: private web search under fire,'' Journal of Internet
-  Services and Applications, vol.7, no.1, p.1, 2016.
+\bibitem[Blei et~al., 2003]{lda2003}
+Blei, D.~M., Ng, A.~Y., and Jordan, M.~I. (2003).
+\newblock Latent dirichlet allocation.
+\newblock {\em Journal of machine Learning research}, 3(Jan):993--1022.
 
-\bibitem{AOL}
-B.~Michael and J.~Tom, Jeller, ``A {Face} {Is} {Exposed} for {AOL} {Searcher}
-  {No}. 4417749 - {New} {York} {Times},'' 2006.
+\bibitem[Bodon, 2010]{apriori2010}
+Bodon, F. (2010).
+\newblock A fast apriori implementation.
+\newblock In {\em Proceedings of the {IEEE} {ICDM} workshop on frequent itemset
+  mining implementations ({FIMI}Åf03)}, volume~90.
 
-\bibitem{tor2004}
-R.~Dingledine, N.~Mathewson, and P.~Syverson, ``Tor: {The} second-generation
-  onion router,'' tech. rep., DTIC Document, 2004.
+\bibitem[Boneh et~al., 2004]{pke2004}
+Boneh, D., Di~Crescenzo, G., Ostrovsky, R., and Persiano, G. (2004).
+\newblock Public key encryption with keyword search.
+\newblock In {\em International {Conference} on the {Theory} and {Applications}
+  of {Cryptographic} {Techniques}}, pages 506--522. Springer.
 
-\bibitem{private2007}
-F.~Saint-Jean, A.~Johnson, D.~Boneh, and J.~Feigenbaum, ``Private web search,''
-  Proceedings of the 2007 {ACM} workshop on {Privacy} in electronic society,
-  pp.84--90, ACM, 2007.
+\bibitem[Chor et~al., 1998]{pir1998}
+Chor, B., Kushilevitz, E., Goldreich, O., and Sudan, M. (1998).
+\newblock Private information retrieval.
+\newblock {\em Journal of the ACM (JACM)}, 45(6):965--981.
 
-\bibitem{pir1998}
-B.~Chor, E.~Kushilevitz, O.~Goldreich, and M.~Sudan, ``Private information
-  retrieval,'' Journal of the ACM (JACM), vol.45, no.6, pp.965--981, 1998.
+\bibitem[Deerwester et~al., 1990]{LSA1990}
+Deerwester, S., Dumais, S.~T., Furnas, G.~W., Landauer, T.~K., and Harshman, R.
+  (1990).
+\newblock Indexing by {Latent} {Semantic} {Analysis}.
+\newblock {\em Journal of the American Society for Information Science}, 41(6).
 
-\bibitem{obs2012}
-E.~Balsa, C.~Troncoso, and C.~Diaz, ``{OB}-{PWS}: {Obfuscation}-{Based}
-  {Private} {Web} {Search},'' 2012 {IEEE} {Symposium} on {Security} and
-  {Privacy}, pp.491--505, May\ 2012.
+\bibitem[Dice, 1945]{dice1945}
+Dice, L.~R. (1945).
+\newblock Measures of the amount of ecologic association between species.
+\newblock {\em Ecology}, 26(3):297--302.
 
-\bibitem{patent}
-``ì¡ãñÅEé¿ópêVàƒÇ∆ÇÕ.''
-  \url{https://www.jpo.go.jp/seido/s_tokkyo/chizai04.htm/}.
+\bibitem[Dingledine et~al., 2004]{tor2004}
+Dingledine, R., Mathewson, N., and Syverson, P. (2004).
+\newblock Tor: {The} second-generation onion router.
+\newblock Technical report, DTIC Document.
 
-\bibitem{NTCIR6}
-A.~Fujii, M.~Iwayama, and N.~Kando, ``Overview of the {Patent} {Retrieval}
-  {Task} at the {NTCIR}-6 {Workshop}.,'' {NTCIR}, 2007.
+\bibitem[Freedman et~al., 2005]{opf2005}
+Freedman, M.~J., Ishai, Y., Pinkas, B., and Reingold, O. (2005).
+\newblock Keyword search and oblivious pseudorandom functions.
+\newblock In {\em Theory of {Cryptography} {Conference}}, pages 303--324.
+  Springer.
 
-\bibitem{PDS2008}
-M.~Murugesan and C.~Clifton, ``Plausibly deniable search,'' Proceedings of the
-  {Workshop} on {Secure} {Knowledge} {Management} ({SKM} 2008), 2008.
+\bibitem[Fujii et~al., 2007]{NTCIR6}
+Fujii, A., Iwayama, M., and Kando, N. (2007).
+\newblock Overview of the {Patent} {Retrieval} {Task} at the {NTCIR}-6
+  {Workshop}.
+\newblock In {\em {NTCIR}}.
 
-\bibitem{LSA1990}
-S.~Deerwester, S.T. Dumais, G.W. Furnas, T.K. Landauer, and R.~Harshman,
-  ``Indexing by {Latent} {Semantic} {Analysis},'' Journal of the American
-  Society for Information Science, vol.41, no.6, Sept.\ 1990.
+\bibitem[{Josep DomingoÅ]Ferrer} et~al., 2009]{goo2009}
+{Josep DomingoÅ]Ferrer}, {Agusti Solanas}, and {Jordi Castell^^c3^^a0Å]Roca}
+  (2009).
+\newblock h(k)Å]private information retrieval from privacyÅ]uncooperative
+  queryable databases.
+\newblock {\em Online Information Review}, 33(4):720--744.
 
-\bibitem{apriori2010}
-F.~Bodon, ``A fast apriori implementation,'' Proceedings of the {IEEE} {ICDM}
-  workshop on frequent itemset mining implementations ({FIMI}Åf03), 2010.
+\bibitem[Michael and Tom, 2006]{AOL}
+Michael, B. and Tom, Jeller, J. (2006).
+\newblock A {Face} {Is} {Exposed} for {AOL} {Searcher} {No}. 4417749 - {New}
+  {York} {Times}.
 
-\bibitem{if2006}
-J.~Zobel and A.~Moffat, ``Inverted {Files} for {Text} {Search} {Engines},'' ACM
-  Comput. Surv., vol.38, no.2, July\ 2006.
+\bibitem[Murugesan and Clifton, 2008]{PDS2008}
+Murugesan, M. and Clifton, C. (2008).
+\newblock Plausibly deniable search.
+\newblock In {\em Proceedings of the {Workshop} on {Secure} {Knowledge}
+  {Management} ({SKM} 2008)}.
 
-\bibitem{pss2006}
-J.~Bethencourt, D.~Song, and B.~Waters, ``New constructions and practical
-  applications for private stream searching,'' 2006 {IEEE} {Symposium} on
-  {Security} and {Privacy} ({S}\&{P}'06), pp.6--pp, IEEE, 2006.
+\bibitem[Murugesan and Clifton, 2009]{providing2009}
+Murugesan, M. and Clifton, C. (2009).
+\newblock Providing {Privacy} through {Plausibly} {Deniable} {Search}.
+\newblock In {\em Proceedings of the 2009 {SIAM} {International} {Conference}
+  on {Data} {Mining}}, Proceedings, pages 768--779. Society for Industrial and
+  Applied Mathematics.
 
-\bibitem{opf2005}
-M.J. Freedman, Y.~Ishai, B.~Pinkas, and O.~Reingold, ``Keyword search and
-  oblivious pseudorandom functions,'' Theory of {Cryptography} {Conference},
-  pp.303--324, Springer, 2005.
+\bibitem[Pang et~al., 2010]{embellishing2010}
+Pang, H., Ding, X., and Xiao, X. (2010).
+\newblock Embellishing {Text} {Search} {Queries} to {Protect} {User} {Privacy}.
+\newblock {\em Proc. VLDB Endow.}, 3(1-2):598--607.
 
-\bibitem{pke2004}
-D.~Boneh, G.~Di~Crescenzo, R.~Ostrovsky, and G.~Persiano, ``Public key
-  encryption with keyword search,'' International {Conference} on the {Theory}
-  and {Applications} of {Cryptographic} {Techniques}, pp.506--522, Springer,
-  2004.
+\bibitem[Pang et~al., 2012]{oti2012}
+Pang, H.~H., Xiao, X., and Shen, J. (2012).
+\newblock Obfuscating the {Topical} {Intention} in {Enterprise} {Text}
+  {Search}.
+\newblock In {\em 2012 {IEEE} 28th {International} {Conference} on {Data}
+  {Engineering}}, pages 1168--1179.
 
-\bibitem{soe2000}
-D.X. Song, D.~Wagner, and A.~Perrig, ``Practical techniques for searches on
-  encrypted data,'' Security and {Privacy}, 2000. {S}\&{P} 2000. {Proceedings}.
-  2000 {IEEE} {Symposium} on, pp.44--55, IEEE, 2000.
+\bibitem[Petit et~al., 2016]{simattack2016}
+Petit, A., Cerqueus, T., Boutet, A., Mokhtar, S.~B., Coquil, D., Brunie, L.,
+  and Kosch, H. (2016).
+\newblock {SimAttack}: private web search under fire.
+\newblock {\em Journal of Internet Services and Applications}, 7(1):1.
 
-\bibitem{praw2005}
-B.~Shapira, Y.~Elovici, A.~Meshiach, and T.~Kuflik, ``{PRAW}Å\{A} {PRivAcy}
-  model for the {Web},'' Journal of the American Society for Information
-  Science and Technology, vol.56, no.2, pp.159--172, Jan.\ 2005.
+\bibitem[Saint-Jean et~al., 2007]{private2007}
+Saint-Jean, F., Johnson, A., Boneh, D., and Feigenbaum, J. (2007).
+\newblock Private web search.
+\newblock In {\em Proceedings of the 2007 {ACM} workshop on {Privacy} in
+  electronic society}, pages 84--90. ACM.
 
-\bibitem{goo2009}
-{Josep DomingoÅ]Ferrer}, {Agusti Solanas}, and {Jordi Castell^^c3^^a0Å]Roca},
-  ``h(k)Å]private information retrieval from privacyÅ]uncooperative queryable
-  databases,'' Online Information Review, vol.33, no.4, pp.720--744, Aug.\
-  2009.
+\bibitem[Shapira et~al., 2005]{praw2005}
+Shapira, B., Elovici, Y., Meshiach, A., and Kuflik, T. (2005).
+\newblock {PRAW}Å\{A} {PRivAcy} model for the {Web}.
+\newblock {\em Journal of the American Society for Information Science and
+  Technology}, 56(2):159--172.
 
-\bibitem{dpe1994}
-J.~Benaloh, ``Dense probabilistic encryption,'' Proceedings of the workshop on
-  selected areas of cryptography, pp.120--128, 1994.
+\bibitem[Song et~al., 2000]{soe2000}
+Song, D.~X., Wagner, D., and Perrig, A. (2000).
+\newblock Practical techniques for searches on encrypted data.
+\newblock In {\em Security and {Privacy}, 2000. {S}\&{P} 2000. {Proceedings}.
+  2000 {IEEE} {Symposium} on}, pages 44--55. IEEE.
 
-\bibitem{oti2012}
-H.H. Pang, X.~Xiao, and J.~Shen, ``Obfuscating the {Topical} {Intention} in
-  {Enterprise} {Text} {Search},'' 2012 {IEEE} 28th {International} {Conference}
-  on {Data} {Engineering}, pp.1168--1179, April\ 2012.
+\bibitem[Thaler and Ravishankar, 1998]{hrw1998}
+Thaler, D.~G. and Ravishankar, C.~V. (1998).
+\newblock Using name-based mappings to increase hit rates.
+\newblock {\em IEEE/ACM Transactions on Networking (TON)}, 6(1):1--14.
 
-\bibitem{lda2003}
-D.M. Blei, A.Y. Ng, and M.I. Jordan, ``Latent dirichlet allocation,'' Journal
-  of machine Learning research, vol.3, no.Jan, pp.993--1022, 2003.
+\bibitem[Wang and Ravishankar, 2014]{masking2014}
+Wang, P. and Ravishankar, C.~V. (2014).
+\newblock On masking topical intent in keyword search.
+\newblock In {\em 2014 {IEEE} 30th {International} {Conference} on {Data}
+  {Engineering}}, pages 256--267. IEEE.
 
-\bibitem{hrw1998}
-D.G. Thaler and C.V. Ravishankar, ``Using name-based mappings to increase hit
-  rates,'' IEEE/ACM Transactions on Networking (TON), vol.6, no.1, pp.1--14,
-  1998.
-
-\bibitem{dice1945}
-L.R. Dice, ``Measures of the amount of ecologic association between species,''
-  Ecology, vol.26, no.3, pp.297--302, 1945.
+\bibitem[Zobel and Moffat, 2006]{if2006}
+Zobel, J. and Moffat, A. (2006).
+\newblock Inverted {Files} for {Text} {Search} {Engines}.
+\newblock {\em ACM Comput. Surv.}, 38(2).
 
 \end{thebibliography}
