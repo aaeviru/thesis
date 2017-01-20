@@ -1,48 +1,47 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
+This is pBibTeX, Version 0.99d-j0.33 (sjis.euc) (TeX Live 2015/W32TeX)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis-test.aux
 The style file: apalike.bst
 Database file #1: thesis.bib
-Warning--I didn't find a database entry for "wordnet1995"
-You've used 25 entries,
+You've used 26 entries,
             1935 wiz_defined-function locations,
-            625 strings with 7999 characters,
-and the built_in function-call counts, 11244 in all, are:
-= -- 1136
-> -- 442
-< -- 20
-+ -- 152
-- -- 148
-* -- 902
-:= -- 1852
-add.period$ -- 81
-call.type$ -- 25
-change.case$ -- 200
-chr.to.int$ -- 25
-cite$ -- 25
-duplicate$ -- 477
-empty$ -- 809
-format.name$ -- 185
-if$ -- 2302
+            631 strings with 8084 characters,
+and the built_in function-call counts, 11589 in all, are:
+= -- 1172
+> -- 449
+< -- 21
++ -- 154
+- -- 150
+* -- 931
+:= -- 1912
+add.period$ -- 84
+call.type$ -- 26
+change.case$ -- 206
+chr.to.int$ -- 26
+cite$ -- 26
+duplicate$ -- 491
+empty$ -- 837
+format.name$ -- 188
+if$ -- 2369
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 23
-newline$ -- 127
-num.names$ -- 75
-pop$ -- 213
+missing$ -- 24
+newline$ -- 132
+num.names$ -- 78
+pop$ -- 216
 preamble$ -- 1
-purify$ -- 199
+purify$ -- 205
 quote$ -- 0
-skip$ -- 355
+skip$ -- 366
 stack$ -- 0
-substring$ -- 775
-swap$ -- 108
+substring$ -- 806
+swap$ -- 109
 text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 150
+type$ -- 156
 warning$ -- 0
-while$ -- 95
+while$ -- 99
 width$ -- 0
-write$ -- 330
-(There was 1 warning)
+write$ -- 343
+is.kanji.str$ -- 0
