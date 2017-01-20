@@ -1,15 +1,12 @@
-This is pBibTeX, Version 0.99d-j0.33 (sjis.euc) (TeX Live 2015/W32TeX)
+This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis-test.aux
 The style file: apalike.bst
 Database file #1: thesis.bib
-Repeated entry---line 133 of file thesis.bib
- : @article{simattack2016
- :                       ,
-I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "wordnet1995"
 You've used 25 entries,
             1935 wiz_defined-function locations,
-            625 strings with 8001 characters,
+            625 strings with 7999 characters,
 and the built_in function-call counts, 11244 in all, are:
 = -- 1136
 > -- 442
@@ -48,5 +45,4 @@ warning$ -- 0
 while$ -- 95
 width$ -- 0
 write$ -- 330
-is.kanji.str$ -- 0
-(There was 1 error message)
+(There was 1 warning)

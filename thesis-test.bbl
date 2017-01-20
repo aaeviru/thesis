@@ -28,7 +28,7 @@ Blei, D.~M., Ng, A.~Y., and Jordan, M.~I. (2003).
 Bodon, F. (2010).
 \newblock A fast apriori implementation.
 \newblock In {\em Proceedings of the {IEEE} {ICDM} workshop on frequent itemset
-  mining implementations ({FIMI}Åf03)}, volume~90.
+  mining implementations ({FIMI}‚Äô03)}, volume~90.
 
 \bibitem[Boneh et~al., 2004]{pke2004}
 Boneh, D., Di~Crescenzo, G., Ostrovsky, R., and Persiano, G. (2004).
@@ -69,10 +69,10 @@ Fujii, A., Iwayama, M., and Kando, N. (2007).
   {Workshop}.
 \newblock In {\em {NTCIR}}.
 
-\bibitem[{Josep DomingoÅ]Ferrer} et~al., 2009]{goo2009}
-{Josep DomingoÅ]Ferrer}, {Agusti Solanas}, and {Jordi Castell^^c3^^a0Å]Roca}
+\bibitem[{Josep Domingo‚ÄêFerrer} et~al., 2009]{goo2009}
+{Josep Domingo‚ÄêFerrer}, {Agusti Solanas}, and {Jordi Castell√†‚ÄêRoca}
   (2009).
-\newblock h(k)Å]private information retrieval from privacyÅ]uncooperative
+\newblock h(k)‚Äêprivate information retrieval from privacy‚Äêuncooperative
   queryable databases.
 \newblock {\em Online Information Review}, 33(4):720--744.
 
@@ -120,7 +120,7 @@ Saint-Jean, F., Johnson, A., Boneh, D., and Feigenbaum, J. (2007).
 
 \bibitem[Shapira et~al., 2005]{praw2005}
 Shapira, B., Elovici, Y., Meshiach, A., and Kuflik, T. (2005).
-\newblock {PRAW}Å\{A} {PRivAcy} model for the {Web}.
+\newblock {PRAW}‚Äî{A} {PRivAcy} model for the {Web}.
 \newblock {\em Journal of the American Society for Information Science and
   Technology}, 56(2):159--172.
 
