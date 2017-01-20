@@ -920,7 +920,22 @@
   NtW_{SA}(v,t)  = \{atindex(n,wvec_{SA}(t))| n \in v\}
  \end{equation}
  によって定義する．
+ 図\ref{fig:tv1}，\ref{fig:tv1}はLDAを意味分析ツールとして用いる時の例を表している．
 
+ \begin{figure}
+ \begin{minipage}[t]{0.5\linewidth}
+ \centering
+ \includegraphics[width=0.9\textwidth,natwidth=310,natheight=299]{tv1.png}
+ \caption{質問数字化関数$WtN$の例}
+ \label{fig:tv1}
+ \end{minipage}%
+ \begin{minipage}[t]{0.5\linewidth}
+ \centering
+ \includegraphics[width=0.9\textwidth,natwidth=310,natheight=299]{tv2.png}
+ \caption{数字ベクトル質問化関数$NtW$の例}
+ \label{fig:tv2}
+ \end{minipage}
+ \end{figure}
  \section{質問者が検索したいトピックを曖昧化する質問曖昧化}\label{s:AAAA}
  検索したいトピックを曖昧化する質問曖昧化(QOT)は以下の特徴を持つ．
  まず，トピック出現頻度で質問者が興味あるトピックを特定することを防ぐためにQOTは事前にトピックをグループにし，
@@ -1009,6 +1024,12 @@
  そして，サーバは質問者からもらった数字ベクトルを各子データベースに送り，
  各子データベースの単語ベクトルを用いて質問にし，各子データベースを検索する．
  最後，質問者はサーバからもらった各子データベースの検索結果から真の子データベースの検索結果を利用する．
+ 
+ \begin{figure}
+ \includegraphics[width=0.9\textwidth,natwidth=997,natheight=476]{dbb.pdf}
+ \caption{データベース分割の流れ}
+ \label{fig:dbb}
+ \end{figure}
  
  データベース分割では他の曖昧化と違って全ての子データベース，
  あるいはトピックについて質問を提出する．

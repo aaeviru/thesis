@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.sjis) (TeX Live 2015/W32TeX) (preloaded format=platex 2016.4.9)  20 JAN 2017 17:19
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.sjis) (TeX Live 2015/W32TeX) (preloaded format=platex 2016.4.9)  20 JAN 2017 19:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -409,30 +409,35 @@ File: LDA.png Graphic file (type eps)
 
 ] [20] [21]
 第6章
-[22
+File: tv1.png Graphic file (type eps)
+<tv1.png>
+File: tv2.png Graphic file (type eps)
+ <tv2.png> [22
 
 ] [23] [24]
+File: dbb.pdf Graphic file (type eps)
+ <dbb.pdf> [25]
 第7章
-[25
+[26
 
 ]
 File: ETSQ1.eps Graphic file (type eps)
  <ETSQ1.eps>
 File: ETSQ2.eps Graphic file (type eps)
- <ETSQ2.eps> [26]
+ <ETSQ2.eps> [27]
 File: HMD.eps Graphic file (type eps)
  <HMD.eps>
 File: AAAA1.eps Graphic file (type eps)
- <AAAA1.eps> [27]
+ <AAAA1.eps> [28]
 File: BBBB1.eps Graphic file (type eps)
  <BBBB1.eps>
 File: HDGA1.eps Graphic file (type eps)
 
-<HDGA1.eps> [28]
+<HDGA1.eps> [29]
 File: AAAA2.eps Graphic file (type eps)
  <AAAA2.eps>
 File: BBBB2.eps Graphic file (type eps)
- <BBBB2.eps> [29]
+ <BBBB2.eps> [30]
 File: SA2.eps Graphic file (type eps)
  <SA2.eps>
 File: DS.eps Graphic file (type eps)
@@ -441,26 +446,30 @@ File: CROSS1.eps Graphic file (type eps)
  <CROSS1.eps>
 File: CROSS1.eps Graphic file (type eps)
 
-<CROSS1.eps> [30] [31]
+<CROSS1.eps> [31] [32]
 第8章
-[32
+[33
 
-] (./thesis-test.bbl [33
+] (./thesis-test.bbl [34
 
 
-] [34
+] [35
 
 ]
 Missing character: There is no ^^c3 in font cmr10!
 Missing character: There is no ^^a0 in font cmr10!
- [35]) [36] (./thesis-test.aux) ) 
+ [36]) [37] (./thesis-test.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2735 strings out of 493717
- 32957 string characters out of 6153662
+ 2744 strings out of 493717
+ 33026 string characters out of 6153662
  99634 words of memory out of 5000000
- 6221 multiletter control sequences out of 15000+600000
+ 6227 multiletter control sequences out of 15000+600000
  28426 words of font info for 132 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  33i,13n,26p,330b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis-test.dvi (42 pages, 126372 bytes).
+Output written on thesis-test.dvi (43 pages, 127092 bytes).
