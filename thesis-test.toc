@@ -5,8 +5,8 @@
 \contentsline {chapter}{\numberline {第3章}曖昧化検索}{5}
 \contentsline {section}{\numberline {3.1}否認可能検索}{6}
 \contentsline {subsection}{\numberline {3.1.1}シード単語と標準質問}{7}
-\contentsline {subsection}{\numberline {3.1.2}PD-質問集合の構築}{7}
-\contentsline {subsection}{\numberline {3.1.3}凝集型クラスタリング}{8}
+\contentsline {subsection}{\numberline {3.1.2}PD-質問集合の構築}{8}
+\contentsline {subsection}{\numberline {3.1.3}凝集型クラスタリング}{9}
 \contentsline {subsection}{\numberline {3.1.4}PD-質問集合の使用}{9}
 \contentsline {section}{\numberline {3.2}質問者のプライバシーを保護する質問加工法}{9}
 \contentsline {subsection}{\numberline {3.2.1}類似検索}{10}
@@ -35,10 +35,10 @@
 \contentsline {subsection}{\numberline {7.2.3}質問者が検索したいトピックを曖昧化する質問曖昧化}{28}
 \contentsline {subsection}{\numberline {7.2.4}質問者が検索したいトピックにおける質問曖昧化}{29}
 \contentsline {section}{\numberline {7.3}事前情報がない場合の類似攻撃}{29}
-\contentsline {subsection}{\numberline {7.3.1}質問意図を曖昧化するキーワード検索}{29}
+\contentsline {subsection}{\numberline {7.3.1}質問意図を曖昧化するキーワード検索}{30}
 \contentsline {subsection}{\numberline {7.3.2}質問者が検索したいトピックを曖昧化する質問曖昧化}{30}
 \contentsline {subsection}{\numberline {7.3.3}質問者が検索したいトピックにおける質問曖昧化}{30}
-\contentsline {section}{\numberline {7.4}事前情報がある場合の類似攻撃}{30}
+\contentsline {section}{\numberline {7.4}事前情報がある場合の類似攻撃}{31}
 \contentsline {section}{\numberline {7.5}データベース分割}{31}
 \contentsline {section}{\numberline {7.6}交差攻撃}{31}
 \contentsline {chapter}{\numberline {第8章}おわりに}{33}

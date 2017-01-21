@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.sjis) (TeX Live 2015/W32TeX) (preloaded format=platex 2016.4.9)  19 JAN 2017 16:08
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.sjis) (TeX Live 2015/W32TeX) (preloaded format=platex 2016.4.9)  22 JAN 2017 02:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -153,7 +153,7 @@ Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 )
-No file suribtabst_skeleton.aux.
+(./suribtabst_skeleton.aux)
 \openout1 = `suribtabst_skeleton.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
@@ -193,6 +193,7 @@ LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 5.76599pt on input line 28.
 LaTeX Font Info:    Try loading font information for U+msa on input line 28.
+
 (c:/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -212,35 +213,81 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 13.83836pt on input line 28.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 30.
- [1
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 33.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 33.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 33.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 33.
+
+
+LaTeX Warning: Citation `AOL' on page 1 undefined on input line 33.
+
+
+LaTeX Warning: Citation `providing2009' on page 1 undefined on input line 37.
+
+
+LaTeX Warning: Citation `embellishing2010' on page 1 undefined on input line 37
+.
+
+
+LaTeX Warning: Citation `masking2014' on page 1 undefined on input line 37.
+
+
+LaTeX Warning: Citation `simattack2016' on page 1 undefined on input line 38.
+
+
+LaTeX Warning: Citation `LSA1990' on page 1 undefined on input line 52.
+
+
+LaTeX Warning: Citation `wordnet1995' on page 1 undefined on input line 61.
+
+
+LaTeX Warning: Citation `dpe1994' on page 1 undefined on input line 64.
+
+
+LaTeX Warning: Citation `lda2003' on page 1 undefined on input line 68.
+
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 69.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 4.805pt on input line 69.
+
+LaTeX Warning: Citation `hrw1998' on page 1 undefined on input line 71.
+
+[1
 
 
 ]
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 81.
+(Font)              scaled to size 8.64899pt on input line 84.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 81.
+(Font)              scaled to size 8.64899pt on input line 84.
 
 
-LaTeX Warning: Empty `thebibliography' environment on input line 92.
+LaTeX Warning: Empty `thebibliography' environment on input line 95.
 
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 95.
+(Font)              scaled to size 7.68799pt on input line 98.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 95.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 95.
+(Font)              scaled to size 7.68799pt on input line 98.
 [2
 
 
-] (./suribtabst_skeleton.aux) ) 
-Here is how much of TeX's memory you used:
- 1772 strings out of 493717
- 20204 string characters out of 6153662
- 81803 words of memory out of 5000000
- 5315 multiletter control sequences out of 15000+600000
- 18517 words of font info for 86 fonts, out of 8000000 for 9000
- 934 hyphenation exceptions out of 8191
- 30i,8n,26p,237b,316s stack positions out of 5000i,500n,10000p,200000b,80000s
+] (./suribtabst_skeleton.aux)
 
-Output written on suribtabst_skeleton.dvi (2 pages, 5940 bytes).
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1794 strings out of 493717
+ 20485 string characters out of 6153662
+ 80803 words of memory out of 5000000
+ 5334 multiletter control sequences out of 15000+600000
+ 20015 words of font info for 94 fonts, out of 8000000 for 9000
+ 934 hyphenation exceptions out of 8191
+ 29i,8n,26p,237b,316s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on suribtabst_skeleton.dvi (2 pages, 7528 bytes).
