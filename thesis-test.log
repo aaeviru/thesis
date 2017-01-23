@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.sjis) (TeX Live 2015/W32TeX) (preloaded format=platex 2016.4.9)  23 JAN 2017 22:18
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.sjis) (TeX Live 2015/W32TeX) (preloaded format=platex 2016.4.9)  23 JAN 2017 23:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -424,8 +424,8 @@ File: AAAA2-2.eps Graphic file (type eps)
  <AAAA2-2.eps>
 File: BBBB2.eps Graphic file (type eps)
  <BBBB2.eps> [31]
-File: SA2.eps Graphic file (type eps)
- <SA2.eps>
+File: SA2-2.eps Graphic file (type eps)
+ <SA2-2.eps>
 File: DS.eps Graphic file (type eps)
  <DS.eps> [32]
 File: CROSS1.eps Graphic file (type eps)
@@ -447,11 +447,11 @@ Missing character: There is no ^^a0 in font cmr10!
  [38]) [39] (./thesis-test.aux) ) 
 Here is how much of TeX's memory you used:
  2774 strings out of 493717
- 33636 string characters out of 6153662
+ 33640 string characters out of 6153662
  97797 words of memory out of 5000000
  6248 multiletter control sequences out of 15000+600000
  28426 words of font info for 132 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  33i,13n,26p,280b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis-test.dvi (45 pages, 135692 bytes).
+Output written on thesis-test.dvi (45 pages, 135900 bytes).
