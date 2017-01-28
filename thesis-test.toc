@@ -34,13 +34,14 @@
 \contentsline {subsection}{\numberline {7.2.2}質問意図を曖昧化するキーワード検索}{28}
 \contentsline {subsection}{\numberline {7.2.3}質問者が検索したいトピックを曖昧化する質問曖昧化}{30}
 \contentsline {subsection}{\numberline {7.2.4}質問者が検索したいトピックにおける質問曖昧化}{30}
-\contentsline {section}{\numberline {7.3}事前情報がない場合の類似攻撃}{30}
+\contentsline {section}{\numberline {7.3}事前情報がない場合の類似攻撃}{31}
 \contentsline {subsection}{\numberline {7.3.1}質問意図を曖昧化するキーワード検索}{31}
 \contentsline {subsection}{\numberline {7.3.2}質問者が検索したいトピックを曖昧化する質問曖昧化}{31}
-\contentsline {subsection}{\numberline {7.3.3}質問者が検索したいトピックにおける質問曖昧化}{31}
+\contentsline {subsection}{\numberline {7.3.3}質問者が検索したいトピックにおける質問曖昧化}{32}
 \contentsline {section}{\numberline {7.4}事前情報がある場合の類似攻撃}{32}
 \contentsline {section}{\numberline {7.5}データベース分割}{32}
 \contentsline {section}{\numberline {7.6}交差攻撃}{33}
-\contentsline {chapter}{\numberline {第8章}おわりに}{35}
-\contentsline {chapter}{謝辞}{36}
-\contentsline {chapter}{参考文献}{37}
+\contentsline {section}{\numberline {7.7}検索曖昧化手法の比較}{34}
+\contentsline {chapter}{\numberline {第8章}おわりに}{36}
+\contentsline {chapter}{謝辞}{37}
+\contentsline {chapter}{参考文献}{38}
