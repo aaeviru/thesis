@@ -1,47 +1,47 @@
 This is pBibTeX, Version 0.99d-j0.33 (sjis.euc) (TeX Live 2015/W32TeX)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: suribtabst_skeleton.aux
-The style file: apalike.bst
+The style file: plain.bst
 Database file #1: thesis.bib
 You've used 10 entries,
-            1935 wiz_defined-function locations,
-            540 strings with 5395 characters,
-and the built_in function-call counts, 4334 in all, are:
-= -- 438
-> -- 168
-< -- 9
-+ -- 58
-- -- 56
-* -- 358
-:= -- 727
-add.period$ -- 31
+            2118 wiz_defined-function locations,
+            566 strings with 5720 characters,
+and the built_in function-call counts, 3766 in all, are:
+= -- 376
+> -- 173
+< -- 3
++ -- 68
+- -- 58
+* -- 272
+:= -- 611
+add.period$ -- 32
 call.type$ -- 10
-change.case$ -- 78
-chr.to.int$ -- 10
+change.case$ -- 59
+chr.to.int$ -- 0
 cite$ -- 10
-duplicate$ -- 174
-empty$ -- 305
-format.name$ -- 74
-if$ -- 872
-int.to.chr$ -- 1
-int.to.str$ -- 0
-missing$ -- 9
-newline$ -- 52
-num.names$ -- 30
-pop$ -- 67
+duplicate$ -- 149
+empty$ -- 295
+format.name$ -- 58
+if$ -- 798
+int.to.chr$ -- 0
+int.to.str$ -- 10
+missing$ -- 10
+newline$ -- 53
+num.names$ -- 20
+pop$ -- 57
 preamble$ -- 1
-purify$ -- 78
+purify$ -- 49
 quote$ -- 0
-skip$ -- 140
+skip$ -- 110
 stack$ -- 0
-substring$ -- 309
-swap$ -- 36
+substring$ -- 237
+swap$ -- 40
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 60
+type$ -- 40
 warning$ -- 0
 while$ -- 38
-width$ -- 0
-write$ -- 132
+width$ -- 12
+write$ -- 114
 is.kanji.str$ -- 0

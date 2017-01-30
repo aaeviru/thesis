@@ -1,59 +1,61 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
 
-\bibitem[Benaloh, 1994]{dpe1994}
-Benaloh, J. (1994).
+\bibitem{dpe1994}
+Josh Benaloh.
 \newblock Dense probabilistic encryption.
 \newblock In {\em Proceedings of the workshop on selected areas of
-  cryptography}, pages 120--128.
+  cryptography}, pages 120--128, 1994.
 
-\bibitem[Blei et~al., 2003]{lda2003}
-Blei, D.~M., Ng, A.~Y., and Jordan, M.~I. (2003).
+\bibitem{lda2003}
+David~M. Blei, Andrew~Y. Ng, and Michael~I. Jordan.
 \newblock Latent dirichlet allocation.
-\newblock {\em Journal of machine Learning research}, 3(Jan):993--1022.
+\newblock {\em Journal of machine Learning research}, 3(Jan):993--1022, 2003.
 
-\bibitem[Deerwester et~al., 1990]{LSA1990}
-Deerwester, S., Dumais, S.~T., Furnas, G.~W., Landauer, T.~K., and Harshman, R.
-  (1990).
+\bibitem{LSA1990}
+Scott Deerwester, Susan~T. Dumais, George~W. Furnas, Thomas~K. Landauer, and
+  Richard Harshman.
 \newblock Indexing by {Latent} {Semantic} {Analysis}.
-\newblock {\em Journal of the American Society for Information Science}, 41(6).
+\newblock {\em Journal of the American Society for Information Science}, 41(6),
+  September 1990.
 
-\bibitem[Michael and Tom, 2006]{AOL}
-Michael, B. and Tom, Jeller, J. (2006).
-\newblock A {Face} {Is} {Exposed} for {AOL} {Searcher} {No}. 4417749 - {New}
-  {York} {Times}.
+\bibitem{NTCIR6}
+Atsushi Fujii, Makoto Iwayama, and Noriko Kando.
+\newblock Overview of the {Patent} {Retrieval} {Task} at the {NTCIR}-6
+  {Workshop}.
+\newblock In {\em {NTCIR}}, 2007.
 
-\bibitem[Miller, 1995]{wordnet1995}
-Miller, G.~A. (1995).
+\bibitem{wordnet1995}
+George~A. Miller.
 \newblock {WordNet}: a lexical database for {English}.
-\newblock {\em Communications of the ACM}, 38(11):39--41.
+\newblock {\em Communications of the ACM}, 38(11):39--41, 1995.
 
-\bibitem[Murugesan and Clifton, 2009]{providing2009}
-Murugesan, M. and Clifton, C. (2009).
+\bibitem{providing2009}
+M.~Murugesan and C.~Clifton.
 \newblock Providing {Privacy} through {Plausibly} {Deniable} {Search}.
 \newblock In {\em Proceedings of the 2009 {SIAM} {International} {Conference}
   on {Data} {Mining}}, Proceedings, pages 768--779. Society for Industrial and
-  Applied Mathematics.
+  Applied Mathematics, April 2009.
 
-\bibitem[Pang et~al., 2010]{embellishing2010}
-Pang, H., Ding, X., and Xiao, X. (2010).
+\bibitem{embellishing2010}
+HweeHwa Pang, Xuhua Ding, and Xiaokui Xiao.
 \newblock Embellishing {Text} {Search} {Queries} to {Protect} {User} {Privacy}.
-\newblock {\em Proc. VLDB Endow.}, 3(1-2):598--607.
+\newblock {\em Proc. VLDB Endow.}, 3(1-2):598--607, September 2010.
 
-\bibitem[Petit et~al., 2016]{simattack2016}
-Petit, A., Cerqueus, T., Boutet, A., Mokhtar, S.~B., Coquil, D., Brunie, L.,
-  and Kosch, H. (2016).
+\bibitem{simattack2016}
+Albin Petit, Thomas Cerqueus, Antoine Boutet, Sonia~Ben Mokhtar, David Coquil,
+  Lionel Brunie, and Harald Kosch.
 \newblock {SimAttack}: private web search under fire.
-\newblock {\em Journal of Internet Services and Applications}, 7(1):1.
+\newblock {\em Journal of Internet Services and Applications}, 7(1):1, 2016.
 
-\bibitem[Thaler and Ravishankar, 1998]{hrw1998}
-Thaler, D.~G. and Ravishankar, C.~V. (1998).
+\bibitem{hrw1998}
+David~G. Thaler and Chinya~V. Ravishankar.
 \newblock Using name-based mappings to increase hit rates.
-\newblock {\em IEEE/ACM Transactions on Networking (TON)}, 6(1):1--14.
+\newblock {\em IEEE/ACM Transactions on Networking (TON)}, 6(1):1--14, 1998.
 
-\bibitem[Wang and Ravishankar, 2014]{masking2014}
-Wang, P. and Ravishankar, C.~V. (2014).
+\bibitem{masking2014}
+Peng Wang and Chinya~V. Ravishankar.
 \newblock On masking topical intent in keyword search.
 \newblock In {\em 2014 {IEEE} 30th {International} {Conference} on {Data}
-  {Engineering}}, pages 256--267. IEEE.
+  {Engineering}}, pages 256--267. IEEE, 2014.
 
 \end{thebibliography}
